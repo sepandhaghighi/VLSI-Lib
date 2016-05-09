@@ -1,0 +1,8 @@
+***** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******
+ Input File: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   root                 HOSTNAME: Microelectronic.lab.edu
+ lic: HOSTID: ac162d8b13a0         PID:      8314
+ **error** stop simulation by signal SIGINT = 2
+

@@ -1,0 +1,53 @@
+* Liberty NCX vC-2009.06-SP1
+flow_stage netlist
+time_unit 1e-12
+capacitance_unit 1e-15
+current_unit 1e-06
+leakage_power_unit 1e-12
+resistance_unit 1000
+slew_derate 1
+input_threshold_pct_rise 7.58
+output_threshold_pct_rise 50
+input_threshold_pct_fall 92.42
+output_threshold_pct_fall 50
+slew_lower_threshold_pct_rise 20
+slew_upper_threshold_pct_rise 80
+slew_lower_threshold_pct_fall 20
+slew_upper_threshold_pct_fall 80
+capacitance_lower_threshold_pct_rise 0.5
+capacitance_upper_threshold_pct_rise 80
+capacitance_lower_threshold_pct_fall 20
+capacitance_upper_threshold_pct_fall 99.5
+output_threshold_rise 0
+output_threshold_fall 0
+
+cell And2
+pin Out 0 1.32
+number_output_pin 1
+combinational_cell
+pg_syntax
+gate_leakage
+reference_align
+
+related_pin A 0 1.32
+related_pin_edge fall
+timing_type combinational
+timing_sense positive_unate
+
+input_state !Ap&B&!GND
+output_state !Out
+input_pins A Ap B GND
+output_pins Out
+power_pins VDD VSS
+intrinsic_power_pins VDD VSS
+pin_related_power VDD VDD VDD VDD
+pin_related_ground VSS VSS VSS VSS
+
+clk_width 1000
+pin_edge fall
+
+input_net_transition 10
+total_output_net_capacitance 0
+input_voltage_level_high 1.32 1.32 1.32 1.32
+input_voltage_level_low 0 0 0 0
+ccs_power_tolerance 0.05

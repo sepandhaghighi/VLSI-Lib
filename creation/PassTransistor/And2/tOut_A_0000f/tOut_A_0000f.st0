@@ -1,0 +1,13 @@
+***** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******
+ Input File: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   root                 HOSTNAME: Microelectronic.lab.edu
+ lic: HOSTID: ac162d8b13a0         PID:      7955
+ lic: Using FLEXlm license file:
+ lic: /opt/Admin/cadence.dat
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12
+ lic: NODE LOCKED license on hostid ac162d8b13a0
+ lic:
+ lic: Release hspice token(s)

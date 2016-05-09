@@ -1,0 +1,12 @@
+#!/bin/sh
+
+/opt/Synopsys/NCX/ncx/amd64/bin/ncx \
+   -input_library ../PassTransistor.lib \
+   -output_library PassTransistor_CCS.lib \
+   -model_file ../model.typ \
+   -netlist_dir ../netlists \
+   -simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice \
+   -templates true \
+   -input_template_dir ../creation/config \
+   -timing true \
+   -farm_type NoFarm

@@ -1,0 +1,426 @@
+
+                       Liberty NCX (TM) C-2009.06-SP1
+               Synopsys Inc. Proprietary and Confidential
+   Your use of this program and its documentation are covered by a license
+      agreement, a copy of which may be found in the file "license.txt"
+     located in the install directory. Your use of this program is your
+            consent to be bound by its terms and conditions.
+    Parts of this program are protected by law and international treaties.
+
+           Unpublished - Copyright (c) 2006 Synopsys Inc.
+                          All rights reserved.
+  All rights for unpublished material are reserved under U.S. copyright laws.
+Copyright notice is precautionary and does not imply publication or disclosure.
+                  Liberty NCX is a Trademark of Synopsys Inc.
+
+
+Build date: Jul 16 2009
+
+Local host: Microelectronic.lab.edu Linux (2.6.18-406.el5) (x86_64 X 16)
+
+Command-line: /opt/Synopsys/NCX/ncx/amd64/bin/ncx \
+   -output_library PassTransistor.lib \
+   -model_file ../model.typ \
+   -netlist_dir ../netlists \
+   -simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice \
+   -templates true \
+   -input_template_dir config \
+   -library_template_file PassTransistor \
+   -timing true \
+   -farm_type NoFarm
+Process id: 7856
+
+Program configuration:
+  Files/folders:
+    output_library      : /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor.lib (user)
+    log_file            : /home/Rezayi/Desktop/NCXtemplate/creation/ncx.log
+    work_dir            : /home/Rezayi/Desktop/NCXtemplate/creation/work
+  Flows:
+    preanalysis_opt     : auto
+    prechar             : false
+    timing              : true (user)
+    power               : false
+    noise               : false
+    compact             : true
+    templates           : true (user)
+    ibis                : false
+  Simulation settings:
+    simulator_exec      : /opt/Synopsys/HSPICE/hspice/amd64/hspice (user)
+    simulator_type      : hspice
+    model_file          : /home/Rezayi/Desktop/NCXtemplate/creation/../model.typ (user)
+    netlist_dir         : /home/Rezayi/Desktop/NCXtemplate/creation/../netlists (user)
+    netlist_suffix      : .spc
+    simulation_dir      : /home/Rezayi/Desktop/NCXtemplate/creation
+  Compute farm:
+    farm_type           : NoFarm (user)
+    queue_name          : normal
+    project_name        : NcxProj
+    bundle_size         : 50
+    constraint_bundle_size: 10
+    max_jobs            : 100
+    max_job_time        : 600
+    update_interval     : 60
+    farm_retry_limit    : 3
+    farm_retry_interval : 3
+    model_extraction_to_farm: false
+    backup_failed_sims  : false
+  Output format control:
+    precision           : 7
+    only_active_cells_to_library: false
+    failed_cells_to_library: false
+    sensitization_to_library: false
+    driver_waveform_to_library: true
+    use_driver_waveform_from_library: true
+  Program control:
+    autofix             : true
+    fix_nldm_timing     : delay
+    cleanup             : 1
+    reuse               : false
+    test_simulator      : true
+  Timing model acquisition options:
+    ccs_timing          : true
+    compact_timing      : true
+    nldm                : true
+    capacitance         : true
+    delay               : true
+    constraint          : true
+    shpr_constraint     : false
+    design_rules        : false
+    max_capacitance     : true
+    max_transition      : true
+    variation           : false
+    mismatch            : false
+  Template usage options:
+    input_template_dir  : /home/Rezayi/Desktop/NCXtemplate/creation/config (user)
+    output_template_dir : /home/Rezayi/Desktop/NCXtemplate/creation/work
+    library_template_file: PassTransistor (user)
+    template_suffix     : .opt
+    timing_arcs_to_template: false
+    sensitization_to_template: false
+
+Mon May  9 16:58:59 2016
+
+--- begin flow...
+--- testing simulation setup...
+using HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011)
+done
+
+creating library PassTransistor
+initializing database...
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/PassTransistor.opt...
+  do 6 cells...done
+Warning: Convert rail_connection format to pg_pin by default.
+  adding new cell And2
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/and2.opt...done
+  adding new cell And3
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/and3.opt...done
+  adding new cell Or2
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/or2.opt...done
+  adding new cell Or3
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/or3.opt...done
+  adding new cell Xor2
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/xor2.opt...done
+  adding new cell Xor3
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/xor3.opt...done
+Warning: PassTransistor::And2::A is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::And2::Ap is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::And2::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::And2::GND is not a PAD pin.  The voltage group DC_0 will be ignored.
+Warning: PassTransistor::And2::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::And3::A is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::And3::Bp is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::And3::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::And3::C is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::And3::Cp is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::And3::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::Or2::A is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::Or2::Ap is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::Or2::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::Or2::VCC is not a PAD pin.  The voltage group DC_3 will be ignored.
+Warning: PassTransistor::Or2::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::Or3::A is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::Or3::Bp is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::Or3::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::Or3::C is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::Or3::Cp is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::Or3::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::Xor2::A is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::Xor2::Ap is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::Xor2::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::Xor2::Bp is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::Xor2::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::Xor3::A is not a PAD pin.  The voltage group DC_18 will be ignored.
+Warning: PassTransistor::Xor3::Ap is not a PAD pin.  The voltage group DC_17 will be ignored.
+Warning: PassTransistor::Xor3::Bp is not a PAD pin.  The voltage group DC_16 will be ignored.
+Warning: PassTransistor::Xor3::B is not a PAD pin.  The voltage group DC_15 will be ignored.
+Warning: PassTransistor::Xor3::C is not a PAD pin.  The voltage group DC_14 will be ignored.
+Warning: PassTransistor::Xor3::Cp is not a PAD pin.  The voltage group DC_18 will be ignored.
+Warning: PassTransistor::Xor3::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+
+cell types:
+  combinational  : 6
+done
+
+Mon May  9 16:59:05 2016
+
+--- generating sensitizations...
+
+cell PassTransistor::And2 (1 of 6) (4in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (positive_unate) B -> Out
+2 delay arcs created
+
+
+cell PassTransistor::And3 (2 of 6) (5in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (positive_unate) B -> Out
+   combinational (positive_unate) C -> Out
+3 delay arcs created
+
+
+cell PassTransistor::Or2 (3 of 6) (4in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (positive_unate) B -> Out
+2 delay arcs created
+
+
+cell PassTransistor::Or3 (4 of 6) (5in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (positive_unate) B -> Out
+   combinational (positive_unate) C -> Out
+3 delay arcs created
+
+
+cell PassTransistor::Xor2 (5 of 6) (4in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (negative_unate) A -> Out
+   combinational (positive_unate) B -> Out
+   combinational (negative_unate) B -> Out
+4 delay arcs created
+
+
+cell PassTransistor::Xor3 (6 of 6) (6in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (negative_unate) A -> Out
+   combinational (positive_unate) B -> Out
+   combinational (negative_unate) B -> Out
+   combinational (positive_unate) C -> Out
+   combinational (negative_unate) C -> Out
+6 delay arcs created
+
+done
+
+Mon May  9 16:59:05 2016
+
+--- checking indices and signal levels...
+
+Mon May  9 16:59:05 2016
+
+--- pre-analyzing cells...
+
+cell PassTransistor::And2 (1 of 6) ()
+  using existing optimization
+
+cell PassTransistor::And3 (2 of 6) ()
+  using existing optimization
+
+cell PassTransistor::Or2 (3 of 6) ()
+  using existing optimization
+
+cell PassTransistor::Or3 (4 of 6) ()
+  using existing optimization
+
+cell PassTransistor::Xor2 (5 of 6) ()
+  using existing optimization
+
+cell PassTransistor::Xor3 (6 of 6) ()
+  using existing optimization
+done
+
+--- checking pre-analysis simulations...
+
+--- processing pre-analysis results...
+
+cell PassTransistor::And2 (1 of 6)
+
+cell PassTransistor::And3 (2 of 6)
+
+cell PassTransistor::Or2 (3 of 6)
+
+cell PassTransistor::Or3 (4 of 6)
+
+cell PassTransistor::Xor2 (5 of 6)
+
+cell PassTransistor::Xor3 (6 of 6)
+done
+
+Mon May  9 16:59:05 2016
+
+--- building netlists for nominal analysis ...
+
+cell PassTransistor::And2 (1 of 6) ()
+  applying optimizations...done
+
+cell PassTransistor::And3 (2 of 6) ()
+  applying optimizations...done
+
+cell PassTransistor::Or2 (3 of 6) ()
+  applying optimizations...done
+
+cell PassTransistor::Or3 (4 of 6) ()
+  applying optimizations...done
+
+cell PassTransistor::Xor2 (5 of 6) ()
+  applying optimizations...done
+
+cell PassTransistor::Xor3 (6 of 6) ()
+  applying optimizations...done
+done
+
+Mon May  9 16:59:05 2016
+
+--- checking nominal simulation status...
+
+queued=66 done=0
+
+queued=65 done=0
+
+queued=64 done=0
+
+queued=63 done=0
+
+queued=62 done=0
+
+queued=61 done=0
+
+queued=60 done=0
+
+queued=59 done=0
+
+queued=58 done=0
+
+queued=57 done=0
+
+queued=56 done=0
+
+queued=55 done=0
+
+queued=54 done=0
+
+queued=53 done=0
+
+queued=52 done=0
+
+queued=51 done=0
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApr/cApr.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApr/cApr.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000f/tOut_A_0000f.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000f/tOut_A_0000f.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDr/cGNDr.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDr/cGNDr.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApf/cApf.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApf/cApf.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001f/tOut_B_0001f.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001f/tOut_B_0001f.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpf/cBpf.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpf/cBpf.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000r/tOut_A_0000r.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000r/tOut_A_0000r.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000f/tOut_A_0000f.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000f/tOut_A_0000f.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDf/cGNDf.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDf/cGNDf.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpf/cCpf.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpf/cCpf.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000r/tOut_A_0000r.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000r/tOut_A_0000r.sp] fails for cell And2. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpr/cBpr.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpr/cBpr.sp] fails for cell And3. (NCXFL-5)
+
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001r/tOut_B_0001r.sp
+ (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001r/tOut_B_0001r.sp] fails for cell And2. (NCXFL-5)
+
+user-interrupt detected.  Cleaning up...
+  \pkill -P 8135
+  \pkill -P 8144
+  \pkill -P 8180
+  \pkill -P 8198
+  \pkill -P 8207
+  \pkill -P 8219
+  \pkill -P 8225
+  \pkill -P 8231
+  \pkill -P 8237
+  \pkill -P 8245
+  \pkill -P 8247
+  \pkill -P 8251
+  \pkill -P 8255
+  \pkill -P 8268
+  \pkill -P 8275
+  \pkill -P 8282
+

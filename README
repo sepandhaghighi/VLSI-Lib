@@ -1,0 +1,11 @@
+This the demo for ncx.
+
+What are included in this demo package?
+There are two subdir "creation" and "libimport" which demostrate the 
+creation flow and library import flow of ncx.
+
+How to run?
+Set you path environment to make sure ncx is in your path.
+And change directory to "creation" or "libimport", modify the "run" script,
+change the path of simulator, and type "run" to run ncx.
+

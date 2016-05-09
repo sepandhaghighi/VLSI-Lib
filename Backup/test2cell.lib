@@ -1,0 +1,3443 @@
+library (Training) {
+technology ( cmos ) ;
+
+delay_model     : table_lookup;
+date : "29-NOV-2004" ;
+revision : 1.000000 ;
+time_unit : "1ps" ;
+leakage_power_unit : "1pW" ;
+voltage_unit : "1V" ;
+pulling_resistance_unit : "1kohm" ;
+current_unit : "1uA" ;
+capacitive_load_unit(1.000,ff) ;
+
+/*** default specification ***/
+input_threshold_pct_rise      :  7.58;
+output_threshold_pct_rise     :  50.00;
+input_threshold_pct_fall      :  92.42;
+output_threshold_pct_fall     :  50.00;
+slew_lower_threshold_pct_rise :  20.00;
+slew_upper_threshold_pct_rise :  80.00;
+slew_lower_threshold_pct_fall :  20.00;
+slew_upper_threshold_pct_fall :  80.00;
+slew_derate_from_library      :  1.0;
+/*** default specification ***/
+/* *** power tables are in energy units of 'fJ' *** */
+
+/* *** fanouts are scaled to units of 3.000ff *** */
+
+operating_conditions("WORST"){
+process : 1.2;
+temperature : 125;
+voltage : 1.18;
+tree_type : worst_case_tree;
+}
+operating_conditions("TYPICAL"){
+process : 1;
+temperature : 25;
+voltage : 1.32;
+tree_type : balanced_tree;
+}
+operating_conditions("BEST"){
+process : 0.8;
+temperature : -40;
+voltage : 1.45;
+tree_type : best_case_tree;
+}
+
+/****************************/
+/** user supplied defaults **/
+/****************************/
+
+default_inout_pin_cap		:	0.0100;
+default_cell_leakage_power		:	0.0000;
+default_input_pin_cap		:	0.0100;
+default_output_pin_cap		:	0.0000;
+default_fanout_load		:	1.0000;
+
+/*****************************/
+/** user supplied k_factors **/
+/*****************************/
+
+
+/**********************************************/
+/** PVT values used in k-factor calculations **/
+/** Process     min,max :   0.800   1.200    **/
+/** Voltage     min,max :   1.188   1.452    **/
+/** Temperature min,max : -40.000 125.000    **/
+/**********************************************/
+
+/****************************/
+/** user supplied nominals **/
+/****************************/
+
+nom_voltage     : 1.320;
+nom_temperature : 25.000;
+nom_process     : 1.000;
+power_lut_template(power_inputs_0) {
+ variable_1 : input_transition_time;
+ index_1("4.500000,195.000000");
+}
+power_lut_template(power_outputs_0) {
+ variable_1 : input_transition_time;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("1.10000,10.00000");
+}
+lu_table_template(del_0_2_2) {
+ variable_1 : input_net_transition;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("1.10000,10.00000");
+}
+iv_lut_template(current_low_1) {
+ variable_1 : iv_output_voltage;
+ index_1("-1.32,-1.27,-1.21,-1.16,-1.11,-1.06,-1.00,-0.95,-0.90,-0.84,-0.79,-0.74,-0.69,-0.63,-0.58,-0.53,-0.48,-0.42,-0.37,-0.32,-0.26,-0.21,-0.16,-0.11,-0.05, 0.00, 0.03, 0.05, 0.08, 0.11, 0.13, 0.16, 0.18, 0.21, 0.24, 0.26, 0.29, 0.32, 0.34, 0.37, 0.40, 0.42, 0.45, 0.48, 0.50, 0.53, 0.55, 0.58, 0.61, 0.63, 0.66, 0.69, 0.71, 0.74, 0.77, 0.79, 0.82, 0.84, 0.87, 0.90, 0.92, 0.95, 0.98, 1.00, 1.03, 1.06, 1.08, 1.11, 1.14, 1.16, 1.19, 1.21, 1.24, 1.27, 1.29, 1.32, 1.37, 1.43, 1.48, 1.53, 1.58, 1.64, 1.69, 1.74, 1.80, 1.85, 1.90, 1.95, 2.01, 2.06, 2.11, 2.16, 2.22, 2.27, 2.32, 2.38, 2.43, 2.48, 2.53, 2.59, 2.64");
+}
+iv_lut_template(current_high_1) {
+ variable_1 : iv_output_voltage;
+ index_1("-1.32,-1.27,-1.21,-1.16,-1.11,-1.06,-1.00,-0.95,-0.90,-0.84,-0.79,-0.74,-0.69,-0.63,-0.58,-0.53,-0.48,-0.42,-0.37,-0.32,-0.26,-0.21,-0.16,-0.11,-0.05, 0.00, 0.03, 0.05, 0.08, 0.11, 0.13, 0.16, 0.18, 0.21, 0.24, 0.26, 0.29, 0.32, 0.34, 0.37, 0.40, 0.42, 0.45, 0.48, 0.50, 0.53, 0.55, 0.58, 0.61, 0.63, 0.66, 0.69, 0.71, 0.74, 0.77, 0.79, 0.82, 0.84, 0.87, 0.90, 0.92, 0.95, 0.98, 1.00, 1.03, 1.06, 1.08, 1.11, 1.14, 1.16, 1.19, 1.21, 1.24, 1.27, 1.29, 1.32, 1.37, 1.43, 1.48, 1.53, 1.58, 1.64, 1.69, 1.74, 1.80, 1.85, 1.90, 1.95, 2.01, 2.06, 2.11, 2.16, 2.22, 2.27, 2.32, 2.38, 2.43, 2.48, 2.53, 2.59, 2.64");
+}
+noise_lut_template(noise_reject_0_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.456992,50.330337,92.258571,169.115576,309.999146,568.247304,1041.631897,1909.374673,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_1_10_4) {
+ variable_1 : input_noise_width;
+ index_1("26.583229,48.926062,90.047737,165.731608,305.026720,561.397436,1033.244173,1901.671529,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_2_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.568354,50.508910,92.539073,169.543949,310.627173,569.110494,1042.686484,1910.340989,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_3_10_4) {
+ variable_1 : input_noise_width;
+ index_1("18.968155,36.415012,69.909441,134.211954,257.659742,494.654469,949.636297,1823.109169,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_0) {
+    vil : 0.729270;
+    vih : 0.789360;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_1) {
+    vil : 0.728030;
+    vih : 0.778210;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_2) {
+    vol : 0.004839;
+    voh : 1.318500;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_4_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.494085,50.389827,92.352034,169.258334,310.208475,568.535065,1041.983523,1909.696921,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_5_10_4) {
+ variable_1 : input_noise_width;
+ index_1("7.430392,16.037762,34.615915,74.715009,161.264914,348.074276,751.283702,1621.571138,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_6_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.620125,40.832826,77.118872,145.650472,275.082604,519.534457,981.218178,1853.176631,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_7_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.498684,64.565580,114.215465,202.045307,357.414875,632.261123,1118.459683,1978.537058,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_8_10_4) {
+ variable_1 : input_noise_width;
+ index_1("30.026899,54.428978,98.661991,178.842021,324.182273,587.636764,1065.193859,1930.849167,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_9_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.129707,49.805003,91.432552,167.852845,308.146028,565.697738,1038.513890,1906.514782,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_3) {
+    vil : 0.739870;
+    vih : 0.746440;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_4) {
+    vil : 0.738260;
+    vih : 0.744180;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_5) {
+    vil : 0.733300;
+    vih : 0.737500;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_6) {
+    vol : 0.000063;
+    voh : 1.319600;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_10_10_4) {
+ variable_1 : input_noise_width;
+ index_1("6.274096,13.831388,30.491611,67.219454,148.186825,326.681248,720.176289,1587.645115,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_11_10_4) {
+ variable_1 : input_noise_width;
+ index_1("7.596798,16.351600,35.195728,75.756453,163.060705,350.977274,755.455138,1626.066722,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_12_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.249350,56.363035,101.659449,183.358537,330.715475,596.496499,1075.873674,1940.504537,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_13_10_4) {
+ variable_1 : input_noise_width;
+ index_1("11.140217,22.858117,46.901557,96.235223,197.460782,405.161015,831.331906,1705.773042,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_14_10_4) {
+ variable_1 : input_noise_width;
+ index_1("17.827475,34.491503,66.732039,129.109045,249.792241,483.282666,935.025584,1809.030001,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_15_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.464971,56.703182,102.185087,184.148254,331.854486,598.036624,1077.724780,1942.173198,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_7) {
+    vil : 0.723760;
+    vih : 0.777510;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_8) {
+    vil : 0.725870;
+    vih : 0.770640;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_9) {
+    vil : 0.724970;
+    vih : 0.757400;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_16_10_4) {
+ variable_1 : input_noise_width;
+ index_1("15.709884,30.878761,60.694137,119.298128,234.487940,460.900728,905.929241,1780.660648,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_17_10_4) {
+ variable_1 : input_noise_width;
+ index_1("6.296547,13.874686,30.573409,67.369692,148.451728,327.119139,720.819706,1588.354170,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_10) {
+    vil : 0.723300;
+    vih : 0.782320;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_11) {
+    vol : 0.006098;
+    voh : 1.317900;
+    vomin : 0;
+    vomax : VDD;
+}
+power_lut_template(power_outputs_1) {
+ variable_1 : input_transition_time;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("3.70751,12.60751");
+}
+lu_table_template(del_1_2_2) {
+ variable_1 : input_net_transition;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("3.70751,12.60751");
+}
+noise_lut_template(noise_reject_18_10_4) {
+ variable_1 : input_noise_width;
+ index_1("256.385177,397.153747,615.211459,952.994002,1476.236432,2286.765707,3542.316992,5487.230124,8500.000000,9000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_19_10_4) {
+ variable_1 : input_noise_width;
+ index_1("8.578369,18.186019,38.554099,81.734135,173.275191,367.340913,778.757452,1650.954597,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_20_10_4) {
+ variable_1 : input_noise_width;
+ index_1("279.497593,428.309965,656.354226,1005.815658,1541.340177,2361.992997,3619.584438,5546.752899,8500.000000,9000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_21_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.138529,40.035838,75.826863,143.614155,272.001567,515.164071,975.707685,1847.965610,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_22_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.977034,33.047423,64.329974,125.224456,243.761397,474.504909,923.669254,1798.010676,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_23_10_4) {
+ variable_1 : input_noise_width;
+ index_1("8.607436,18.239926,38.652034,81.907117,173.568504,367.807178,779.416296,1651.652820,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_12) {
+    vil : 0.720460;
+    vih : 0.762820;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_13) {
+    vil : 0.715840;
+    vih : 0.797190;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_14) {
+    vol : 0.003968;
+    voh : 1.318000;
+    vomin : 0;
+    vomax : VDD;
+}
+lu_table_template(vio_0_2_2) {
+ variable_1 : related_pin_transition;
+ index_1("4.500000,195.000000");
+ variable_2 : constrained_pin_transition;
+ index_2("4.500000,195.000000");
+}
+iv_lut_template(current_low_2) {
+ variable_1 : iv_output_voltage;
+ index_1("-1.32,-1.27,-1.22,-1.16,-1.11,-1.06,-1.01,-0.96,-0.90,-0.85,-0.80,-0.75,-0.69,-0.64,-0.59,-0.54,-0.49,-0.43,-0.38,-0.33,-0.28,-0.23,-0.17,-0.12,-0.07,-0.02, 0.01, 0.03, 0.06, 0.09, 0.11, 0.14, 0.17, 0.19, 0.22, 0.24, 0.27, 0.30, 0.32, 0.35, 0.37, 0.40, 0.43, 0.45, 0.48, 0.50, 0.53, 0.56, 0.58, 0.61, 0.63, 0.66, 0.69, 0.71, 0.74, 0.76, 0.79, 0.82, 0.84, 0.87, 0.89, 0.92, 0.95, 0.97, 1.00, 1.02, 1.05, 1.08, 1.10, 1.13, 1.16, 1.18, 1.21, 1.23, 1.26, 1.29, 1.34, 1.39, 1.44, 1.49, 1.55, 1.60, 1.65, 1.70, 1.75, 1.81, 1.86, 1.91, 1.96, 2.01, 2.07, 2.12, 2.17, 2.22, 2.28, 2.33, 2.38, 2.43, 2.48, 2.54, 2.59, 2.64");
+}
+iv_lut_template(current_high_2) {
+ variable_1 : iv_output_voltage;
+ index_1("-1.32,-1.27,-1.22,-1.16,-1.11,-1.06,-1.01,-0.96,-0.90,-0.85,-0.80,-0.75,-0.69,-0.64,-0.59,-0.54,-0.49,-0.43,-0.38,-0.33,-0.28,-0.23,-0.17,-0.12,-0.07,-0.02, 0.01, 0.03, 0.06, 0.09, 0.11, 0.14, 0.17, 0.19, 0.22, 0.24, 0.27, 0.30, 0.32, 0.35, 0.37, 0.40, 0.43, 0.45, 0.48, 0.50, 0.53, 0.56, 0.58, 0.61, 0.63, 0.66, 0.69, 0.71, 0.74, 0.76, 0.79, 0.82, 0.84, 0.87, 0.89, 0.92, 0.95, 0.97, 1.00, 1.02, 1.05, 1.08, 1.10, 1.13, 1.16, 1.18, 1.21, 1.23, 1.26, 1.29, 1.34, 1.39, 1.44, 1.49, 1.55, 1.60, 1.65, 1.70, 1.75, 1.81, 1.86, 1.91, 1.96, 2.01, 2.07, 2.12, 2.17, 2.22, 2.28, 2.33, 2.38, 2.43, 2.48, 2.54, 2.59, 2.64");
+}
+noise_lut_template(noise_reject_24_10_1) {
+ variable_1 : input_noise_width;
+ index_1("48.876035,84.764981,147.006647,254.951443,442.158499,766.828916,1329.899995,2306.425802,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_25_10_1) {
+ variable_1 : input_noise_width;
+ index_1("81.072265,131.983843,214.866757,349.798296,569.463837,927.074446,1509.256554,2457.036064,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_26_10_1) {
+ variable_1 : input_noise_width;
+ index_1("46.958917,81.848516,142.660437,248.654482,433.400124,755.408333,1316.662636,2294.918417,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_27_10_1) {
+ variable_1 : input_noise_width;
+ index_1("81.037487,131.934300,214.797623,349.704503,569.341679,926.925289,1509.094668,2456.904286,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_28_10_1) {
+ variable_1 : input_noise_width;
+ index_1("158.211015,236.913400,354.766444,531.245720,795.514965,1191.245473,1783.832912,2671.204157,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_29_10_1) {
+ variable_1 : input_noise_width;
+ index_1("289.955573,402.529327,558.809259,775.764067,1076.950459,1495.070913,2075.524473,2881.336130,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_30_10_1) {
+ variable_1 : input_noise_width;
+ index_1("162.717847,242.808166,362.319233,540.654086,806.766005,1203.859183,1796.403078,2680.599245,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_31_10_4) {
+ variable_1 : input_noise_width;
+ index_1("60.603910,100.622839,167.067699,277.388478,460.558013,764.680945,1269.627129,2108.007341,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_15) {
+    vil : 0.700000;
+    vih : 1.122000;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_16) {
+    vil : 0.198000;
+    vih : 0.770000;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_17) {
+    vil : 0.700000;
+    vih : 0.770000;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_32_10_4) {
+ variable_1 : input_noise_width;
+ index_1("46.958917,80.493686,137.976640,236.509893,405.408694,694.923190,1191.188662,2041.852178,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_33_10_4) {
+ variable_1 : input_noise_width;
+ index_1("79.832879,128.061202,205.425028,329.525583,528.597273,847.931364,1360.180302,2181.887041,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_34_10_4) {
+ variable_1 : input_noise_width;
+ index_1("82.484721,131.775699,210.521834,336.324853,537.304872,858.385939,1371.337687,2190.817633,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_35_10_4) {
+ variable_1 : input_noise_width;
+ index_1("61.442877,101.840637,168.799311,279.782297,463.734913,768.633585,1273.998507,2111.633201,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_36_10_1) {
+ variable_1 : input_noise_width;
+ index_1("81.131788,129.882509,207.926716,332.866370,532.880152,853.078839,1365.679513,2186.293277,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_37_10_1) {
+ variable_1 : input_noise_width;
+ index_1("44.798884,77.244453,133.188709,229.650563,395.974866,682.759461,1177.247651,2029.868660,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_38_10_1) {
+ variable_1 : input_noise_width;
+ index_1("81.037487,129.750406,207.745433,332.624507,532.570375,852.706875,1365.282503,2185.975471,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_39_10_1) {
+ variable_1 : input_noise_width;
+ index_1("46.811564,80.272634,137.651794,236.045778,404.772127,694.104660,1190.253101,2041.050184,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_40_10_1) {
+ variable_1 : input_noise_width;
+ index_1("109.072792,168.271428,259.599787,400.496094,617.863068,953.204729,1470.551168,2268.684440,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_41_10_1) {
+ variable_1 : input_noise_width;
+ index_1("85.392698,135.831860,216.064075,343.687294,546.694104,869.611558,1383.267640,2200.326507,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_42_10_1) {
+ variable_1 : input_noise_width;
+ index_1("60.802950,100.911944,167.479053,277.957516,461.313693,765.621764,1270.668299,2108.871510,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_43_10_4) {
+ variable_1 : input_noise_width;
+ index_1("87.363519,138.571003,219.793376,348.623646,552.966831,877.084270,1391.180761,2206.611126,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_44_10_4) {
+ variable_1 : input_noise_width;
+ index_1("56.837872,95.129801,159.219175,266.485847,446.018556,746.503257,1249.425847,2091.169640,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_45_10_4) {
+ variable_1 : input_noise_width;
+ index_1("43.033184,74.573847,129.231867,223.950837,388.092956,672.541102,1165.472156,2019.691200,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_46_10_4) {
+ variable_1 : input_noise_width;
+ index_1("40.730684,71.070603,124.010452,216.384717,377.567736,658.814528,1149.559513,2005.856001,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_47_10_1) {
+ variable_1 : input_noise_width;
+ index_1("46.752983,81.534358,142.190962,247.972388,432.448762,754.164337,1315.216731,2293.657979,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_48_10_1) {
+ variable_1 : input_noise_width;
+ index_1("47.846010,83.199843,144.676932,251.579978,437.474615,760.728420,1322.837277,2300.293265,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_49_10_1) {
+ variable_1 : input_noise_width;
+ index_1("82.249026,133.658603,217.201625,352.963034,573.581820,932.097903,1514.703693,2461.465981,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_50_10_1) {
+ variable_1 : input_noise_width;
+ index_1("148.061137,223.559661,337.555981,509.680680,769.574263,1161.991361,1754.507638,2649.156574,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_51_10_1) {
+ variable_1 : input_noise_width;
+ index_1("290.559730,403.263110,559.682291,776.773922,1078.071854,1496.238338,2076.604781,2882.085898,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_52_10_4) {
+ variable_1 : input_noise_width;
+ index_1("104.070556,161.499208,250.618380,388.915668,603.528746,936.570515,1453.392793,2255.410113,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_53_10_4) {
+ variable_1 : input_noise_width;
+ index_1("30.805654,55.662170,100.574952,181.727032,328.359236,593.306271,1072.034200,1937.038900,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_54_10_1) {
+ variable_1 : input_noise_width;
+ index_1("46.752983,80.184729,137.522578,235.861114,404.518776,693.778800,1189.880547,2040.730731,3500.000000,4000.000000");
+}
+output_voltage(DC_18) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_19) {
+    vol : 0.000001;
+    voh : 1.122000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_55_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.479336,40.600067,76.741918,145.056953,274.185478,518.263171,979.616851,1851.663840,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_56_10_4) {
+ variable_1 : input_noise_width;
+ index_1("277.012426,380.360448,522.265634,717.112922,984.653996,1352.009511,1856.418322,2549.012382,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_57_10_4) {
+ variable_1 : input_noise_width;
+ index_1("61.388344,101.761542,168.686935,279.627071,463.529074,768.377689,1273.715729,2111.398838,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_20) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_58_10_4) {
+ variable_1 : input_noise_width;
+ index_1("46.752983,80.184729,137.522578,235.861114,404.518776,693.778800,1189.880547,2040.730731,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_59_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.037487,129.750406,207.745433,332.624507,532.570375,852.706875,1365.282503,2185.975471,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_60_10_4) {
+ variable_1 : input_noise_width;
+ index_1("34.416610,61.331076,109.293184,194.762603,347.070791,618.486978,1102.155964,1964.063613,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_61_10_4) {
+ variable_1 : input_noise_width;
+ index_1("82.249026,131.446166,210.070507,335.723888,536.536663,857.465320,1370.357005,2190.034136,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_62_10_1) {
+ variable_1 : input_noise_width;
+ index_1("34.416610,61.331076,109.293184,194.762603,347.070791,618.486978,1102.155964,1964.063613,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_63_10_1) {
+ variable_1 : input_noise_width;
+ index_1("82.249026,131.446166,210.070507,335.723888,536.536663,857.465320,1370.357005,2190.034136,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_64_10_4) {
+ variable_1 : input_noise_width;
+ index_1("148.061137,219.859102,326.473414,484.787252,719.870807,1068.951331,1587.308358,2357.027631,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_65_10_4) {
+ variable_1 : input_noise_width;
+ index_1("290.299630,396.277284,540.943458,738.421899,1007.992413,1375.973148,1878.290033,2563.984227,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_21) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+input_voltage(DC_22) {
+    vil : 0.750000;
+    vih : 0.770000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_23) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_66_10_4) {
+ variable_1 : input_noise_width;
+ index_1("1010.000000,1261.973131,1576.808103,1970.187582,2461.706725,3075.849251,3843.207040,4802.003981,6000.000000,6500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_24) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_25) {
+    vol : 0.198000;
+    voh : 1.122000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_67_10_4) {
+ variable_1 : input_noise_width;
+ index_1("35.104613,62.402526,110.927737,197.186935,350.522675,623.094760,1107.623295,1968.929031,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_68_10_1) {
+ variable_1 : input_noise_width;
+ index_1("1010.000000,1179.749244,1378.027998,1609.631177,1880.159568,2196.155275,2565.259926,2996.399463,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_69_10_4) {
+ variable_1 : input_noise_width;
+ index_1("63.177139,104.351445,172.360196,284.692148,470.233971,776.698580,1282.894734,2118.993055,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_26) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_27) {
+    vol : 0.198000;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_70_10_4) {
+ variable_1 : input_noise_width;
+ index_1("64.579029,106.374756,175.220794,288.624179,475.422551,783.117347,1289.953072,2124.814286,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_71_10_4) {
+ variable_1 : input_noise_width;
+ index_1("267.240015,368.593190,508.385466,701.195218,967.129801,1333.922461,1839.824530,2537.594502,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_28) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_72_10_4) {
+ variable_1 : input_noise_width;
+ index_1("71.905310,116.862278,189.927449,308.674760,501.665811,815.319612,1325.077484,2153.548512,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_73_10_1) {
+ variable_1 : input_noise_width;
+ index_1("82.484721,131.775699,210.521834,336.324853,537.304872,858.385939,1371.337687,2190.817633,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_74_10_1) {
+ variable_1 : input_noise_width;
+ index_1("71.905310,116.862278,189.927449,308.674760,501.665811,815.319612,1325.077484,2153.548512,3500.000000,4000.000000");
+}
+output_voltage(DC_29) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_30) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_31) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_75_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.219323,56.315644,101.586178,183.248400,330.556547,596.281497,1075.615132,1940.271363,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_76_10_4) {
+ variable_1 : input_noise_width;
+ index_1("63.013779,104.115308,172.025827,284.231835,469.625623,775.944839,1282.064616,2118.307380,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_77_10_4) {
+ variable_1 : input_noise_width;
+ index_1("58.100310,96.976086,161.864217,270.169954,450.944660,752.678390,1256.306615,2096.919920,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_78_10_4) {
+ variable_1 : input_noise_width;
+ index_1("66.937938,109.766999,179.999482,295.168984,484.027666,793.724252,1301.574750,2134.364455,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_79_10_4) {
+ variable_1 : input_noise_width;
+ index_1("28.117725,51.388525,93.918715,171.647754,313.706927,573.337162,1047.842661,1915.058567,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_80_10_4) {
+ variable_1 : input_noise_width;
+ index_1("26.535075,48.848506,89.925374,165.543913,304.750328,561.015871,1032.775943,1901.240595,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_81_10_4) {
+ variable_1 : input_noise_width;
+ index_1("20.223059,38.514521,73.350343,139.694658,266.046438,506.681558,964.967632,1837.766773,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_82_10_4) {
+ variable_1 : input_noise_width;
+ index_1("74.465920,120.495651,194.977807,315.499730,510.520050,826.088570,1336.719931,2162.988617,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_83_10_4) {
+ variable_1 : input_noise_width;
+ index_1("55.833257,93.656916,157.103817,263.532159,442.059273,741.527719,1243.867942,2086.513311,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_84_10_4) {
+ variable_1 : input_noise_width;
+ index_1("64.424226,106.151605,174.905683,288.191571,474.852390,782.412865,1289.179338,2124.176943,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_85_10_4) {
+ variable_1 : input_noise_width;
+ index_1("35.770323,63.436762,112.501718,199.515804,353.830650,627.499810,1112.837488,1973.558007,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_86_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.745687,77.164187,133.070073,229.480085,395.739692,682.455313,1176.898008,2029.567202,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_87_10_4) {
+ variable_1 : input_noise_width;
+ index_1("5.700709,12.718803,28.376814,63.311272,141.253247,315.148933,703.126138,1568.738819,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_88_10_4) {
+ variable_1 : input_noise_width;
+ index_1("37.690317,66.406345,117.000941,206.143259,363.202575,639.924445,1127.479052,1986.498599,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_89_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.427023,76.683127,132.358678,228.457292,394.328011,680.628659,1174.797020,2027.754810,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_90_10_4) {
+ variable_1 : input_noise_width;
+ index_1("45.895964,78.897127,135.627539,233.149546,400.794053,688.982138,1184.389794,2036.016768,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_91_10_4) {
+ variable_1 : input_noise_width;
+ index_1("19.600251,37.474638,71.649513,136.990056,261.917697,500.772698,957.450750,1830.594883,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_92_10_4) {
+ variable_1 : input_noise_width;
+ index_1("25.090893,46.514153,86.229150,159.853848,296.341233,549.365110,1018.427374,1887.987238,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_32) {
+    vil : 0.705700;
+    vih : 0.778530;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_33) {
+    vil : 0.722420;
+    vih : 0.761690;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_34) {
+    vil : 0.692620;
+    vih : 0.768920;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_93_10_4) {
+ variable_1 : input_noise_width;
+ index_1("54.478861,91.665945,154.236807,259.518324,436.664646,734.730443,1236.254934,2080.118331,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_94_10_4) {
+ variable_1 : input_noise_width;
+ index_1("56.832476,95.121899,159.207838,266.470035,445.997384,746.476680,1249.396192,2091.144823,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_95_10_4) {
+ variable_1 : input_noise_width;
+ index_1("124.560221,189.001589,286.781769,435.148633,660.273257,1001.866354,1520.183015,2306.651372,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_96_10_4) {
+ variable_1 : input_noise_width;
+ index_1("68.270853,111.677175,182.681054,298.828901,488.823061,799.614712,1308.006389,2139.631361,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_97_10_4) {
+ variable_1 : input_noise_width;
+ index_1("53.275312,89.891527,151.674131,255.920025,431.814304,728.601028,1229.369784,2074.317778,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_98_10_4) {
+ variable_1 : input_noise_width;
+ index_1("69.191959,112.994467,184.526494,301.342428,492.109598,803.643410,1312.396127,2143.218711,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_99_10_4) {
+ variable_1 : input_noise_width;
+ index_1("123.945438,188.185099,285.719525,433.805054,658.641808,1000.009169,1518.303767,2305.225192,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_100_10_4) {
+ variable_1 : input_noise_width;
+ index_1("67.007940,109.867436,180.140644,295.361873,484.280694,794.035425,1301.914909,2134.643338,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_101_10_4) {
+ variable_1 : input_noise_width;
+ index_1("24.748303,45.957960,85.344605,158.486182,294.311161,546.540135,1014.933033,1884.745504,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_102_10_4) {
+ variable_1 : input_noise_width;
+ index_1("42.637398,73.973362,128.339407,222.661278,386.304144,670.214835,1162.783086,2017.359859,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_103_10_4) {
+ variable_1 : input_noise_width;
+ index_1("77.268733,124.454850,200.456367,322.870144,520.039005,837.614043,1349.124352,2173.001434,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_104_10_4) {
+ variable_1 : input_noise_width;
+ index_1("29.600415,53.751933,97.609113,177.250163,321.871797,584.492852,1061.391204,1927.399599,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_105_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.339326,40.368408,76.366438,144.465270,273.290398,516.993747,978.016560,1850.150794,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_106_10_4) {
+ variable_1 : input_noise_width;
+ index_1("42.102896,73.161311,127.130860,220.912604,383.875156,667.051731,1159.121669,2014.181184,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_107_10_4) {
+ variable_1 : input_noise_width;
+ index_1("82.790499,132.203040,211.106879,337.103551,538.299865,859.577847,1372.606837,2191.831182,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_108_10_4) {
+ variable_1 : input_noise_width;
+ index_1("56.600972,94.782772,158.721196,265.791107,445.088083,745.334948,1248.121905,2090.078148,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_109_10_4) {
+ variable_1 : input_noise_width;
+ index_1("23.022442,43.141076,80.840791,151.485177,283.863608,531.923650,996.756053,1867.791794,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_110_10_4) {
+ variable_1 : input_noise_width;
+ index_1("11.734205,23.921063,48.764893,99.410915,202.656653,413.130882,842.198483,1716.885171,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_111_10_4) {
+ variable_1 : input_noise_width;
+ index_1("52.763317,89.135167,150.579579,254.380065,429.734348,725.967304,1226.405405,2071.815368,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_112_10_4) {
+ variable_1 : input_noise_width;
+ index_1("67.501260,110.574860,181.134393,296.719058,486.060089,796.222567,1304.304531,2136.601474,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_113_10_4) {
+ variable_1 : input_noise_width;
+ index_1("83.356364,132.993350,212.188130,338.541757,540.136349,861.776336,1374.946261,2193.698228,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_114_10_4) {
+ variable_1 : input_noise_width;
+ index_1("126.518551,191.599089,290.156744,439.411985,665.443409,1007.744315,1526.123170,2311.153629,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_115_10_4) {
+ variable_1 : input_noise_width;
+ index_1("77.961539,125.430703,201.802858,324.676434,522.365184,840.422515,1352.138360,2175.427374,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_116_10_4) {
+ variable_1 : input_noise_width;
+ index_1("67.878197,111.114956,181.892476,297.753554,487.415316,797.887001,1306.121589,2138.089231,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_117_10_4) {
+ variable_1 : input_noise_width;
+ index_1("61.755713,102.294199,169.443482,280.671768,464.913966,770.098816,1275.617060,2112.974138,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_118_10_4) {
+ variable_1 : input_noise_width;
+ index_1("126.193419,191.168189,289.597323,438.705884,664.587818,1006.772382,1525.141752,2310.410382,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_119_10_4) {
+ variable_1 : input_noise_width;
+ index_1("75.701587,122.243384,197.399364,318.761697,514.738335,831.202606,1342.231043,2167.442883,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_120_10_4) {
+ variable_1 : input_noise_width;
+ index_1("74.988261,121.234891,196.002664,316.881086,512.307441,828.256797,1339.057894,2164.879356,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_121_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.999475,57.545120,103.484225,186.097184,334.661266,601.826211,1082.272808,1946.266895,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_122_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.473588,130.361168,208.583352,333.742138,534.001459,854.424797,1367.115616,2187.442492,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_123_10_4) {
+ variable_1 : input_noise_width;
+ index_1("46.950542,80.481125,137.958184,236.483530,405.372542,694.876712,1191.135549,2041.806656,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_124_10_4) {
+ variable_1 : input_noise_width;
+ index_1("50.715061,86.100038,146.173864,248.162476,421.310710,715.268148,1214.325939,2061.586958,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_125_10_4) {
+ variable_1 : input_noise_width;
+ index_1("49.849043,84.812180,144.297773,245.505389,417.698036,710.663214,1209.108401,2057.153228,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_126_10_4) {
+ variable_1 : input_noise_width;
+ index_1("78.667672,126.424215,203.172177,326.511290,524.725501,843.269008,1355.189748,2177.880648,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_127_10_4) {
+ variable_1 : input_noise_width;
+ index_1("54.031468,91.006923,153.285858,258.184251,434.867956,732.461946,1233.708980,2077.975319,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_128_10_4) {
+ variable_1 : input_noise_width;
+ index_1("50.619134,85.957520,145.966449,247.868997,420.912067,714.760499,1213.751307,2061.099118,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_129_10_4) {
+ variable_1 : input_noise_width;
+ index_1("34.184219,60.968564,108.739232,193.939628,345.897048,616.917589,1100.290719,1962.400957,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_130_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.818227,65.059919,114.964609,203.149058,358.976037,634.331247,1120.899697,1980.694055,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_131_10_4) {
+ variable_1 : input_noise_width;
+ index_1("68.751900,112.365405,183.645605,300.143164,490.542199,801.722905,1310.304429,2141.510099,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_132_10_4) {
+ variable_1 : input_noise_width;
+ index_1("74.339680,120.316893,194.729849,315.165337,510.087130,825.563124,1336.153043,2162.529919,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_133_10_4) {
+ variable_1 : input_noise_width;
+ index_1("45.283037,77.974412,134.266810,231.198618,398.108817,685.517203,1180.415545,2032.597945,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_134_10_4) {
+ variable_1 : input_noise_width;
+ index_1("35.107513,62.407037,110.934610,197.197116,350.537154,623.114063,1107.646170,1968.949363,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_135_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.578913,56.882810,102.462488,184.564748,332.454804,598.847817,1078.699130,1943.050940,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_136_10_4) {
+ variable_1 : input_noise_width;
+ index_1("25.175557,46.651456,86.447278,160.190753,296.840779,550.059517,1019.285400,1888.782385,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_137_10_4) {
+ variable_1 : input_noise_width;
+ index_1("19.340260,37.039322,70.935518,135.851507,260.174769,498.271324,954.259761,1827.541836,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_138_10_4) {
+ variable_1 : input_noise_width;
+ index_1("22.977059,43.066655,80.721243,151.298472,283.583686,531.530198,996.264473,1867.331158,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_35) {
+    vil : 0.702450;
+    vih : 0.747620;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_36) {
+    vil : 0.721960;
+    vih : 0.749740;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_37) {
+    vil : 0.711260;
+    vih : 0.759880;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_139_10_4) {
+ variable_1 : input_noise_width;
+ index_1("59.992893,99.734597,165.802802,275.637242,458.230430,761.780683,1266.414823,2105.338899,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_140_10_4) {
+ variable_1 : input_noise_width;
+ index_1("64.966785,106.933421,176.009271,289.706092,476.847721,784.877347,1291.885066,2126.404884,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_141_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.626068,56.957125,102.577217,184.736950,332.702929,599.182994,1079.101594,1943.413384,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_142_10_4) {
+ variable_1 : input_noise_width;
+ index_1("67.175847,110.108288,180.479082,295.824224,484.887062,794.780967,1302.729718,2135.311221,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_143_10_4) {
+ variable_1 : input_noise_width;
+ index_1("39.020084,68.451928,120.083452,210.659303,369.554184,648.299376,1137.294880,1995.127084,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_144_10_4) {
+ variable_1 : input_noise_width;
+ index_1("26.405812,48.640227,89.596627,165.039433,304.007143,559.989459,1031.515875,1900.080410,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_145_10_4) {
+ variable_1 : input_noise_width;
+ index_1("42.782354,74.193370,128.666509,223.134097,386.960255,671.068388,1163.770120,2018.215900,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_146_10_4) {
+ variable_1 : input_noise_width;
+ index_1("64.703715,106.554445,175.474464,288.972342,475.881291,783.684008,1290.575267,2125.326665,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_147_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.468907,76.746381,132.452254,228.591882,394.513847,680.869217,1175.073812,2027.993674,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_148_10_4) {
+ variable_1 : input_noise_width;
+ index_1("74.001078,119.837239,194.064253,314.267372,508.924132,824.151009,1334.628960,2161.296222,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_149_10_4) {
+ variable_1 : input_noise_width;
+ index_1("34.871377,62.039597,110.374521,196.367089,349.356293,621.539078,1105.778922,1967.289056,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_150_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.237287,76.396494,131.934499,227.847002,393.485075,679.537157,1173.540695,2026.670282,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_151_10_4) {
+ variable_1 : input_noise_width;
+ index_1("38.237503,67.249155,118.272602,208.008684,365.829549,643.392653,1131.549124,1990.080887,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_152_10_4) {
+ variable_1 : input_noise_width;
+ index_1("55.172299,92.686067,155.706887,261.577987,439.434918,738.223615,1240.170236,2083.409663,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_153_10_4) {
+ variable_1 : input_noise_width;
+ index_1("33.013015,59.136831,105.932910,189.759601,339.919920,608.904906,1090.742738,1953.867852,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_154_10_4) {
+ variable_1 : input_noise_width;
+ index_1("29.453120,53.517818,97.244599,176.698386,321.069960,583.400459,1060.068328,1926.198107,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_155_10_4) {
+ variable_1 : input_noise_width;
+ index_1("25.812001,47.681782,88.081210,162.709933,300.569467,555.233495,1025.667166,1894.686011,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_38) {
+    vil : 0.705140;
+    vih : 0.775770;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_39) {
+    vil : 0.713340;
+    vih : 0.789850;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_156_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.271383,50.032507,91.790424,168.400156,308.949573,566.803745,1039.867062,1907.756462,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_157_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.638020,40.862397,77.166739,145.725806,275.196421,519.695668,981.421150,1853.368292,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_158_10_4) {
+ variable_1 : input_noise_width;
+ index_1("26.740146,49.178673,90.446099,166.342366,305.925663,562.637848,1034.765587,1903.071085,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_159_10_4) {
+ variable_1 : input_noise_width;
+ index_1("20.714085,39.331547,74.682065,141.805020,269.256933,511.260431,970.772509,1843.286137,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_40) {
+    vil : 0.736190;
+    vih : 0.792080;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_41) {
+    vil : 0.733040;
+    vih : 0.779420;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_160_10_4) {
+ variable_1 : input_noise_width;
+ index_1("26.475618,48.752720,89.774209,165.311981,304.408710,560.544140,1032.196921,1900.707559,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_161_10_4) {
+ variable_1 : input_noise_width;
+ index_1("5.085106,11.508560,26.046058,58.947176,133.408657,301.929133,683.322983,1546.489716,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_162_10_4) {
+ variable_1 : input_noise_width;
+ index_1("7.602649,16.362619,35.216056,75.792914,163.123486,351.078619,755.600556,1626.223216,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_163_10_4) {
+ variable_1 : input_noise_width;
+ index_1("17.110497,33.274634,64.708893,125.838824,244.717670,475.900332,925.479252,1799.771480,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_42) {
+    vil : 0.725360;
+    vih : 0.785110;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_43) {
+    vil : 0.664350;
+    vih : 0.873410;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_164_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.666886,32.518549,63.446528,123.789714,241.524536,471.235449,919.421489,1793.871571,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_165_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.257256,76.426668,131.979164,227.911279,393.573876,679.652172,1173.673109,2026.784616,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_166_10_4) {
+ variable_1 : input_noise_width;
+ index_1("32.479005,58.298970,104.645136,187.835301,337.159484,605.192513,1086.304834,1949.888951,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_167_10_4) {
+ variable_1 : input_noise_width;
+ index_1("37.421242,65.991338,116.373920,205.222226,361.903783,638.207427,1125.461346,1984.720311,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_168_10_4) {
+ variable_1 : input_noise_width;
+ index_1("30.644410,55.407157,100.179870,181.131949,327.498758,592.139802,1070.628625,1935.768630,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_169_10_4) {
+ variable_1 : input_noise_width;
+ index_1("6.828365,14.894834,32.490364,70.871804,154.593916,337.218437,735.580524,1604.534772,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_170_10_4) {
+ variable_1 : input_noise_width;
+ index_1("24.871695,46.158397,85.663547,158.979594,295.043952,547.560420,1016.195764,1885.917595,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_171_10_4) {
+ variable_1 : input_noise_width;
+ index_1("49.440057,84.203006,143.408942,244.244542,415.981008,708.471099,1206.620706,2055.035881,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_172_10_4) {
+ variable_1 : input_noise_width;
+ index_1("35.422606,62.896858,111.680511,198.301425,352.106691,625.205398,1110.123154,1971.149675,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_173_10_4) {
+ variable_1 : input_noise_width;
+ index_1("32.052261,57.628172,103.612228,186.288988,334.937178,602.198304,1082.718856,1946.667922,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_174_10_4) {
+ variable_1 : input_noise_width;
+ index_1("43.512425,75.300027,130.309769,225.506374,390.247982,675.340057,1168.703528,2022.489146,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_175_10_4) {
+ variable_1 : input_noise_width;
+ index_1("5.732008,12.779885,28.493585,63.528302,141.640486,315.796685,704.089270,1569.812869,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_44) {
+    vil : 0.710360;
+    vih : 0.797610;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_45) {
+    vil : 0.729380;
+    vih : 0.779980;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_176_10_4) {
+ variable_1 : input_noise_width;
+ index_1("3.742398,8.800650,20.695671,48.668086,114.448215,269.137230,632.905011,1488.343891,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_177_10_4) {
+ variable_1 : input_noise_width;
+ index_1("10.981490,22.572887,46.399464,95.375935,196.049011,402.986505,828.354718,1702.715923,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_46) {
+    vil : 0.651700;
+    vih : 0.878560;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_47) {
+    vol : 0.040318;
+    voh : 1.254200;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_178_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.798884,77.244453,133.188709,229.650563,395.974866,682.759461,1177.247651,2029.868660,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_179_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.131788,129.882509,207.926716,332.866370,532.880152,853.078839,1365.679513,2186.293277,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_180_10_4) {
+ variable_1 : input_noise_width;
+ index_1("82.350090,131.587482,210.264072,335.981656,536.866199,857.860275,1370.777771,2190.370334,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_181_10_4) {
+ variable_1 : input_noise_width;
+ index_1("60.137913,99.945517,166.103307,276.053488,458.783933,762.470703,1267.179453,2105.974379,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_182_10_1) {
+ variable_1 : input_noise_width;
+ index_1("145.462940,216.479522,322.167169,479.452670,713.526656,1061.878097,1580.298483,2351.817317,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_183_10_1) {
+ variable_1 : input_noise_width;
+ index_1("79.832879,128.061202,205.425028,329.525583,528.597273,847.931364,1360.180302,2181.887041,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_184_10_1) {
+ variable_1 : input_noise_width;
+ index_1("47.846010,81.822645,139.926929,239.292504,409.220031,699.817300,1196.774878,2046.634328,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_185_10_1) {
+ variable_1 : input_noise_width;
+ index_1("145.650256,216.723422,322.478266,479.838453,713.985921,1062.390667,1580.806984,2352.195665,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_186_10_1) {
+ variable_1 : input_noise_width;
+ index_1("131.912987,198.728483,299.386820,451.029802,679.481755,1023.647337,1542.136876,2323.247526,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_187_10_1) {
+ variable_1 : input_noise_width;
+ index_1("282.718308,387.206997,530.313229,726.309500,994.743222,1362.386252,1865.904948,2555.517036,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_188_10_4) {
+ variable_1 : input_noise_width;
+ index_1("270.504261,372.529657,513.035709,706.536066,973.018455,1340.009321,1845.417187,2541.448436,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_189_10_4) {
+ variable_1 : input_noise_width;
+ index_1("61.434442,101.828403,168.781930,279.758290,463.703079,768.594011,1273.954779,2111.596961,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_190_10_4) {
+ variable_1 : input_noise_width;
+ index_1("62.000456,102.648836,169.946871,281.366455,465.834301,771.241887,1276.879028,2114.019063,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_48) {
+    vil : 1.000000;
+    vih : 1.020000;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_191_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.683719,64.851898,114.649463,202.684885,358.319710,633.461223,1119.874541,1979.788093,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_192_10_4) {
+ variable_1 : input_noise_width;
+ index_1("60.645969,100.683940,167.154651,277.508780,460.717800,764.879911,1269.847352,2108.190156,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_193_10_4) {
+ variable_1 : input_noise_width;
+ index_1("60.390152,100.312224,166.625552,276.776582,459.745071,763.668404,1268.506109,2107.076501,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_194_10_4) {
+ variable_1 : input_noise_width;
+ index_1("181.383787,262.592406,380.159510,550.363415,796.770515,1153.498282,1669.939161,2417.599443,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_195_10_4) {
+ variable_1 : input_noise_width;
+ index_1("48.318551,82.529301,140.962124,240.766857,411.235854,702.401193,1199.718921,2049.150122,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_196_10_4) {
+ variable_1 : input_noise_width;
+ index_1("60.957369,101.136155,167.797957,278.398505,461.899112,766.350344,1271.474299,2109.540245,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_197_10_4) {
+ variable_1 : input_noise_width;
+ index_1("73.947881,119.761857,193.959614,314.126157,508.741176,823.928789,1334.389042,2161.101952,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_198_10_4) {
+ variable_1 : input_noise_width;
+ index_1("40.528980,70.762549,123.549577,215.714362,376.631688,657.589172,1148.133663,2004.611638,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_199_10_4) {
+ variable_1 : input_noise_width;
+ index_1("67.834285,111.052056,181.804216,297.633149,487.257630,797.693398,1305.910298,2137.916285,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_200_10_4) {
+ variable_1 : input_noise_width;
+ index_1("45.237777,77.906214,134.166148,231.054164,397.909812,685.260182,1180.120478,2032.343886,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_201_10_1) {
+ variable_1 : input_noise_width;
+ index_1("46.958917,80.493686,137.976640,236.509893,405.408694,694.923190,1191.188662,2041.852178,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_202_10_1) {
+ variable_1 : input_noise_width;
+ index_1("48.876035,83.361875,142.180155,242.499303,413.601404,705.429333,1203.164541,2052.090615,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_203_10_4) {
+ variable_1 : input_noise_width;
+ index_1("158.015832,232.740269,342.801302,504.909327,743.676954,1095.355904,1613.341049,2376.277271,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_204_10_4) {
+ variable_1 : input_noise_width;
+ index_1("145.462940,216.479522,322.167169,479.452670,713.526656,1061.878097,1580.298483,2351.817317,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_205_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.143464,138.952306,237.945760,407.464882,697.754101,1194.853364,2046.099852,3503.797813,6000.000000,6500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_206_10_4) {
+ variable_1 : input_noise_width;
+ index_1("41.453703,72.173276,125.657817,218.777471,380.904135,663.175963,1154.627418,2010.272609,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_207_10_4) {
+ variable_1 : input_noise_width;
+ index_1("20.843396,39.546306,75.031456,142.357653,270.096069,512.454969,972.284033,1844.720606,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_208_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.906913,77.407414,133.429517,229.996522,396.452010,683.376404,1177.956721,2030.479875,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_209_10_1) {
+ variable_1 : input_noise_width;
+ index_1("133.611270,200.965363,302.272982,454.650266,683.841681,1028.569607,1547.076560,2326.965398,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_210_10_1) {
+ variable_1 : input_noise_width;
+ index_1("131.652473,198.385031,298.943268,450.472886,678.810471,1022.888771,1541.374922,2322.673508,3500.000000,4000.000000");
+}
+power_lut_template(power_outputs_2) {
+ variable_1 : input_transition_time;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("4.86355,13.76355");
+}
+lu_table_template(del_2_2_2) {
+ variable_1 : input_net_transition;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("4.86355,13.76355");
+}
+noise_lut_template(noise_reject_211_10_4) {
+ variable_1 : input_noise_width;
+ index_1("23.544237,43.995428,82.211104,153.621997,287.062415,536.412959,1002.356450,1873.031653,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_212_10_4) {
+ variable_1 : input_noise_width;
+ index_1("48.866827,83.348134,142.160067,242.470750,413.562444,705.379496,1203.107873,2052.042289,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_213_10_1) {
+ variable_1 : input_noise_width;
+ index_1("48.987299,83.527900,142.422837,242.844181,414.071910,706.031111,1203.848697,2052.673973,3500.000000,4000.000000");
+}
+input_voltage(DC_49) {
+    vil : 0.550000;
+    vih : 0.720000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_50) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_214_10_1) {
+ variable_1 : input_noise_width;
+ index_1("307.883147,424.223943,584.526811,805.403838,1109.744380,1529.087062,2106.888113,2903.024707,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_215_10_1) {
+ variable_1 : input_noise_width;
+ index_1("500.000000,648.419777,840.896415,1090.507733,1414.213562,1834.008086,2378.414230,3084.421651,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_216_10_1) {
+ variable_1 : input_noise_width;
+ index_1("332.028080,453.195367,618.580334,844.319376,1152.437557,1572.997564,2147.032889,2930.551408,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_217_10_4) {
+ variable_1 : input_noise_width;
+ index_1("492.225789,639.589488,831.071273,1079.879319,1403.176096,1823.262212,2369.114683,3078.385735,4000.000000,4500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_218_10_4) {
+ variable_1 : input_noise_width;
+ index_1("500.000000,674.751859,910.580143,1228.831290,1658.312395,2237.898744,3020.052677,4075.572319,5500.000000,6000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_219_10_4) {
+ variable_1 : input_noise_width;
+ index_1("538.898499,692.350644,889.498516,1142.784537,1468.194127,1886.264580,2423.381214,3113.442605,4000.000000,4500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_220_10_4) {
+ variable_1 : input_noise_width;
+ index_1("554.421204,738.593002,983.944372,1310.798402,1746.229258,2326.304805,3099.074203,4128.547943,5500.000000,6000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_221_10_4) {
+ variable_1 : input_noise_width;
+ index_1("407.866788,542.576587,721.778191,960.166305,1277.288986,1699.150601,2260.344209,3006.888232,4000.000000,4500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_222_10_4) {
+ variable_1 : input_noise_width;
+ index_1("500.000000,666.760716,889.139705,1185.686853,1581.138830,2108.482517,2811.706626,3749.471047,5000.000000,5500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_223_10_4) {
+ variable_1 : input_noise_width;
+ index_1("500.000000,658.037006,866.025404,1139.753528,1500.000000,1974.111019,2598.076211,3419.260585,4500.000000,5000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_224_10_4) {
+ variable_1 : input_noise_width;
+ index_1("344.111729,467.594658,635.388873,863.395279,1173.220746,1594.225671,2166.306299,2943.675457,4000.000000,4500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_225_10_4) {
+ variable_1 : input_noise_width;
+ index_1("549.986023,724.734518,955.006309,1258.442957,1658.291324,2185.184556,2879.488951,3794.396494,5000.000000,5500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_226_10_4) {
+ variable_1 : input_noise_width;
+ index_1("628.061523,813.997677,1054.979796,1367.304110,1772.091312,2296.714823,2976.651904,3857.882777,5000.000000,5500.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_51) {
+    vil : 0.550000;
+    vih : 1.122000;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_52) {
+    vil : 0.550000;
+    vih : 0.570000;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_53) {
+    vil : 0.550000;
+    vih : 0.620000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_54) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_55) {
+    vol : 0.000081;
+    voh : 1.317900;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_56) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_227_10_4) {
+ variable_1 : input_noise_width;
+ index_1("47.846010,81.822645,139.926929,239.292504,409.220031,699.817300,1196.774878,2046.634328,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_228_10_4) {
+ variable_1 : input_noise_width;
+ index_1("48.876035,83.361875,142.180155,242.499303,413.601404,705.429333,1203.164541,2052.090615,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_229_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.364927,32.002456,62.582450,122.383200,239.326645,468.015570,915.228528,1789.776480,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_230_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.488439,64.549723,114.191420,202.009861,357.364711,632.194567,1118.381191,1978.467631,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_57) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_58) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_231_10_4) {
+ variable_1 : input_noise_width;
+ index_1("66.298323,108.848696,178.707968,293.403037,481.709591,790.871601,1298.454299,2131.804411,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_232_10_4) {
+ variable_1 : input_noise_width;
+ index_1("66.370969,108.953050,178.854811,293.603930,481.973433,791.196461,1298.809846,2132.096260,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_59) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_60) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_61) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_233_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.309386,31.907400,62.423084,122.123438,238.920177,467.419290,914.450993,1789.016064,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_234_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.490892,64.553519,114.197177,202.018348,357.376722,632.210504,1118.399986,1978.484256,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_62) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+input_voltage(DC_63) {
+    vil : 0.198000;
+    vih : 1.122000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_64) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_65) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_235_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.586140,56.894200,102.480074,184.591146,332.492844,598.899207,1078.760842,1943.106519,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_236_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.616568,64.748011,114.492024,202.452916,357.991601,633.026133,1119.361695,1979.334719,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_237_10_4) {
+ variable_1 : input_noise_width;
+ index_1("42.973085,74.482710,129.096482,223.755308,387.821861,672.188729,1165.065026,2019.338404,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_238_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.464162,32.172194,62.866854,122.846499,240.051175,469.077809,916.612847,1791.129522,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_239_10_4) {
+ variable_1 : input_noise_width;
+ index_1("18.990398,36.452373,69.970916,134.310296,257.810769,494.871908,949.914570,1823.376263,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_240_10_4) {
+ variable_1 : input_noise_width;
+ index_1("19.968299,38.089647,72.656224,138.592169,264.365369,504.278478,961.914128,1834.856793,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_241_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.515516,64.591634,114.254969,202.103540,357.497283,632.370454,1118.588615,1978.651094,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_66) {
+    vil : 0.728610;
+    vih : 0.761970;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_67) {
+    vil : 0.714450;
+    vih : 0.767120;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_242_10_4) {
+ variable_1 : input_noise_width;
+ index_1("63.364351,104.621965,172.743118,285.219121,470.930174,777.560875,1283.844075,2119.776937,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_243_10_4) {
+ variable_1 : input_noise_width;
+ index_1("32.345028,58.088492,104.321221,187.350660,336.463370,604.255140,1085.182839,1948.881714,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_244_10_4) {
+ variable_1 : input_noise_width;
+ index_1("54.509531,91.711099,154.301926,259.609629,436.787546,734.885530,1236.428894,2080.264677,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_245_10_4) {
+ variable_1 : input_noise_width;
+ index_1("10.016113,20.826693,43.305337,90.045607,187.233532,389.318225,809.516747,1683.243480,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_246_10_4) {
+ variable_1 : input_noise_width;
+ index_1("53.409259,90.089253,151.960048,256.321986,432.356803,729.287439,1230.141785,2074.968975,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_247_10_4) {
+ variable_1 : input_noise_width;
+ index_1("5.706984,12.731054,28.400241,63.354825,141.330979,315.278994,703.319576,1568.954593,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_248_10_4) {
+ variable_1 : input_noise_width;
+ index_1("83.559620,133.277061,212.576060,339.057459,540.794481,862.563743,1375.783662,2194.366153,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_249_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.158250,49.850850,91.504689,167.963197,308.308086,565.920853,1038.786937,1906.765397,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_68) {
+    vil : 0.754070;
+    vih : 0.760330;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_69) {
+    vil : 0.765690;
+    vih : 0.773150;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_70) {
+    vil : 0.760480;
+    vih : 0.769610;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_71) {
+    vil : 0.742020;
+    vih : 0.748280;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_250_10_4) {
+ variable_1 : input_noise_width;
+ index_1("38.748745,68.035243,119.456626,209.742550,368.267033,646.605127,1135.312564,1993.387562,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_251_10_4) {
+ variable_1 : input_noise_width;
+ index_1("9.398758,19.699044,41.287620,86.535548,181.371585,380.140330,796.743715,1669.911077,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_252_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.791089,50.865800,93.099252,170.398787,311.879484,570.830430,1044.786196,1912.263498,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_253_10_4) {
+ variable_1 : input_noise_width;
+ index_1("84.820226,135.034737,214.976793,342.245430,544.858506,867.420761,1380.943435,2198.477205,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_72) {
+    vil : 0.736740;
+    vih : 0.737930;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_73) {
+    vil : 0.751080;
+    vih : 0.752080;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_254_10_4) {
+ variable_1 : input_noise_width;
+ index_1("77.128105,124.256634,200.182684,322.502756,519.565557,837.042050,1348.510085,2172.506685,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_255_10_4) {
+ variable_1 : input_noise_width;
+ index_1("96.574532,151.273651,236.953959,371.162976,581.387014,910.680435,1426.483281,2234.433146,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_74) {
+    vil : 0.002500;
+    vih : 0.752080;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_75) {
+    vol : 0.002498;
+    voh : 0.050050;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_256_10_4) {
+ variable_1 : input_noise_width;
+ index_1("41.584756,72.372887,125.955643,219.209497,381.505762,663.961408,1155.538908,2011.065931,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_257_10_4) {
+ variable_1 : input_noise_width;
+ index_1("18.972862,36.422918,69.922450,134.232766,257.691706,494.700491,949.695199,1823.165708,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_258_10_4) {
+ variable_1 : input_noise_width;
+ index_1("52.934564,89.388249,150.945968,254.895756,430.431149,726.849976,1227.399292,2072.654704,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_259_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.082863,49.729748,91.314120,167.671644,307.879879,565.331249,1038.065305,1906.102979,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_76) {
+    vil : 0.733760;
+    vih : 0.740650;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_77) {
+    vil : 0.748480;
+    vih : 0.754370;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_78) {
+    vil : 0.002500;
+    vih : 0.754370;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_260_10_4) {
+ variable_1 : input_noise_width;
+ index_1("4.930758,11.202320,25.450849,57.822462,131.368388,298.459333,678.077692,1540.542737,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_261_10_4) {
+ variable_1 : input_noise_width;
+ index_1("43.923253,75.921746,131.231436,226.834743,392.085939,677.724151,1171.452427,2024.866290,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_262_10_4) {
+ variable_1 : input_noise_width;
+ index_1("19.792602,37.796234,72.176226,137.828750,263.199744,502.609980,959.791177,1832.830903,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_263_10_4) {
+ variable_1 : input_noise_width;
+ index_1("42.485593,73.742860,127.996552,222.165474,385.615838,669.319007,1161.746716,2016.460638,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_264_10_4) {
+ variable_1 : input_noise_width;
+ index_1("28.764959,52.422086,95.535512,174.106655,317.296956,578.251064,1053.821306,1920.514143,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_265_10_4) {
+ variable_1 : input_noise_width;
+ index_1("48.843682,83.313591,142.109565,242.398968,413.464495,705.254193,1202.965391,2051.920775,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_266_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.518882,32.265735,63.023496,123.101521,240.449757,469.661833,917.373507,1791.872560,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_267_10_4) {
+ variable_1 : input_noise_width;
+ index_1("61.159586,101.429661,168.215269,278.975363,462.664620,767.302704,1272.527473,2110.413741,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_79) {
+    vil : 0.706180;
+    vih : 0.713590;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_80) {
+    vil : 0.716390;
+    vih : 0.722040;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_81) {
+    vil : 0.727010;
+    vih : 0.733060;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_82) {
+    vil : 0.741520;
+    vih : 0.747100;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_268_10_4) {
+ variable_1 : input_noise_width;
+ index_1("49.683352,84.565464,143.937906,244.995058,417.003277,709.776493,1208.102425,2056.297276,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_269_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.596632,40.794000,77.056014,145.551535,274.933107,519.322682,980.951515,1852.924797,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_270_10_4) {
+ variable_1 : input_noise_width;
+ index_1("33.208813,59.443611,106.403772,190.462228,340.926450,610.256668,1092.356433,1955.312639,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_271_10_4) {
+ variable_1 : input_noise_width;
+ index_1("31.275042,56.403579,101.722127,183.452740,330.851395,596.680355,1076.094737,1940.703888,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_272_10_4) {
+ variable_1 : input_noise_width;
+ index_1("49.570771,84.397770,143.693217,244.647940,416.530550,709.172940,1207.417460,2055.714258,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_273_10_4) {
+ variable_1 : input_noise_width;
+ index_1("37.053064,65.422874,115.514129,203.957930,360.119042,635.845461,1122.682790,1982.268843,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_83) {
+    vil : 0.750660;
+    vih : 0.758170;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_84) {
+    vil : 0.736290;
+    vih : 0.741620;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_85) {
+    vil : 0.751680;
+    vih : 0.755710;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_274_10_4) {
+ variable_1 : input_noise_width;
+ index_1("4.797360,10.936680,24.932666,56.839722,129.579161,295.405369,673.444180,1535.270214,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_275_10_4) {
+ variable_1 : input_noise_width;
+ index_1("17.998121,34.780216,67.210541,129.880065,250.984908,485.012260,937.255130,1811.185511,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_276_10_4) {
+ variable_1 : input_noise_width;
+ index_1("16.155553,31.643907,61.980971,121.402227,237.790737,465.761097,912.287005,1786.898015,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_277_10_4) {
+ variable_1 : input_noise_width;
+ index_1("18.648760,35.877916,69.024692,132.795004,255.481230,491.514415,945.613189,1819.243294,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_86) {
+    vil : 0.716160;
+    vih : 0.771150;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_87) {
+    vil : 0.731620;
+    vih : 0.776310;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_278_10_4) {
+ variable_1 : input_noise_width;
+ index_1("22.938256,43.003009,80.618981,151.138727,283.344128,531.193405,995.843587,1866.936676,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_279_10_4) {
+ variable_1 : input_noise_width;
+ index_1("21.969337,41.409342,78.051224,147.116406,277.295290,522.665557,985.156595,1856.892049,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_280_10_4) {
+ variable_1 : input_noise_width;
+ index_1("20.717022,39.336428,74.690008,141.817589,269.276024,511.287619,970.806925,1843.318810,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_281_10_4) {
+ variable_1 : input_noise_width;
+ index_1("36.885433,65.163819,115.121960,203.380738,359.303514,634.765200,1121.410852,1981.145623,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_282_10_4) {
+ variable_1 : input_noise_width;
+ index_1("53.200199,89.780622,151.513718,255.694452,431.509789,728.215637,1228.936232,2073.951979,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_283_10_4) {
+ variable_1 : input_noise_width;
+ index_1("17.799007,34.443305,66.652102,128.980151,249.592720,482.993122,934.652085,1808.668653,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_88) {
+    vil : 0.738900;
+    vih : 0.795610;
+    vimin : 0;
+    vimax : VDD;
+}
+input_voltage(DC_89) {
+    vil : 0.741260;
+    vih : 0.775390;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_284_10_1) {
+ variable_1 : input_noise_width;
+ index_1("82.282637,133.706394,217.268192,353.053177,573.699006,932.240724,1514.858417,2461.591694,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_285_10_1) {
+ variable_1 : input_noise_width;
+ index_1("44.798884,78.544594,137.709974,241.442931,423.314938,742.185890,1301.253147,2281.449668,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_286_10_1) {
+ variable_1 : input_noise_width;
+ index_1("81.143464,132.085258,215.008266,349.990263,569.713837,927.379676,1509.587808,2457.305685,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_287_10_1) {
+ variable_1 : input_noise_width;
+ index_1("148.423621,224.038494,338.175597,510.460200,770.515727,1163.057345,1755.580505,2649.966418,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_288_10_1) {
+ variable_1 : input_noise_width;
+ index_1("268.308888,376.108524,527.219291,739.042491,1035.970826,1452.197356,2035.653041,2853.526268,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_289_10_1) {
+ variable_1 : input_noise_width;
+ index_1("152.449731,229.347140,345.032492,519.070875,780.896232,1174.789330,1767.366665,2658.846867,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_290_10_1) {
+ variable_1 : input_noise_width;
+ index_1("79.832879,130.216665,212.398449,346.446451,565.094254,921.734125,1503.455027,2452.309138,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_291_10_1) {
+ variable_1 : input_noise_width;
+ index_1("290.320971,402.973146,559.337328,776.374927,1077.628824,1495.777160,2076.178051,2881.789757,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_292_10_1) {
+ variable_1 : input_noise_width;
+ index_1("247.101185,349.963679,495.645444,701.971151,994.185465,1408.041824,1994.176988,2824.306632,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_293_10_1) {
+ variable_1 : input_noise_width;
+ index_1("240.742489,342.070917,486.048444,690.626061,981.310325,1394.343493,1981.222174,2815.117883,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_294_10_1) {
+ variable_1 : input_noise_width;
+ index_1("1010.000000,1199.606198,1424.806961,1692.284417,2009.975124,2387.305561,2835.471830,3367.771863,4000.000000,4500.000000");
+}
+noise_lut_template(noise_reject_295_10_1) {
+ variable_1 : input_noise_width;
+ index_1("61.228419,101.529541,168.357240,279.171559,462.924905,767.626432,1272.885371,2110.710496,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_296_10_1) {
+ variable_1 : input_noise_width;
+ index_1("40.097093,70.102303,122.560826,214.274788,374.619576,654.952587,1145.062669,2001.928905,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_297_10_1) {
+ variable_1 : input_noise_width;
+ index_1("290.320971,396.302774,540.973282,738.455826,1008.029463,1376.011078,1878.324551,2564.007786,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_298_10_1) {
+ variable_1 : input_noise_width;
+ index_1("267.090307,368.412509,508.171853,700.949687,966.858870,1333.642189,1839.566809,2537.416764,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_299_10_1) {
+ variable_1 : input_noise_width;
+ index_1("326.149301,438.781089,590.308927,794.165103,1068.420589,1437.386950,1933.771461,2601.576467,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_300_10_4) {
+ variable_1 : input_noise_width;
+ index_1("77.746527,125.127965,201.385298,324.116501,521.644367,839.552584,1351.205123,2174.676512,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_301_10_4) {
+ variable_1 : input_noise_width;
+ index_1("65.610608,107.860098,177.315850,291.497146,479.204683,787.785171,1295.073894,2129.027626,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_302_10_4) {
+ variable_1 : input_noise_width;
+ index_1("69.615091,113.598861,185.372181,302.492868,493.612014,805.482857,1314.397979,2144.852659,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_90) {
+    vil : 0.198000;
+    vih : 0.720000;
+    vimin : 0;
+    vimax : VDD;
+}
+noise_lut_template(noise_reject_303_10_4) {
+ variable_1 : input_noise_width;
+ index_1("40.097093,70.102303,122.560826,214.274788,374.619576,654.952587,1145.062669,2001.928905,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_304_10_4) {
+ variable_1 : input_noise_width;
+ index_1("381.036547,502.752582,663.348858,875.245048,1154.828089,1523.719464,2010.447292,2652.652544,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_305_10_4) {
+ variable_1 : input_noise_width;
+ index_1("159.388878,234.508867,345.032911,507.646944,746.900981,1098.915460,1616.834386,2378.848535,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_306_10_4) {
+ variable_1 : input_noise_width;
+ index_1("97.782863,152.928493,239.174058,374.058678,585.012837,914.936721,1430.924502,2237.908791,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_307_10_4) {
+ variable_1 : input_noise_width;
+ index_1("70.658519,115.087318,187.452143,305.318661,497.297513,809.989197,1319.295758,2148.845074,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_308_10_4) {
+ variable_1 : input_noise_width;
+ index_1("75.415114,121.838516,196.838844,318.007243,513.763467,830.021659,1340.959408,2166.415917,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_309_10_4) {
+ variable_1 : input_noise_width;
+ index_1("71.005757,115.582045,188.142619,306.255569,498.517954,811.479615,1320.913638,2150.162258,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_310_10_1) {
+ variable_1 : input_noise_width;
+ index_1("134.403475,202.007591,303.616160,456.333211,685.865994,1030.852347,1549.364702,2328.685564,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_311_10_1) {
+ variable_1 : input_noise_width;
+ index_1("146.411339,217.714011,323.741255,481.404019,715.848927,1064.469066,1582.868044,2353.728564,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_312_10_4) {
+ variable_1 : input_noise_width;
+ index_1("96.691670,151.434188,237.169483,371.444284,581.739499,911.094501,1426.915641,2234.771743,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_313_10_4) {
+ variable_1 : input_noise_width;
+ index_1("117.540786,179.648469,274.573395,419.655950,641.399057,980.309584,1498.297934,2289.987504,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_314_10_4) {
+ variable_1 : input_noise_width;
+ index_1("133.754014,201.153215,302.515151,454.953785,684.206877,1028.981549,1547.489602,2327.276006,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_315_10_4) {
+ variable_1 : input_noise_width;
+ index_1("163.321416,239.563832,351.398064,515.439240,756.058832,1109.005511,1626.716297,2386.107089,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_316_10_4) {
+ variable_1 : input_noise_width;
+ index_1("109.072792,168.271428,259.599787,400.496094,617.863068,953.204729,1470.551168,2268.684440,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_317_10_4) {
+ variable_1 : input_noise_width;
+ index_1("121.351171,184.734063,281.222452,428.107661,651.712437,992.108151,1510.295841,2299.137979,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_318_10_4) {
+ variable_1 : input_noise_width;
+ index_1("101.064092,157.409440,245.168500,381.855073,594.747275,926.331338,1442.780462,2247.160790,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_319_10_4) {
+ variable_1 : input_noise_width;
+ index_1("69.155172,112.941900,184.452910,301.242285,491.978762,803.483158,1312.221653,2143.076244,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_320_10_4) {
+ variable_1 : input_noise_width;
+ index_1("77.458724,124.722571,200.825920,323.366093,520.677957,838.385783,1349.952907,2173.668598,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_321_10_4) {
+ variable_1 : input_noise_width;
+ index_1("62.097559,102.789492,170.146456,281.641791,466.198945,771.694626,1277.378686,2114.432643,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_322_10_4) {
+ variable_1 : input_noise_width;
+ index_1("62.301396,103.084664,170.565167,282.219246,466.963474,772.643569,1278.425656,2115.298985,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_323_10_4) {
+ variable_1 : input_noise_width;
+ index_1("41.300257,71.939459,125.308802,218.270976,380.198501,662.254338,1153.557435,2009.340942,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_324_10_1) {
+ variable_1 : input_noise_width;
+ index_1("325.048235,437.484672,588.813651,792.488373,1066.615593,1435.565317,1932.137307,2600.476990,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_325_10_1) {
+ variable_1 : input_noise_width;
+ index_1("202.008676,288.540829,412.139773,588.683387,840.850977,1201.036721,1715.511125,2450.365062,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_326_10_1) {
+ variable_1 : input_noise_width;
+ index_1("158.211015,232.991798,343.118827,505.299030,744.136111,1095.863082,1613.839022,2376.643974,3500.000000,4000.000000");
+}
+noise_lut_template(noise_reject_327_10_4) {
+ variable_1 : input_noise_width;
+ index_1("134.871038,202.622359,304.407982,457.324748,687.057955,1032.195687,1550.710431,2329.696656,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_328_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.289915,130.103983,208.230582,333.271698,533.399196,853.701960,1366.344461,2186.825465,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_329_10_4) {
+ variable_1 : input_noise_width;
+ index_1("81.578760,130.508401,208.785261,334.011334,534.346012,854.838238,1367.556595,2187.795256,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_330_10_4) {
+ variable_1 : input_noise_width;
+ index_1("82.753206,132.150932,211.035556,337.008640,538.178615,859.432631,1372.452241,2191.707746,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+output_voltage(DC_91) {
+    vol : 0.000001;
+    voh : 1.302900;
+    vomin : 0;
+    vomax : VDD;
+}
+input_voltage(DC_92) {
+    vil : 1.200000;
+    vih : 1.122000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_93) {
+    vol : 1.320000;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+output_voltage(DC_94) {
+    vol : 0.000001;
+    voh : 0.000001;
+    vomin : 0;
+    vomax : VDD;
+}
+power_lut_template(power_outputs_3) {
+ variable_1 : input_transition_time;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("7.26356,16.16356");
+}
+lu_table_template(del_3_2_2) {
+ variable_1 : input_net_transition;
+ index_1("4.500000,195.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("7.26356,16.16356");
+}
+noise_lut_template(noise_reject_331_10_1) {
+ variable_1 : input_noise_width;
+ index_1("133.611270,204.347912,312.534033,477.996184,731.057508,1118.094868,1710.038021,2615.368441,4000.000000,4500.000000");
+}
+input_voltage(DC_95) {
+    vil : 0.750000;
+    vih : 0.920000;
+    vimin : 0;
+    vimax : VDD;
+}
+output_voltage(DC_96) {
+    vol : 0.000001;
+    voh : 1.320000;
+    vomin : 0;
+    vomax : VDD;
+}
+noise_lut_template(noise_reject_332_10_4) {
+ variable_1 : input_noise_width;
+ index_1("3.599964,8.506863,20.102065,47.502000,112.249166,265.249366,626.795087,1481.142399,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_333_10_4) {
+ variable_1 : input_noise_width;
+ index_1("28.733073,52.371236,95.456074,173.986005,317.121043,578.010606,1053.529142,1920.247899,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_334_10_4) {
+ variable_1 : input_noise_width;
+ index_1("35.052028,62.320726,110.803089,197.002271,350.260041,622.744581,1107.208266,1968.560116,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_335_10_4) {
+ variable_1 : input_noise_width;
+ index_1("19.451285,37.225305,71.240710,136.338404,260.920483,499.342051,955.626334,1828.849958,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_336_10_4) {
+ variable_1 : input_noise_width;
+ index_1("44.302661,76.495271,132.080702,228.057389,393.775714,679.913567,1173.974020,2027.044417,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_337_10_4) {
+ variable_1 : input_noise_width;
+ index_1("29.443613,53.502702,97.221056,176.662737,321.018138,583.329836,1059.982775,1926.120379,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+noise_lut_template(noise_reject_338_10_4) {
+ variable_1 : input_noise_width;
+ index_1("27.600320,50.560150,92.619535,169.666788,310.807206,569.357861,1042.988601,1910.617728,3500.000000,4000.000000");
+ variable_2 : total_output_net_capacitance;
+ index_2("12.00000,20.00000,50.00000,100.00000");
+}
+input_voltage(DC_97) {
+    vil : 0.713190;
+    vih : 0.765870;
+    vimin : 0;
+    vimax : VDD;
+}
+
+scaling_factors("Training_average_factors") {
+k_process_cell_fall             :  0.0000; /* average of 58 max=0.0000 [an02d1] min=0.0000 [an02d1] */
+k_process_cell_rise             :  0.0000; /* average of 58 max=0.0000 [an02d1] min=0.0000 [an02d1] */
+k_temp_cell_fall                : -0.0014; /* average of 58 max=0.0018 [lat2rsa] min=-0.0029 [full_adder_pro] */
+k_temp_cell_rise                : -0.0009; /* average of 58 max=0.0018 [lat2rsa] min=-0.0034 [nd04d1] */
+k_volt_cell_fall                : -0.5947; /* average of 58 max=-0.2730 [fppreobs] min=-0.8359 [slbhb1] */
+k_volt_cell_rise                : -0.5753; /* average of 58 max=-0.2351 [fnpreobs] min=-0.8131 [slbhb1] */
+k_volt_rise_transition          : -0.6283; /* average of 58 max=1.4902 [an02d1] min=-2.5943 [oai21d1] */
+k_volt_fall_transition          : -0.8772; /* average of 58 max=0.1122 [fppre] min=-2.5514 [nd04d1] */
+k_temp_rise_transition          : -0.0000; /* average of 58 max=0.0038 [lpp] min=-0.0034 [sdnfb1] */
+k_temp_fall_transition          : -0.0005; /* average of 58 max=0.0030 [lat2rsa] min=-0.0038 [nd04d1] */
+k_process_rise_transition       :  0.0000; /* average of 58 max=0.0000 [an02d1] min=0.0000 [an02d1] */
+k_process_fall_transition       :  0.0000; /* average of 58 max=0.0000 [an02d1] min=0.0000 [an02d1] */
+}
+ 
+/* 
+-- Description    :    INVERTER
+-- Filename       :    inv0d1.cell
+-- Programmer     :    A Student
+-- Date           :    29-NOV-2004
+-- Version        :    1.0a
+-- Copyright      :    COPYRIGHT 1994-2003 (C) by Synopsys Inc.
+*/ 
+
+/* Output transitions (and template slope indexes) have been adjusted to
+   60.00% of the acquired values */
+
+cell(INV0D1) {
+	scaling_factors : Training_average_factors ;
+	cell_leakage_power : 1946.300 ;
+	pin(I) {
+		input_voltage : DC_46;
+		direction : input;
+		capacitance : 3.99987;
+		fanout_load : 1.333;
+		rise_capacitance : 4.29553;
+		fall_capacitance : 3.70420;
+		hyperbolic_noise_low() {
+			height_coefficient : 0.686520 ;
+			area_coefficient   : 23.835510 ;
+			width_coefficient  : -14.685030 ;
+		}
+		hyperbolic_noise_high() {
+			height_coefficient : 0.496120 ;
+			area_coefficient   : 5.836774 ;
+			width_coefficient  : 8.258962 ;
+		}
+	}
+	pin(ZN) {
+		output_voltage : DC_47;
+		direction : output;
+		internal_power() {
+		rise_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'ZN' */
+		values( " 8.49, 9.55",\
+ 			" 13.8, 11.4");
+ 		}
+		fall_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'ZN' */
+		values( " 4.46, 4.96",\
+ 			" 6.21, 4.38");
+ 		}
+		related_pin  : "I";
+		}
+		max_transition : 9000.0;
+                function  : "(I)'";
+		timing() {
+			related_pin     : "I";
+			timing_sense    : negative_unate;
+			cell_fall(del_0_2_2) {
+			values( " 11.563929, 22.155493",\
+ 				" 181.732470, 212.885790");
+ 			}
+			fall_transition(del_0_2_2)  {
+			values( " 9.173097, 33.203163",\
+ 				" 40.584138, 68.104953");
+ 			}
+			cell_rise(del_0_2_2) {
+			values( " 7.981406, 14.870931",\
+ 				" 133.190410, 161.600350");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 4.994082, 14.228809",\
+ 				" 43.071549, 69.722754");
+ 			}
+			steady_state_current_low(current_low_1)  {
+			values("-127717.000000, -116355.000000, -104992.000000, -93630.000000, -82267.300000, -70904.400000, \
+			        -59541.400000, -48178.100000, -36814.700000, -25451.100000, -14087.200000, -4717.910000, \
+			        -1565.790000, -974.793000, -841.202000, -768.427000, -702.034000, -634.831000, \
+			        -565.738000, -494.432000, -420.647000, -344.069000, -264.306000, -180.853000, \
+			        -93.049100, -0.001474, 46.242900, 89.069900, 128.678000, 165.250000, \
+			        198.958000, 229.960000, 258.405000, 284.431000, 308.170000, 329.748000, \
+			        349.290000, 366.925000, 382.799000, 397.094000, 410.052000, 421.956000, \
+			        433.072000, 443.582000, 453.595000, 463.173000, 472.359000, 481.182000, \
+			        489.669000, 497.840000, 505.717000, 513.316000, 520.654000, 527.747000, \
+			        534.606000, 541.247000, 547.680000, 553.917000, 559.967000, 565.841000, \
+			        571.547000, 577.094000, 582.489000, 587.740000, 592.854000, 597.836000, \
+			        602.693000, 607.431000, 612.055000, 616.570000, 620.981000, 625.292000, \
+			        629.507000, 633.630000, 637.665000, 641.616000, 649.279000, 656.643000, \
+			        663.743000, 670.652000, 677.567000, 685.162000, 695.785000, 715.047000, \
+			        748.600000, 796.861000, 857.072000, 926.641000, 1004.850000, 1100.550000, \
+			        1293.000000, 2187.710000, 7585.470000, 22996.900000, 39158.000000, 55319.600000, \
+			        71481.700000, 87644.100000, 103807.000000, 119969.000000, 136132.000000");
+			}
+			steady_state_current_high(current_high_1)  {
+			values("-128901.000000, -117517.000000, -106132.000000, -94747.100000, -83362.300000, -71977.500000, \
+			        -60592.900000, -49208.400000, -37824.200000, -26440.500000, -15057.400000, -5487.400000, \
+			        -2163.930000, -1539.090000, -1415.210000, -1368.240000, -1337.400000, -1312.210000, \
+			        -1289.500000, -1267.850000, -1246.570000, -1225.340000, -1203.990000, -1182.460000, \
+			        -1160.710000, -1138.680000, -1127.560000, -1116.360000, -1105.060000, -1093.680000, \
+			        -1082.190000, -1070.580000, -1058.850000, -1046.990000, -1034.970000, -1022.790000, \
+			        -1010.430000, -997.855000, -985.053000, -971.993000, -958.646000, -944.975000, \
+			        -930.944000, -916.511000, -901.630000, -886.255000, -870.335000, -853.819000, \
+			        -836.655000, -818.793000, -800.181000, -780.773000, -760.522000, -739.387000, \
+			        -717.328000, -694.311000, -670.303000, -645.275000, -619.202000, -592.059000, \
+			        -563.827000, -534.486000, -504.019000, -472.412000, -439.651000, -405.722000, \
+			        -370.614000, -334.317000, -296.819000, -258.113000, -218.188000, -177.036000, \
+			        -134.649000, -91.018700, -46.138100, 0.000523, 95.286300, 193.566000, \
+			        294.187000, 396.596000, 500.324000, 604.971000, 710.190000, 815.682000, \
+			        921.190000, 1026.490000, 1131.400000, 1235.920000, 1341.180000, 1457.110000, \
+			        1661.550000, 2542.800000, 7809.810000, 23141.500000, 39301.700000, 55461.300000, \
+			        71620.100000, 87778.300000, 103936.000000, 120092.000000, 136248.000000");
+			}
+			noise_immunity_low(noise_reject_176_10_4)  {
+			values("1.980000, 1.894094, 2.014360, 2.422264", \
+				"1.701415, 1.706522, 1.888632, 2.283089", \
+				"1.360207, 1.433501, 1.669954, 2.030309", \
+				"1.062753, 1.144690, 1.375961, 1.667201", \
+				"0.871101, 0.926108, 1.092607, 1.289186", \
+				"0.770500, 0.798953, 0.894795, 1.007168", \
+				"0.723326, 0.736005, 0.785689, 0.844696", \
+				"0.702378, 0.707329, 0.733203, 0.764692", \
+				"0.693302, 0.694762, 0.709616, 0.728339", \
+				"0.692457, 0.693588, 0.707395, 0.724902") ;
+			}
+			noise_immunity_high(noise_reject_177_10_4)  {
+			values("2.640000, 1.694240, 1.741194, 2.046798", \
+				"0.903889, 1.038836, 1.401544, 1.692037", \
+				"0.649153, 0.751281, 1.076179, 1.311707", \
+				"0.563119, 0.617965, 0.829653, 0.992645", \
+				"0.527201, 0.554580, 0.674026, 0.775589", \
+				"0.510907, 0.524083, 0.586808, 0.648144", \
+				"0.503237, 0.509326, 0.541162, 0.579688", \
+				"0.499565, 0.502166, 0.518127, 0.544671", \
+				"0.497792, 0.498686, 0.506716, 0.527205", \
+				"0.497582, 0.498275, 0.505356, 0.525117") ;
+			}
+		}
+	}
+}	/* cell(INV0D1) */ 
+
+
+/*-- Description    :    DFF with falling edge clock,low clear,low preset,q and qb outputs
+-- Filename       :    dfbfb1.cell
+-- Programmer     :    A Student
+-- Date           :    29-NOV-2004
+-- Version        :    1.0a
+-- Copyright      :    COPYRIGHT 1994-2003 (C) by Synopsys Inc.
+*/ 
+
+/* Output transitions (and template slope indexes) have been adjusted to
+   60.00% of the acquired values */
+
+cell(DFBFB1) {
+	scaling_factors : Training_average_factors ;
+	cell_leakage_power : 203560.000 ;
+	ff (IQ,IQN) {
+		clocked_on : "CPN'" ;
+		next_state : "D" ;
+		clear : "CDN'" ;
+		preset : "SDN'" ;
+		clear_preset_var2 : "L" ;
+		clear_preset_var1 : "L" ;
+	}
+	pin(D) {
+		input_voltage : DC_17;
+		nextstate_type : data;
+		direction : input;
+		internal_power() {
+		rise_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'D' */
+		values( " 16.8, 17.5");
+ 		}
+		fall_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'D' */
+		values( " 25.8, 28.5");
+ 		}
+		}
+		capacitance : 3.15334;
+		fanout_load : 1.051;
+		rise_capacitance : 3.34144;
+		fall_capacitance : 2.96524;
+		hyperbolic_noise_high() {
+			height_coefficient : 0.590073 ;
+			area_coefficient   : 118.419373 ;
+			width_coefficient  : 51.305187 ;
+		}
+		hyperbolic_noise_low() {
+			height_coefficient : 0.755419 ;
+			area_coefficient   : 103.105865 ;
+			width_coefficient  : 30.682465 ;
+		}
+		timing() {
+			timing_type     : setup_falling;
+			related_pin     : "CPN";
+			fall_constraint(vio_0_2_2) {
+			values( " 44.676600, 200.312000",\
+ 				" -104.085000, 45.960600");
+ 			}
+			rise_constraint(vio_0_2_2) {
+			values( " 23.679000, 216.400000",\
+ 				" -133.240000, 59.480700");
+ 			}
+		}
+		timing() {
+			timing_type     : hold_falling;
+			related_pin     : "CPN";
+			fall_constraint(vio_0_2_2) {
+			values( " -18.467300, -170.402000",\
+ 				" 108.240000, -42.939400");
+ 			}
+			rise_constraint(vio_0_2_2) {
+			values( " -0.201546, -184.073000",\
+ 				" 149.102000, -42.939400");
+ 			}
+		}
+	}
+	pin(CPN) {
+		input_voltage : DC_16;
+		direction : input;
+		internal_power() {
+		rise_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'CPN' */
+		values( " 37.8, 37.5");
+ 		}
+		fall_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'CPN' */
+		values( " 29.7, 31.7");
+ 		}
+		}
+		capacitance : 3.51490;
+		fanout_load : 1.172;
+		rise_capacitance : 3.75049;
+		fall_capacitance : 3.27931;
+		clock : true;
+		hyperbolic_noise_high() {
+			height_coefficient : 0.599459 ;
+			area_coefficient   : 45.593021 ;
+			width_coefficient  : 58.788193 ;
+		}
+		hyperbolic_noise_low() {
+			height_coefficient : 0.762638 ;
+			area_coefficient   : 61.041485 ;
+			width_coefficient  : 12.284386 ;
+		}
+		min_pulse_width_low  : 57.242300;
+		min_pulse_width_high : 59.729800;
+	}
+	pin(SDN) {
+		input_voltage : DC_17;
+		direction : input;
+		internal_power() {
+		rise_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'SDN' */
+		values( " 18.0, 16.1");
+ 		}
+		fall_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'SDN' */
+		values( " 6.25, 5.85");
+ 		}
+		}
+		capacitance : 6.71775;
+		fanout_load : 2.239;
+		rise_capacitance : 6.79121;
+		fall_capacitance : 6.64430;
+		hyperbolic_noise_low() {
+			height_coefficient : 0.754396 ;
+			area_coefficient   : 101.874817 ;
+			width_coefficient  : 33.335835 ;
+		}
+		hyperbolic_noise_high() {
+			height_coefficient : 0.586941 ;
+			area_coefficient   : 143.900757 ;
+			width_coefficient  : -13.253030 ;
+		}
+		min_pulse_width_low  : 55.584000;
+		timing() {
+			timing_type     : recovery_falling;
+			related_pin     : "CPN";
+			rise_constraint(vio_0_2_2) {
+			values( " 19.147100, 211.037000",\
+ 				" -146.307000, 35.235200");
+ 			}
+		}
+		timing() {
+			timing_type     : removal_falling;
+			related_pin     : "CPN";
+			rise_constraint(vio_0_2_2) {
+			values( " 2.379230, -174.405000",\
+ 				" 153.709000, -21.941800");
+ 			}
+		}
+	}
+	pin(CDN) {
+		input_voltage : DC_17;
+		direction : input;
+		internal_power() {
+		rise_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'CDN' */
+		values( " 7.20, 6.85");
+ 		}
+		fall_power(power_inputs_0) {  /* short-circuit power [in fJ] for pin 'CDN' */
+		values( " 8.12, 6.93");
+ 		}
+		}
+		capacitance : 7.21583;
+		fanout_load : 2.405;
+		rise_capacitance : 7.41452;
+		fall_capacitance : 7.01715;
+		hyperbolic_noise_low() {
+			height_coefficient : 0.760362 ;
+			area_coefficient   : 59.782059 ;
+			width_coefficient  : 15.153825 ;
+		}
+		hyperbolic_noise_high() {
+			height_coefficient : 0.604226 ;
+			area_coefficient   : 46.483032 ;
+			width_coefficient  : 56.999779 ;
+		}
+		min_pulse_width_low  : 45.370400;
+		timing() {
+			timing_type     : recovery_falling;
+			related_pin     : "CPN";
+			rise_constraint(vio_0_2_2) {
+			values( " -30.401200, 152.803000",\
+ 				" -192.381000, -43.619200");
+ 			}
+		}
+		timing() {
+			timing_type     : removal_falling;
+			related_pin     : "CPN";
+			rise_constraint(vio_0_2_2) {
+			values( " 43.468100, -84.220700",\
+ 				" 197.668000, 67.184800");
+ 			}
+		}
+	}
+	pin(Q) {
+		output_voltage : DC_6;
+		direction : output;
+		internal_power() {
+		rise_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'Q' */
+		values( " 11.1, 4.31",\
+ 			" 11.0, 3.93");
+ 		}
+		fall_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'Q' */
+		values( " 12.9, 20.6",\
+ 			" 12.9, 20.5");
+ 		}
+		related_pin  : "CPN";
+		}
+		internal_power() {
+		power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'Q' */
+		values( " 25.1, 16.9",\
+ 			" 27.0, 18.6");
+ 		}
+		related_pin  : "SDN";
+		}
+		internal_power() {
+		rise_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'Q' */
+		values( " 24.1, 25.4",\
+ 			" 23.3, 22.4");
+ 		}
+		fall_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'Q' */
+		values( " 27.5, 37.6",\
+ 			" 29.7, 37.3");
+ 		}
+		related_pin  : "CDN";
+		}
+		max_transition : 9000.0;
+                function  : "IQ";
+		timing() {
+			timing_type     : falling_edge;
+			related_pin     : "CPN";
+			cell_fall(del_0_2_2) {
+			values( " 90.183164, 103.790290",\
+ 				" 245.657140, 258.987170");
+ 			}
+			fall_transition(del_0_2_2)  {
+			values( " 14.812388, 26.737511",\
+ 				" 14.676531, 26.610682");
+ 			}
+			cell_rise(del_0_2_2) {
+			values( " 105.602260, 116.905770",\
+ 				" 259.331850, 269.764010");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 19.953636, 28.929773",\
+ 				" 25.561424, 25.785331");
+ 			}
+			steady_state_current_low(current_low_2)  {
+			values("-125386.000000, -114366.000000, -103345.000000, -92324.600000, -81303.900000, -70282.900000, \
+			        -59261.800000, -48240.400000, -37219.000000, -26197.300000, -15908.200000, -8186.330000, \
+			        -2032.360000, -1372.150000, -842.359000, -769.563000, -698.554000, -633.807000, \
+			        -568.195000, -499.550000, -429.770000, -356.019000, -280.780000, -200.327000, \
+			        -118.281000, -30.649500, 15.142500, 58.628200, 97.918700, 136.485000, \
+			        169.979000, 202.828000, 231.162000, 258.919000, 282.642000, 305.850000, \
+			        325.460000, 344.618000, 360.618000, 376.250000, 389.311000, 402.126000, \
+			        413.221000, 424.169000, 434.084000, 443.892000, 452.954000, 461.927000, \
+			        470.278000, 478.553000, 486.288000, 493.956000, 501.149000, 508.282000, \
+			        514.995000, 521.654000, 527.939000, 534.176000, 540.078000, 545.937000, \
+			        551.496000, 557.015000, 562.264000, 567.477000, 572.446000, 577.382000, \
+			        582.096000, 586.781000, 591.264000, 595.720000, 599.991000, 604.239000, \
+			        608.316000, 612.372000, 616.267000, 620.163000, 627.605000, 634.748000, \
+			        641.543000, 648.308000, 654.858000, 661.740000, 670.949000, 682.402000, \
+			        709.566000, 740.008000, 793.400000, 849.075000, 920.732000, 1001.120000, \
+			        1142.580000, 1642.610000, 4652.560000, 9208.930000, 24590.200000, 40026.300000, \
+			        55845.700000, 71665.100000, 87485.000000, 103305.000000, 119125.000000, 134945.000000");
+			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.600000, -71330.900000, \
+			        -60289.200000, -49247.700000, -38206.400000, -27165.700000, -16125.300000, -8930.990000, \
+			        -3670.750000, -1729.120000, -1456.250000, -1341.540000, -1306.360000, -1279.480000, \
+			        -1256.770000, -1235.520000, -1215.010000, -1194.590000, -1174.210000, -1153.610000, \
+			        -1132.890000, -1111.980000, -1101.350000, -1090.670000, -1079.890000, -1069.080000, \
+			        -1058.110000, -1047.110000, -1035.920000, -1024.700000, -1013.250000, -1001.750000, \
+			        -989.980000, -978.157000, -965.989000, -953.758000, -941.098000, -928.361000, \
+			        -915.086000, -901.717000, -887.682000, -873.529000, -858.561000, -843.453000, \
+			        -827.365000, -811.113000, -793.715000, -776.130000, -757.240000, -738.142000, \
+			        -717.595000, -696.824000, -674.481000, -651.899000, -627.644000, -603.138000, \
+			        -576.877000, -550.355000, -522.012000, -493.401000, -462.915000, -432.154000, \
+			        -399.474000, -366.514000, -331.596000, -296.394000, -259.201000, -221.719000, \
+			        -182.218000, -142.415000, -100.500000, -58.585400, 30.234300, 122.531000, \
+			        218.147000, 314.173000, 413.076000, 512.189000, 612.778000, 713.428000, \
+			        814.507000, 915.537000, 1016.220000, 1116.890000, 1217.470000, 1325.030000, \
+			        1481.420000, 1985.840000, 4926.440000, 9416.770000, 24755.200000, 40153.500000, \
+			        55970.300000, 71787.000000, 87602.400000, 103418.000000, 119232.000000, 135046.000000");
+			}
+			noise_immunity_low(noise_reject_37_10_1)  {
+			values("2.640000, 1.702315, 1.267512, 1.043461, 0.921728, 0.853680, 0.815036, 0.792893, 0.780140, 0.777945") ;
+			}
+			noise_immunity_high(noise_reject_42_10_1)  {
+			values("2.640000, 1.528183, 1.085692, 0.869716, 0.753861, 0.688558, 0.650718, 0.628440, 0.615201, 0.612707") ;
+			}
+		}
+		timing() {
+			timing_type     : preset;
+			timing_sense    : negative_unate;
+			related_pin     : "SDN";
+			cell_rise(del_0_2_2) {
+			values( " 89.026388, 100.730960",\
+ 				" 253.702620, 265.266320");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 15.726401, 29.292123",\
+ 				" 16.844677, 32.632033");
+ 			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.600000, -71330.800000, \
+			        -60289.200000, -49247.700000, -38206.400000, -27165.700000, -16897.500000, -8857.450000, \
+			        -2697.140000, -1957.750000, -1396.120000, -1347.100000, -1304.400000, -1279.950000, \
+			        -1256.430000, -1235.630000, -1214.940000, -1194.610000, -1174.210000, -1153.610000, \
+			        -1132.920000, -1111.960000, -1101.350000, -1090.670000, -1079.890000, -1069.080000, \
+			        -1058.110000, -1047.110000, -1035.920000, -1024.700000, -1013.250000, -1001.750000, \
+			        -989.980000, -978.157000, -965.989000, -953.758000, -941.098000, -928.361000, \
+			        -915.087000, -901.717000, -887.682000, -873.530000, -858.561000, -843.453000, \
+			        -827.365000, -811.113000, -793.715000, -776.130000, -757.240000, -738.142000, \
+			        -717.595000, -696.824000, -674.481000, -651.899000, -627.644000, -603.138000, \
+			        -576.877000, -550.355000, -522.012000, -493.401000, -462.915000, -432.154000, \
+			        -399.474000, -366.514000, -331.596000, -296.394000, -259.201000, -221.719000, \
+			        -182.218000, -142.415000, -100.500000, -58.585400, 30.234300, 122.531000, \
+			        218.147000, 314.173000, 413.076000, 512.189000, 612.778000, 713.428000, \
+			        814.507000, 915.537000, 1016.220000, 1116.890000, 1217.470000, 1325.030000, \
+			        1481.420000, 1985.840000, 4926.440000, 9416.770000, 24755.200000, 40153.500000, \
+			        55970.300000, 71787.000000, 87602.400000, 103418.000000, 119232.000000, 135046.000000");
+			}
+			noise_immunity_high(noise_reject_46_10_4)  {
+			values("2.640000, 2.640000, 2.640000, 2.640000", \
+				"1.815055, 1.815055, 1.815055, 1.815055", \
+				"1.307025, 1.307025, 1.307025, 1.307025", \
+				"1.003233, 1.003233, 1.003233, 1.003233", \
+				"0.824759, 0.824759, 0.824759, 0.824759", \
+				"0.720995, 0.720995, 0.720995, 0.720995", \
+				"0.661034, 0.661034, 0.661034, 0.661034", \
+				"0.626505, 0.626505, 0.626505, 0.626505", \
+				"0.606663, 0.606663, 0.606663, 0.606663", \
+				"0.603330, 0.603330, 0.603330, 0.603330") ;
+			}
+		}
+		timing() {
+			timing_type     : clear;
+			timing_sense    : positive_unate;
+			related_pin     : "CDN";
+			cell_rise(del_0_2_2) {
+			values( " 36.287867, 44.708912",\
+ 				" 215.199990, 228.224120");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 20.387586, 24.091590",\
+ 				" 21.002448, 32.315831");
+ 			}
+			cell_fall(del_0_2_2) {
+			values( " 30.283387, 42.395982",\
+ 				" 182.192640, 198.252290");
+ 			}
+			fall_transition(del_0_2_2)  {
+			values( " 12.201974, 26.090782",\
+ 				" 23.794274, 33.840611");
+ 			}
+			steady_state_current_low(current_low_2)  {
+			values("-125386.000000, -114366.000000, -103345.000000, -92324.600000, -81303.800000, -70282.900000, \
+			        -59261.700000, -48240.400000, -37219.000000, -26204.200000, -15195.400000, -7705.570000, \
+			        -3298.270000, -1122.750000, -902.227000, -764.535000, -699.396000, -633.843000, \
+			        -567.928000, -499.693000, -429.427000, -356.190000, -280.351000, -200.531000, \
+			        -117.223000, -30.666100, 15.142500, 58.628200, 97.918700, 136.485000, \
+			        169.979000, 202.828000, 231.162000, 258.919000, 282.642000, 305.850000, \
+			        325.460000, 344.618000, 360.618000, 376.250000, 389.311000, 402.126000, \
+			        413.222000, 424.169000, 434.084000, 443.892000, 452.954000, 461.927000, \
+			        470.278000, 478.553000, 486.289000, 493.956000, 501.149000, 508.282000, \
+			        514.995000, 521.654000, 527.939000, 534.176000, 540.078000, 545.937000, \
+			        551.496000, 557.015000, 562.264000, 567.477000, 572.446000, 577.382000, \
+			        582.096000, 586.781000, 591.264000, 595.720000, 599.991000, 604.239000, \
+			        608.317000, 612.372000, 616.267000, 620.163000, 627.605000, 634.748000, \
+			        641.543000, 648.308000, 654.858000, 661.740000, 670.949000, 682.402000, \
+			        709.566000, 740.008000, 793.400000, 849.075000, 920.732000, 1001.120000, \
+			        1142.580000, 1642.610000, 4652.560000, 9208.930000, 24590.200000, 40026.300000, \
+			        55845.700000, 71665.100000, 87485.000000, 103305.000000, 119125.000000, 134945.000000");
+			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.600000, -71330.800000, \
+			        -60289.200000, -49247.700000, -38206.500000, -27165.700000, -16987.500000, -8727.780000, \
+			        -2779.410000, -1971.500000, -1398.380000, -1347.400000, -1304.590000, -1279.940000, \
+			        -1256.470000, -1235.630000, -1214.940000, -1194.610000, -1174.200000, -1153.620000, \
+			        -1132.920000, -1111.960000, -1101.350000, -1090.670000, -1079.890000, -1069.080000, \
+			        -1058.110000, -1047.110000, -1035.920000, -1024.700000, -1013.250000, -1001.750000, \
+			        -989.980000, -978.157000, -965.989000, -953.759000, -941.098000, -928.361000, \
+			        -915.087000, -901.717000, -887.682000, -873.530000, -858.561000, -843.453000, \
+			        -827.365000, -811.113000, -793.715000, -776.130000, -757.240000, -738.142000, \
+			        -717.595000, -696.824000, -674.481000, -651.899000, -627.644000, -603.138000, \
+			        -576.877000, -550.355000, -522.012000, -493.401000, -462.915000, -432.154000, \
+			        -399.474000, -366.514000, -331.596000, -296.394000, -259.201000, -221.719000, \
+			        -182.218000, -142.415000, -100.500000, -58.585400, 30.234300, 122.531000, \
+			        218.147000, 314.173000, 413.076000, 512.189000, 612.778000, 713.428000, \
+			        814.507000, 915.537000, 1016.220000, 1116.890000, 1217.470000, 1325.030000, \
+			        1481.420000, 1985.840000, 4926.440000, 9416.770000, 24755.200000, 40153.500000, \
+			        55970.300000, 71787.000000, 87602.400000, 103418.000000, 119232.000000, 135046.000000");
+			}
+			noise_immunity_low(noise_reject_32_10_4)  {
+			values("2.640000, 3.960000, 2.668904, 3.960000", \
+				"1.675302, 3.960000, 1.965618, 3.960000", \
+				"1.247096, 3.960000, 1.496020, 3.960000", \
+				"1.030434, 1.040986, 1.198218, 3.960000", \
+				"0.913549, 0.871800, 1.015494, 1.120313", \
+				"0.848307, 0.817015, 0.905641, 0.862304", \
+				"0.811196, 0.792625, 0.840406, 0.807579", \
+				"0.789859, 0.780268, 0.801949, 0.786080", \
+				"0.777517, 0.773597, 0.779376, 0.775770", \
+				"0.775364, 0.772467, 0.775415, 0.774103") ;
+			}
+			noise_immunity_high(noise_reject_33_10_4)  {
+			values("2.640000, 2.765945, 3.960000, 3.960000", \
+				"1.258351, 1.257623, 3.960000, 3.960000", \
+				"0.917401, 0.910384, 1.122609, 3.960000", \
+				"0.774790, 0.767862, 0.807255, 2.299532", \
+				"0.702791, 0.696505, 0.705231, 0.801247", \
+				"0.662996, 0.657234, 0.658733, 0.682950", \
+				"0.639895, 0.634493, 0.634312, 0.642412", \
+				"0.626102, 0.620934, 0.620528, 0.623545", \
+				"0.617727, 0.612708, 0.612431, 0.613534", \
+				"0.616015, 0.611027, 0.610800, 0.611604") ;
+			}
+		}
+	}
+	pin(QN) {
+		output_voltage : DC_6;
+		direction : output;
+		internal_power() {
+		rise_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'QN' */
+		values( " 11.0, 3.19",\
+ 			" 11.0, 3.03");
+ 		}
+		fall_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'QN' */
+		values( " 13.0, 21.7",\
+ 			" 12.9, 21.4");
+ 		}
+		related_pin  : "CPN";
+		}
+		internal_power() {
+		rise_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'QN' */
+		values( " 15.4, 16.5",\
+ 			" 16.4, 15.4");
+ 		}
+		fall_power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'QN' */
+		values( " 27.0, 34.3",\
+ 			" 29.0, 36.1");
+ 		}
+		related_pin  : "SDN";
+		}
+		internal_power() {
+		power(power_outputs_0) {  /* worst switching power [in fJ] for pin 'QN' */
+		values( " 25.6, 20.2",\
+ 			" 27.8, 19.9");
+ 		}
+		related_pin  : "CDN";
+		}
+		max_transition : 9000.0;
+                function  : "IQN";
+		timing() {
+			timing_type     : falling_edge;
+			related_pin     : "CPN";
+			cell_rise(del_0_2_2) {
+			values( " 58.556182, 72.628031",\
+ 				" 213.537330, 227.563550");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 16.140258, 28.790472",\
+ 				" 18.209923, 29.793313");
+ 			}
+			cell_fall(del_0_2_2) {
+			values( " 76.437003, 93.772074",\
+ 				" 227.400580, 244.788400");
+ 			}
+			fall_transition(del_0_2_2)  {
+			values( " 19.781347, 34.834904",\
+ 				" 15.366863, 33.147815");
+ 			}
+			steady_state_current_low(current_low_2)  {
+			values("-125386.000000, -114366.000000, -103345.000000, -92324.600000, -81303.900000, -70282.900000, \
+			        -59261.800000, -48240.400000, -37219.000000, -26197.300000, -15175.500000, -8472.710000, \
+			        -1996.520000, -1273.910000, -853.202000, -767.336000, -699.040000, -633.712000, \
+			        -568.540000, -499.474000, -430.204000, -355.916000, -281.365000, -200.174000, \
+			        -118.635000, -30.653300, 15.142400, 58.628400, 97.919000, 136.485000, \
+			        169.980000, 202.829000, 231.163000, 258.920000, 282.643000, 305.852000, \
+			        325.462000, 344.620000, 360.620000, 376.252000, 389.313000, 402.128000, \
+			        413.224000, 424.172000, 434.086000, 443.894000, 452.956000, 461.929000, \
+			        470.281000, 478.556000, 486.291000, 493.959000, 501.152000, 508.285000, \
+			        514.998000, 521.657000, 527.942000, 534.179000, 540.081000, 545.941000, \
+			        551.499000, 557.019000, 562.267000, 567.481000, 572.449000, 577.386000, \
+			        582.100000, 586.785000, 591.268000, 595.724000, 599.995000, 604.242000, \
+			        608.320000, 612.375000, 616.271000, 620.167000, 627.610000, 634.753000, \
+			        641.549000, 648.314000, 654.863000, 661.745000, 670.954000, 682.407000, \
+			        709.571000, 740.013000, 793.403000, 849.074000, 920.711000, 1000.950000, \
+			        1141.370000, 1635.080000, 4601.770000, 9117.330000, 24475.000000, 39890.400000, \
+			        55709.700000, 71529.200000, 87349.000000, 103169.000000, 118989.000000, 134809.000000");
+			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.600000, -71330.800000, \
+			        -60289.200000, -49247.700000, -38206.500000, -27165.600000, -17096.200000, -8462.180000, \
+			        -2931.960000, -1987.830000, -1402.620000, -1347.740000, -1304.920000, -1279.900000, \
+			        -1256.530000, -1235.610000, -1214.940000, -1194.610000, -1174.180000, -1153.610000, \
+			        -1132.900000, -1111.960000, -1101.340000, -1090.660000, -1079.880000, -1069.070000, \
+			        -1058.100000, -1047.110000, -1035.920000, -1024.690000, -1013.240000, -1001.750000, \
+			        -989.973000, -978.150000, -965.982000, -953.752000, -941.091000, -928.354000, \
+			        -915.080000, -901.711000, -887.675000, -873.523000, -858.555000, -843.447000, \
+			        -827.359000, -811.108000, -793.710000, -776.125000, -757.235000, -738.137000, \
+			        -717.591000, -696.820000, -674.477000, -651.895000, -627.640000, -603.134000, \
+			        -576.873000, -550.352000, -522.009000, -493.398000, -462.912000, -432.152000, \
+			        -399.472000, -366.512000, -331.594000, -296.392000, -259.199000, -221.718000, \
+			        -182.217000, -142.414000, -100.500000, -58.585300, 30.233700, 122.530000, \
+			        218.145000, 314.171000, 413.073000, 512.186000, 612.775000, 713.424000, \
+			        814.503000, 915.533000, 1016.220000, 1116.880000, 1217.450000, 1324.860000, \
+			        1480.240000, 1978.490000, 4876.810000, 9327.060000, 24640.900000, 40017.500000, \
+			        55834.400000, 71651.000000, 87466.500000, 103282.000000, 119096.000000, 134910.000000");
+			}
+			noise_immunity_low(noise_reject_37_10_1)  {
+			values("2.640000, 1.702315, 1.267512, 1.043461, 0.921728, 0.853680, 0.815036, 0.792893, 0.780140, 0.777945") ;
+			}
+			noise_immunity_high(noise_reject_36_10_1)  {
+			values("2.640000, 1.240762, 0.905168, 0.765809, 0.695628, 0.656860, 0.634346, 0.620889, 0.612708, 0.611027") ;
+			}
+		}
+		timing() {
+			timing_type     : clear;
+			timing_sense    : positive_unate;
+			related_pin     : "SDN";
+			cell_fall(del_0_2_2) {
+			values( " 61.276174, 76.797110",\
+ 				" 225.079440, 245.527020");
+ 			}
+			fall_transition(del_0_2_2)  {
+			values( " 19.085873, 33.215140",\
+ 				" 20.734230, 37.623438");
+ 			}
+			cell_rise(del_0_2_2) {
+			values( " 70.055253, 81.590846",\
+ 				" 253.656600, 268.277960");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 31.997925, 39.086361",\
+ 				" 24.083694, 41.613157");
+ 			}
+			steady_state_current_low(current_low_2)  {
+			values("-125386.000000, -114366.000000, -103345.000000, -92324.600000, -81303.900000, -70282.900000, \
+			        -59261.800000, -48240.400000, -37219.000000, -26197.300000, -16214.200000, -7678.520000, \
+			        -2327.160000, -1413.580000, -849.026000, -770.881000, -698.442000, -633.957000, \
+			        -567.916000, -499.708000, -429.417000, -356.223000, -280.311000, -200.609000, \
+			        -117.797000, -30.648000, 15.142400, 58.628400, 97.919000, 136.485000, \
+			        169.980000, 202.829000, 231.163000, 258.920000, 282.643000, 305.852000, \
+			        325.462000, 344.620000, 360.620000, 376.252000, 389.313000, 402.128000, \
+			        413.224000, 424.172000, 434.086000, 443.894000, 452.956000, 461.929000, \
+			        470.281000, 478.556000, 486.291000, 493.959000, 501.152000, 508.285000, \
+			        514.998000, 521.657000, 527.942000, 534.179000, 540.081000, 545.941000, \
+			        551.499000, 557.019000, 562.267000, 567.481000, 572.449000, 577.386000, \
+			        582.100000, 586.785000, 591.268000, 595.724000, 599.995000, 604.242000, \
+			        608.320000, 612.375000, 616.271000, 620.167000, 627.610000, 634.753000, \
+			        641.549000, 648.314000, 654.863000, 661.745000, 670.954000, 682.407000, \
+			        709.571000, 740.013000, 793.403000, 849.074000, 920.711000, 1000.950000, \
+			        1141.370000, 1635.080000, 4601.770000, 9117.330000, 24475.000000, 39890.400000, \
+			        55709.700000, 71529.200000, 87349.000000, 103169.000000, 118989.000000, 134809.000000");
+			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.600000, -71330.900000, \
+			        -60289.100000, -49247.700000, -38206.400000, -27165.700000, -16125.200000, -9209.320000, \
+			        -3097.570000, -1796.970000, -1434.330000, -1343.310000, -1305.250000, -1279.680000, \
+			        -1256.550000, -1235.550000, -1214.970000, -1194.580000, -1174.220000, -1153.590000, \
+			        -1132.910000, -1111.970000, -1101.340000, -1090.660000, -1079.880000, -1069.070000, \
+			        -1058.100000, -1047.110000, -1035.920000, -1024.690000, -1013.240000, -1001.750000, \
+			        -989.973000, -978.151000, -965.982000, -953.752000, -941.091000, -928.354000, \
+			        -915.080000, -901.711000, -887.676000, -873.524000, -858.555000, -843.447000, \
+			        -827.360000, -811.108000, -793.710000, -776.125000, -757.235000, -738.138000, \
+			        -717.591000, -696.820000, -674.477000, -651.895000, -627.640000, -603.134000, \
+			        -576.873000, -550.352000, -522.009000, -493.398000, -462.912000, -432.152000, \
+			        -399.472000, -366.512000, -331.594000, -296.392000, -259.199000, -221.718000, \
+			        -182.217000, -142.414000, -100.500000, -58.585300, 30.233700, 122.530000, \
+			        218.145000, 314.171000, 413.073000, 512.186000, 612.775000, 713.425000, \
+			        814.504000, 915.533000, 1016.220000, 1116.880000, 1217.450000, 1324.860000, \
+			        1480.240000, 1978.490000, 4876.810000, 9327.060000, 24640.900000, 40017.500000, \
+			        55834.400000, 71651.000000, 87466.500000, 103282.000000, 119096.000000, 134910.000000");
+			}
+			noise_immunity_low(noise_reject_43_10_4)  {
+			values("2.640000, 2.560259, 3.960000, 3.960000", \
+				"1.722464, 1.708552, 3.960000, 3.313102", \
+				"1.300766, 1.300609, 3.960000, 1.892662", \
+				"1.077513, 1.080223, 1.494381, 1.356266", \
+				"0.950448, 0.953392, 0.916604, 1.095978", \
+				"0.875137, 0.877733, 0.831387, 0.954438", \
+				"0.829423, 0.831631, 0.799525, 0.872686", \
+				"0.801272, 0.803175, 0.784127, 0.823816", \
+				"0.783783, 0.785470, 0.775770, 0.793999", \
+				"0.780079, 0.781717, 0.774103, 0.787736") ;
+			}
+			noise_immunity_high(noise_reject_44_10_4)  {
+			values("2.640000, 2.960496, 3.960000, 3.960000", \
+				"1.914649, 2.005214, 3.000349, 3.960000", \
+				"1.421283, 1.432910, 1.658661, 3.960000", \
+				"1.101352, 1.090419, 1.146226, 3.960000", \
+				"0.900265, 0.885590, 0.901128, 1.030161", \
+				"0.776345, 0.763139, 0.771394, 0.768419", \
+				"0.700906, 0.689952, 0.699034, 0.680927", \
+				"0.655321, 0.646216, 0.657492, 0.641178", \
+				"0.627900, 0.620081, 0.633247, 0.620656", \
+				"0.622797, 0.615232, 0.628795, 0.617075") ;
+			}
+		}
+		timing() {
+			timing_type     : preset;
+			timing_sense    : negative_unate;
+			related_pin     : "CDN";
+			cell_rise(del_0_2_2) {
+			values( " 102.835680, 116.942480",\
+ 				" 258.575460, 272.704580");
+ 			}
+			rise_transition(del_0_2_2)  {
+			values( " 32.393451, 46.025360",\
+ 				" 33.847047, 32.917047");
+ 			}
+			steady_state_current_high(current_high_2)  {
+			values("-126539.000000, -115498.000000, -104456.000000, -93414.300000, -82372.500000, -71330.800000, \
+			        -60289.200000, -49247.700000, -38206.500000, -27197.600000, -16247.300000, -7853.430000, \
+			        -4103.130000, -1624.930000, -1457.480000, -1338.360000, -1307.040000, -1279.000000, \
+			        -1256.920000, -1235.430000, -1215.010000, -1194.590000, -1174.180000, -1153.630000, \
+			        -1132.840000, -1112.000000, -1101.340000, -1090.660000, -1079.880000, -1069.070000, \
+			        -1058.100000, -1047.110000, -1035.920000, -1024.690000, -1013.240000, -1001.750000, \
+			        -989.973000, -978.151000, -965.982000, -953.752000, -941.091000, -928.354000, \
+			        -915.080000, -901.711000, -887.676000, -873.524000, -858.555000, -843.447000, \
+			        -827.359000, -811.108000, -793.710000, -776.125000, -757.235000, -738.137000, \
+			        -717.591000, -696.820000, -674.477000, -651.895000, -627.640000, -603.134000, \
+			        -576.873000, -550.352000, -522.009000, -493.398000, -462.912000, -432.152000, \
+			        -399.472000, -366.512000, -331.594000, -296.392000, -259.199000, -221.718000, \
+			        -182.217000, -142.414000, -100.500000, -58.585300, 30.233700, 122.530000, \
+			        218.145000, 314.171000, 413.073000, 512.186000, 612.775000, 713.425000, \
+			        814.504000, 915.533000, 1016.220000, 1116.880000, 1217.450000, 1324.860000, \
+			        1480.240000, 1978.490000, 4876.810000, 9327.060000, 24640.900000, 40017.500000, \
+			        55834.400000, 71651.000000, 87466.500000, 103282.000000, 119096.000000, 134910.000000");
+			}
+			noise_immunity_high(noise_reject_35_10_4)  {
+			values("2.640000, 2.640000, 2.640000, 2.640000", \
+				"1.521591, 1.521591, 1.521591, 1.521591", \
+				"1.073038, 1.073038, 1.073038, 1.073038", \
+				"0.853280, 0.853280, 0.853280, 0.853280", \
+				"0.735114, 0.735114, 0.735114, 0.735114", \
+				"0.668387, 0.668387, 0.668387, 0.668387", \
+				"0.629662, 0.629662, 0.629662, 0.629662", \
+				"0.606831, 0.606831, 0.606831, 0.606831", \
+				"0.593244, 0.593244, 0.593244, 0.593244", \
+				"0.590677, 0.590677, 0.590677, 0.590677") ;
+			}
+		}
+	}
+}	/* cell(DFBFB1) */ 
+}

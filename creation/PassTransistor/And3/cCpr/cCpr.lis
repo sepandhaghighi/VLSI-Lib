@@ -1,0 +1,23 @@
+ ****** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******               
+  Copyright (C) 2011 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr
+  Command line options: -i /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr.sp -o /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr
+ lic:  
+ lic: FLEXlm: v10.8 
+ lic: USER:   root                 HOSTNAME: Microelectronic.lab.edu 
+ lic: HOSTID: ac162d8b13a0         PID:      7978 
+ lic: Using FLEXlm license file: 
+ lic: /opt/Admin/cadence.dat 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
+ lic: NODE LOCKED license on hostid ac162d8b13a0 
+ lic:   
+ **error** (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+
+               ***** job aborted
+ lic: Release hspice token(s) 

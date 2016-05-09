@@ -1,0 +1,12 @@
+#!/bin/sh
+
+ncx \
+   -output_library PassTransistor.lib \
+   -model_file ../model.typ \
+   -netlist_dir ../netlists \
+   -simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice \
+   -templates true \
+   -input_template_dir config \
+   -library_template_file test2cell \
+   -timing true \
+   -farm_type NoFarm 

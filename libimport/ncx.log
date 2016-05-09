@@ -1,0 +1,184 @@
+
+                       Liberty NCX (TM) C-2009.06-SP1
+               Synopsys Inc. Proprietary and Confidential
+   Your use of this program and its documentation are covered by a license
+      agreement, a copy of which may be found in the file "license.txt"
+     located in the install directory. Your use of this program is your
+            consent to be bound by its terms and conditions.
+    Parts of this program are protected by law and international treaties.
+
+           Unpublished - Copyright (c) 2006 Synopsys Inc.
+                          All rights reserved.
+  All rights for unpublished material are reserved under U.S. copyright laws.
+Copyright notice is precautionary and does not imply publication or disclosure.
+                  Liberty NCX is a Trademark of Synopsys Inc.
+
+
+Build date: Jul 16 2009
+
+Local host: Microelectronic.lab.edu Linux (2.6.18-406.el5) (x86_64 X 16)
+
+Command-line: /opt/Synopsys/NCX/ncx/amd64/bin/ncx \
+   -input_library ../PassTransistor.lib \
+   -output_library PassTransistor_CCS.lib \
+   -model_file ../model.typ \
+   -netlist_dir ../netlists \
+   -simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice \
+   -templates true \
+   -input_template_dir ../creation/config \
+   -timing true \
+   -farm_type NoFarm
+Process id: 16464
+
+Program configuration:
+  Files/folders:
+    input_library       : /home/Rezayi/Desktop/NCXtemplate/libimport/../PassTransistor.lib (user)
+    output_library      : /home/Rezayi/Desktop/NCXtemplate/libimport/PassTransistor_CCS.lib (user)
+    log_file            : /home/Rezayi/Desktop/NCXtemplate/libimport/ncx.log
+    work_dir            : /home/Rezayi/Desktop/NCXtemplate/libimport/work
+  Flows:
+    preanalysis_opt     : auto
+    prechar             : false
+    timing              : true (user)
+    power               : false
+    noise               : false
+    compact             : true
+    templates           : true (user)
+    ibis                : false
+  Simulation settings:
+    simulator_exec      : /opt/Synopsys/HSPICE/hspice/amd64/hspice (user)
+    simulator_type      : hspice
+    model_file          : /home/Rezayi/Desktop/NCXtemplate/libimport/../model.typ (user)
+    netlist_dir         : /home/Rezayi/Desktop/NCXtemplate/libimport/../netlists (user)
+    netlist_suffix      : .spc
+    simulation_dir      : /home/Rezayi/Desktop/NCXtemplate/libimport
+  Compute farm:
+    farm_type           : NoFarm (user)
+    queue_name          : normal
+    project_name        : NcxProj
+    bundle_size         : 50
+    constraint_bundle_size: 10
+    max_jobs            : 100
+    max_job_time        : 600
+    update_interval     : 60
+    farm_retry_limit    : 3
+    farm_retry_interval : 3
+    model_extraction_to_farm: false
+    backup_failed_sims  : false
+  Output format control:
+    precision           : 7
+    only_active_cells_to_library: false
+    failed_cells_to_library: false
+    sensitization_to_library: false
+    driver_waveform_to_library: true
+    use_driver_waveform_from_library: true
+  Program control:
+    autofix             : true
+    fix_nldm_timing     : delay
+    cleanup             : 1
+    reuse               : false
+    test_simulator      : true
+  Timing model acquisition options:
+    ccs_timing          : true
+    compact_timing      : true
+    nldm                : true
+    capacitance         : true
+    delay               : true
+    constraint          : true
+    shpr_constraint     : false
+    design_rules        : false
+    max_capacitance     : true
+    max_transition      : true
+    variation           : false
+    mismatch            : false
+  Template usage options:
+    input_template_dir  : /home/Rezayi/Desktop/NCXtemplate/libimport/../creation/config (user)
+    output_template_dir : /home/Rezayi/Desktop/NCXtemplate/libimport/work
+    template_suffix     : .opt
+    timing_arcs_to_template: false
+    sensitization_to_template: false
+
+Sat May  7 18:16:30 2016
+
+--- begin flow...
+--- testing simulation setup...
+using HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011)
+done
+
+reading library /home/Rezayi/Desktop/NCXtemplate/libimport/../PassTransistor.lib...done
+initializing database...
+
+reading /home/Rezayi/Desktop/NCXtemplate/libimport/../creation/config/PassTransistor.opt...
+  do 2 cells...done
+Warning: Convert rail_connection format to pg_pin by default.
+Warning: skipping new cell DFBFB1: no template file
+Warning: skipping new cell INV0D1: no template file
+Warning: library has no active cells
+done
+
+Sat May  7 18:16:36 2016
+
+--- generating sensitizations...
+done
+
+Sat May  7 18:16:36 2016
+
+--- checking indices and signal levels...
+
+Sat May  7 18:16:36 2016
+
+--- pre-analyzing cells...
+done
+
+--- checking pre-analysis simulations...
+
+--- processing pre-analysis results...
+done
+
+Sat May  7 18:16:36 2016
+
+--- building netlists for nominal analysis ...
+done
+
+Sat May  7 18:16:36 2016
+
+--- checking nominal simulation status...
+done
+
+Sat May  7 18:16:36 2016
+
+--- extracting default arcs...
+done
+
+CCS statistics:
+
+
+Sat May  7 18:16:36 2016
+
+--- merging library...done
+
+Sat May  7 18:16:36 2016
+
+writing /home/Rezayi/Desktop/NCXtemplate/libimport/work/PassTransistor_CCS.opt...done
+
+Sat May  7 18:16:36 2016
+
+--- deleting sensitization templates...done
+
+Sat May  7 18:16:36 2016
+
+--- extracting driver waveform ...done
+
+Sat May  7 18:16:36 2016
+
+
+Checking semantics...1...done
+writing test2cell to /home/Rezayi/Desktop/NCXtemplate/libimport/PassTransistor_CCS.lib...
+done
+
+Sat May  7 18:16:36 2016
+
+done
+
+total program time         : 6.242 seconds (0.10 min.)
+
