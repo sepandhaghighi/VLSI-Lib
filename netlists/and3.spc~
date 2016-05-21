@@ -3,7 +3,7 @@
 ** Design library name: PassTransistor
 ** Design cell name: And3
 ** Design view name: schematic
-
+.subckt and3 out cp c bp b a
 
 .TEMP 25
 .OPTION
@@ -12,7 +12,7 @@
 +    MEASOUT=1
 +    PARHIER=LOCAL
 +    PSF=2
-.INCLUDE "/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl"
+.INCLUDE "/home/Rezayi/Desktop/hspice.mdl"
 
 ** Library name: PassTransistor
 ** Cell name: And3

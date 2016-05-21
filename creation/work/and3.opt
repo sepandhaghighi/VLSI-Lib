@@ -48,9 +48,6 @@ pin Out {
   ncx_internal_power_fall_total_output_net_capacitance_index : 0 ;
   timing {
     *** arc id: Out_A_0000
-    *****
-    *** failed simulation
-    *****
     related_pin : A ;
     timing_type : combinational ;
     timing_sense : positive_unate ;
@@ -70,7 +67,7 @@ pin Out {
   timing {
     *** arc id: Out_B_0001
     *****
-    *** failed simulation
+    *** failed model extraction
     *****
     related_pin : B ;
     timing_type : combinational ;
@@ -91,7 +88,7 @@ pin Out {
   timing {
     *** arc id: Out_C_0002
     *****
-    *** failed simulation
+    *** failed model extraction
     *****
     related_pin : C ;
     timing_type : combinational ;

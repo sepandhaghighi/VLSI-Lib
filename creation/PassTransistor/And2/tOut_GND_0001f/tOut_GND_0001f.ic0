@@ -1,0 +1,37 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "16:56:52 05/14/2016 "
+* "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001f/tOut_GND_0001f.sp "
+* "runtitle" "* hspice timing acquisition"
+* time =  0.000000000e+00 
+* temperature =  2.500000000e+01 
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000000e-12 
+.nodeset
++ n_a = 0.000000000e+00 
++ n_a2 = 0.000000000e+00 
++ n_ap = 0.000000000e+00 
++ n_ap2 = 0.000000000e+00 
++ n_b = 0.000000000e+00 
++ n_b2 = 0.000000000e+00 
++ n_gnd = 1.320000000e+00 
++ n_gnd2 = 1.320000000e+00 
++ n_out = 9.565887497e-01 
++ n_out1 = 9.565887497e-01 
++ vdd = 1.320000000e+00 
++ vss = 0.000000000e+00 
++ x_and2.xm1.bi = 1.319974525e+00 
++ x_and2.xm1.db = 1.319974524e+00 
++ x_and2.xm1.di = 9.565887780e-01 
++ x_and2.xm1.gi = 2.200875716e-07 
++ x_and2.xm1.sb = 1.319974525e+00 
++ x_and2.xm1.si = 1.319999996e+00 
++ x_and2.xm0.bi = 2.252211675e-09 
++ x_and2.xm0.db = 2.316813477e-09 
++ x_and2.xm0.di = 9.565887215e-01 
++ x_and2.xm0.gi = 6.068111415e-08 
++ x_and2.xm0.sb = 2.252211680e-09 
++ x_and2.xm0.si = 7.423937953e-08 
+***   END: Saved Operating Point ***                     

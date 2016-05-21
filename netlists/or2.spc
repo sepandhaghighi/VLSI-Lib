@@ -12,11 +12,11 @@
 +    MEASOUT=1
 +    PARHIER=LOCAL
 +    PSF=2
-.INCLUDE "/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl"
+.INCLUDE "/home/Rezayi/Desktop/hspice.mdl"
 
 ** Library name: PassTransistor
 ** Cell name: Or2
 ** View name: schematic
 xm1 out ap b b nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
 xm0 out a vcc vcc nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
-.END
+.ends

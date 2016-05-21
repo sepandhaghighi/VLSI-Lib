@@ -1,0 +1,37 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "16:57:11 05/14/2016 "
+* "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001r/tOut_A_0001r.sp "
+* "runtitle" "* hspice timing acquisition"
+* time =  0.000000000e+00 
+* temperature =  2.500000000e+01 
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000000e-12 
+.nodeset
++ n_a = 1.320000000e+00 
++ n_a2 = 1.320000000e+00 
++ n_ap = 0.000000000e+00 
++ n_ap2 = 0.000000000e+00 
++ n_b = 1.320000000e+00 
++ n_b2 = 1.320000000e+00 
++ n_bp = 0.000000000e+00 
++ n_bp2 = 0.000000000e+00 
++ n_out = 1.024246622e-01 
++ n_out1 = 1.024246622e-01 
++ vdd = 1.320000000e+00 
++ vss = 0.000000000e+00 
++ x_xor2.xm1.bi = 7.250202140e-01 
++ x_xor2.xm1.db = 7.250166242e-01 
++ x_xor2.xm1.di = 1.031008210e-01 
++ x_xor2.xm1.gi = 1.470506762e-07 
++ x_xor2.xm1.sb = 7.250202141e-01 
++ x_xor2.xm1.si = 1.319999839e+00 
++ x_xor2.xm0.bi = 2.555834960e-10 
++ x_xor2.xm0.db = 2.624550851e-10 
++ x_xor2.xm0.di = 1.017485035e-01 
++ x_xor2.xm0.gi = 1.319998524e+00 
++ x_xor2.xm0.sb = 2.557060053e-10 
++ x_xor2.xm0.si = 1.813820549e-03 
+***   END: Saved Operating Point ***                     

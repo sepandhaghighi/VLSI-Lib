@@ -33,7 +33,7 @@ pin Out {
   output_voltage : DC_6 ;
   direction : output ;
   max_transition : 9000.0000000 ;
-  function : A*B ;
+  function : B+GND;
   max_capacitance : 10.0000000 ;
   ncx_internal_power_rise_input_transition_time_index : 0 ;
   ncx_internal_power_fall_input_transition_time_index : 0 ;

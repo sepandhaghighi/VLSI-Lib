@@ -9,15 +9,139 @@
   Command line options: -i /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp -o /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f
  lic:  
  lic: FLEXlm: v10.8 
- lic: USER:   root                 HOSTNAME: Microelectronic.lab.edu 
- lic: HOSTID: ac162d8b13a0         PID:      7989 
+ lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu 
+ lic: HOSTID: ac162d8b13a0         PID:      5078 
  lic: Using FLEXlm license file: 
  lic: /opt/Admin/cadence.dat 
  lic: Checkout 1 hspice 
  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
  lic: NODE LOCKED license on hostid ac162d8b13a0 
  lic:   
- **error** (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+  **warning** Warning(s) associated with encrypted block(s) were suppressed due to encrypted content.
 
-               ***** job aborted
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/and3.spc:9) Above line is not allowed within subcircuit. The line is ignored.
+  **info**  the obsolete option nopage is ignored
+  **info** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp:139) DC voltage reset to initial transient source value              in source        0:vn_a2               new dc=  0.1320D+01
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp:82) Capacitance value for element cld_out <=0; check the value.
+  
+
+ **warning** the following singular supplies were terminated to 1 meg resistor 
+   supply       node1            node2
+  vn_vdd                  0:vdd              defined in subckt 0                     0:0                defined in subckt 0               
+  vn_vss                  0:vss              defined in subckt 0                     0:0                defined in subckt 0               
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 5         bypass  = 2         
+  Opening plot unit= 15
+ file=/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001
+
+
+   *** data name = stimdata , index =     1 ***
+
+ ******  
+ * hspice timing acquisition
+
+  ******  transient analysis tnom=  25.000 temp=  25.000 *****
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp:189) .MEASURE  nc_delay_b_out never reached the target value, Measurement failed!
+ nc_delay_b_out= failed       targ= not found    trig= 1.011953333e-09
+ nc_inref_b= 1.011953333e-09
+ nc_optr_out= failed       targ= not found    trig= 1.036219768e-09
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp:205) .MEASURE  nc_fulloptr_out never reached the trigger value, Measurement failed!
+   nc_fulloptr_out= failed                          trig= not found
+ t_b_trip1= 1.013351605e-09
+ t_b_trip2= 1.023333333e-09
+ t_stop_b= 1.027026518e-09
+   t_stop_out= failed
+   t_simstop= failed                         measure parameter failed
+ t_b_trip_incap1= 1.010166667e-09
+ t_b_trip_incap2= 1.023333333e-09
+ nc_intg_i_b= 2.146535457e-14  from= 1.010166667e-09     to= 1.023333333e-09
+ nc_intg_i1_b= 1.420555271e-15  from= 1.010166667e-09     to= 1.011953333e-09
+ nc_intg_i2_b= 2.004479930e-14  from= 1.011953333e-09     to= 1.023333333e-09
+ nc_incap_b= 2.045488333e-14
+ nc_incap_c1_b= 1.520025756e-14
+ nc_incap_c2_b= 2.096859157e-14
+ nc_iptr_b= 1.000000000e-11
+ real_iptr_b= 9.981728151e-12  targ= 1.023333333e-09   trig= 1.013351605e-09
+ nc_when_a= 1.000000000e+00
+ nc_when_bp= 0.000000000e+00
+ nc_when_b= 0.000000000e+00
+ nc_when_c= 1.000000000e+00
+ nc_when_cp= 0.000000000e+00
+ nc_when_out= 0.000000000e+00
+ nc_leak_i_a=-1.012504844e-08  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_bp= 1.091758177e-08  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_b=-5.813641437e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_c=-5.814168479e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_cp= 1.083527659e-08  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_vdd=-1.320000000e-06  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_vss= 0.000000000e+00  from= 0.000000000e+00     to= 1.000000000e-09
+   nc_dyn_energy= failed                         measure parameter failed
+   t_int_energy= failed                         measure parameter failed
+   nc_int_energy= failed                         measure parameter failed
+   nc_dyn_eng_vdd= failed                         measure parameter failed
+   nc_dyn_eng_vss= failed                         measure parameter failed
+   nc_dyn_abs_energy= failed                         measure parameter failed
+   nc_charge_vdd= failed                         measure parameter failed
+   nc_charge_vss= failed                         measure parameter failed
+ nc_sidecap= 0.000000000e+00
+ def_cap_out= 0.000000000e+00
+
+          ***** job concluded
+ ****** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******               
+ ******  
+ * hspice timing acquisition
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz
+ cpu MHz	: 2693.620
+  
+ OS:
+ Linux version 2.6.18-406.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.
+ 2 20080704 (Red Hat 4.1.2-55)) #1 SMP Tue Jun 2 17:25:57 EDT 2015
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    16
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      40 # elements   =      72
+  # resistors   =      26 # capacitors =      13 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =      13
+  # curr_srcs   =       0 # diodes     =      16 # bjts        =       0
+  # jfets       =       0 # mosfets    =       4 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          22
+  transient          0.01         121         163          74 rev=         6
+  readin             0.70
+  errchk             0.02
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        183.46 megabytes
+           total cpu time            0.73 seconds
+           total elapsed time       10.29 seconds
+           job started at     16:56:52 05/14/2016
+           job ended   at     16:57:02 05/14/2016
+
+
  lic: Release hspice token(s) 

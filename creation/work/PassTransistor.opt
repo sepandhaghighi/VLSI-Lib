@@ -650,6 +650,7 @@ include PassTransistor.indexes ;
 do {
   And2
   And3
+  inv
   Or2
   Or3
   Xor2

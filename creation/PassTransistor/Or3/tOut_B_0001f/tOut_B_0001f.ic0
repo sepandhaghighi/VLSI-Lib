@@ -1,0 +1,52 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "16:57:10 05/14/2016 "
+* "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001f/tOut_B_0001f.sp "
+* "runtitle" "* hspice timing acquisition"
+* time =  0.000000000e+00 
+* temperature =  2.500000000e+01 
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000000e-12 
+.nodeset
++ n_a = 0.000000000e+00 
++ n_a2 = 0.000000000e+00 
++ n_b = 1.320000000e+00 
++ n_b2 = 1.320000000e+00 
++ n_bp = 0.000000000e+00 
++ n_bp2 = 0.000000000e+00 
++ n_c = 0.000000000e+00 
++ n_c2 = 0.000000000e+00 
++ n_cp = 0.000000000e+00 
++ n_cp2 = 0.000000000e+00 
++ n_out = 8.637960605e-01 
++ n_out1 = 8.637960605e-01 
++ vdd = 1.320000000e+00 
++ vss = 0.000000000e+00 
++ x_or3.net11 = 1.222850224e+00 
++ x_or3.xm0.bi = 1.319999999e+00 
++ x_or3.xm0.db = 1.319999999e+00 
++ x_or3.xm0.di = 1.222850293e+00 
++ x_or3.xm0.gi = 1.319999999e+00 
++ x_or3.xm0.sb = 1.319999999e+00 
++ x_or3.xm0.si = 1.319999813e+00 
++ x_or3.xm1.bi = 3.666544818e-09 
++ x_or3.xm1.db = 3.749128144e-09 
++ x_or3.xm1.di = 1.222850179e+00 
++ x_or3.xm1.gi = 1.178954860e-07 
++ x_or3.xm1.sb = 3.666544826e-09 
++ x_or3.xm1.si = 1.154948512e-07 
++ x_or3.xm2.bi = 2.003298364e-09 
++ x_or3.xm2.db = 2.061633566e-09 
++ x_or3.xm2.di = 8.637960366e-01 
++ x_or3.xm2.gi = 4.663771801e-08 
++ x_or3.xm2.sb = 2.003298368e-09 
++ x_or3.xm2.si = 6.290128695e-08 
++ x_or3.xm3.bi = 1.222828753e+00 
++ x_or3.xm3.db = 1.222828752e+00 
++ x_or3.xm3.di = 8.637960844e-01 
++ x_or3.xm3.gi = 1.714456738e-07 
++ x_or3.xm3.sb = 1.222828753e+00 
++ x_or3.xm3.si = 1.222850221e+00 
+***   END: Saved Operating Point ***                     

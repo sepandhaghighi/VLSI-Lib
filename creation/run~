@@ -2,11 +2,11 @@
 
 ncx \
    -output_library PassTransistor.lib \
-   -model_file ../model.typ \
+   -model_file ICIC/90/TSMC/CDB/models/hspice/crn90g_2d5_lk_v1d2p1.l \
    -netlist_dir ../netlists \
    -simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice \
    -templates true \
    -input_template_dir config \
-   -library_template_file test2cell \
+   -library_template_file PassTransistor \
    -timing true \
    -farm_type NoFarm 

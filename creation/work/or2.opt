@@ -42,7 +42,7 @@ pin Out {
   timing {
     *** arc id: Out_A_0000
     *****
-    *** failed simulation
+    *** failed model extraction
     *****
     related_pin : A ;
     timing_type : combinational ;
@@ -61,7 +61,7 @@ pin Out {
   timing {
     *** arc id: Out_B_0001
     *****
-    *** failed simulation
+    *** failed model extraction
     *****
     related_pin : B ;
     timing_type : combinational ;

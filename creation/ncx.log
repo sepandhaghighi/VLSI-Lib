@@ -28,7 +28,7 @@ Command-line: /opt/Synopsys/NCX/ncx/amd64/bin/ncx \
    -library_template_file PassTransistor \
    -timing true \
    -farm_type NoFarm
-Process id: 7856
+Process id: 4936
 
 Program configuration:
   Files/folders:
@@ -98,7 +98,7 @@ Program configuration:
     timing_arcs_to_template: false
     sensitization_to_template: false
 
-Mon May  9 16:58:59 2016
+Sat May 14 16:56:45 2016
 
 --- begin flow...
 --- testing simulation setup...
@@ -109,7 +109,7 @@ creating library PassTransistor
 initializing database...
 
 reading /home/Rezayi/Desktop/NCXtemplate/creation/config/PassTransistor.opt...
-  do 6 cells...done
+  do 7 cells...done
 Warning: Convert rail_connection format to pg_pin by default.
   adding new cell And2
 
@@ -117,6 +117,9 @@ reading /home/Rezayi/Desktop/NCXtemplate/creation/config/and2.opt...done
   adding new cell And3
 
 reading /home/Rezayi/Desktop/NCXtemplate/creation/config/and3.opt...done
+  adding new cell inv
+
+reading /home/Rezayi/Desktop/NCXtemplate/creation/config/inv.opt...done
   adding new cell Or2
 
 reading /home/Rezayi/Desktop/NCXtemplate/creation/config/or2.opt...done
@@ -140,6 +143,8 @@ Warning: PassTransistor::And3::B is not a PAD pin.  The voltage group DC_15 will
 Warning: PassTransistor::And3::C is not a PAD pin.  The voltage group DC_14 will be ignored.
 Warning: PassTransistor::And3::Cp is not a PAD pin.  The voltage group DC_14 will be ignored.
 Warning: PassTransistor::And3::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
+Warning: PassTransistor::inv::I is not a PAD pin.  The voltage group DC_46 will be ignored.
+Warning: PassTransistor::inv::ZN is not a PAD pin.  The voltage group DC_47 will be ignored.
 Warning: PassTransistor::Or2::A is not a PAD pin.  The voltage group DC_17 will be ignored.
 Warning: PassTransistor::Or2::Ap is not a PAD pin.  The voltage group DC_16 will be ignored.
 Warning: PassTransistor::Or2::B is not a PAD pin.  The voltage group DC_15 will be ignored.
@@ -165,21 +170,21 @@ Warning: PassTransistor::Xor3::Cp is not a PAD pin.  The voltage group DC_18 wil
 Warning: PassTransistor::Xor3::Out is not a PAD pin.  The voltage group DC_6 will be ignored.
 
 cell types:
-  combinational  : 6
+  combinational  : 7
 done
 
-Mon May  9 16:59:05 2016
+Sat May 14 16:56:52 2016
 
 --- generating sensitizations...
 
-cell PassTransistor::And2 (1 of 6) (4in/1out pins)
+cell PassTransistor::And2 (1 of 7) (4in/1out pins)
 creating delay arcs...
-   combinational (positive_unate) A -> Out
    combinational (positive_unate) B -> Out
+   combinational (positive_unate) GND -> Out
 2 delay arcs created
 
 
-cell PassTransistor::And3 (2 of 6) (5in/1out pins)
+cell PassTransistor::And3 (2 of 7) (5in/1out pins)
 creating delay arcs...
    combinational (positive_unate) A -> Out
    combinational (positive_unate) B -> Out
@@ -187,14 +192,20 @@ creating delay arcs...
 3 delay arcs created
 
 
-cell PassTransistor::Or2 (3 of 6) (4in/1out pins)
+cell PassTransistor::inv (3 of 7) (1in/1out pins)
+creating delay arcs...
+   combinational (negative_unate) I -> ZN
+1 delay arcs created
+
+
+cell PassTransistor::Or2 (4 of 7) (4in/1out pins)
 creating delay arcs...
    combinational (positive_unate) A -> Out
    combinational (positive_unate) B -> Out
 2 delay arcs created
 
 
-cell PassTransistor::Or3 (4 of 6) (5in/1out pins)
+cell PassTransistor::Or3 (5 of 7) (5in/1out pins)
 creating delay arcs...
    combinational (positive_unate) A -> Out
    combinational (positive_unate) B -> Out
@@ -202,7 +213,7 @@ creating delay arcs...
 3 delay arcs created
 
 
-cell PassTransistor::Xor2 (5 of 6) (4in/1out pins)
+cell PassTransistor::Xor2 (6 of 7) (4in/1out pins)
 creating delay arcs...
    combinational (positive_unate) A -> Out
    combinational (negative_unate) A -> Out
@@ -211,7 +222,7 @@ creating delay arcs...
 4 delay arcs created
 
 
-cell PassTransistor::Xor3 (6 of 6) (6in/1out pins)
+cell PassTransistor::Xor3 (7 of 7) (6in/1out pins)
 creating delay arcs...
    combinational (positive_unate) A -> Out
    combinational (negative_unate) A -> Out
@@ -223,30 +234,32 @@ creating delay arcs...
 
 done
 
-Mon May  9 16:59:05 2016
+Sat May 14 16:56:52 2016
 
 --- checking indices and signal levels...
 
-Mon May  9 16:59:05 2016
+Sat May 14 16:56:52 2016
 
 --- pre-analyzing cells...
 
-cell PassTransistor::And2 (1 of 6) ()
+cell PassTransistor::And2 (1 of 7) ()
   using existing optimization
 
-cell PassTransistor::And3 (2 of 6) ()
+cell PassTransistor::And3 (2 of 7) ()
   using existing optimization
 
-cell PassTransistor::Or2 (3 of 6) ()
+cell PassTransistor::inv (3 of 7) ()
+
+cell PassTransistor::Or2 (4 of 7) ()
   using existing optimization
 
-cell PassTransistor::Or3 (4 of 6) ()
+cell PassTransistor::Or3 (5 of 7) ()
   using existing optimization
 
-cell PassTransistor::Xor2 (5 of 6) ()
+cell PassTransistor::Xor2 (6 of 7) ()
   using existing optimization
 
-cell PassTransistor::Xor3 (6 of 6) ()
+cell PassTransistor::Xor3 (7 of 7) ()
   using existing optimization
 done
 
@@ -254,45 +267,54 @@ done
 
 --- processing pre-analysis results...
 
-cell PassTransistor::And2 (1 of 6)
+cell PassTransistor::And2 (1 of 7)
 
-cell PassTransistor::And3 (2 of 6)
+cell PassTransistor::And3 (2 of 7)
 
-cell PassTransistor::Or2 (3 of 6)
+cell PassTransistor::inv (3 of 7)
 
-cell PassTransistor::Or3 (4 of 6)
+cell PassTransistor::Or2 (4 of 7)
 
-cell PassTransistor::Xor2 (5 of 6)
+cell PassTransistor::Or3 (5 of 7)
 
-cell PassTransistor::Xor3 (6 of 6)
+cell PassTransistor::Xor2 (6 of 7)
+
+cell PassTransistor::Xor3 (7 of 7)
 done
 
-Mon May  9 16:59:05 2016
+Sat May 14 16:56:52 2016
 
 --- building netlists for nominal analysis ...
 
-cell PassTransistor::And2 (1 of 6) ()
+cell PassTransistor::And2 (1 of 7) ()
   applying optimizations...done
 
-cell PassTransistor::And3 (2 of 6) ()
+cell PassTransistor::And3 (2 of 7) ()
   applying optimizations...done
 
-cell PassTransistor::Or2 (3 of 6) ()
+cell PassTransistor::inv (3 of 7) ()
   applying optimizations...done
 
-cell PassTransistor::Or3 (4 of 6) ()
+cell PassTransistor::Or2 (4 of 7) ()
   applying optimizations...done
 
-cell PassTransistor::Xor2 (5 of 6) ()
+cell PassTransistor::Or3 (5 of 7) ()
   applying optimizations...done
 
-cell PassTransistor::Xor3 (6 of 6) ()
+cell PassTransistor::Xor2 (6 of 7) ()
+  applying optimizations...done
+
+cell PassTransistor::Xor3 (7 of 7) ()
   applying optimizations...done
 done
 
-Mon May  9 16:59:05 2016
+Sat May 14 16:56:52 2016
 
 --- checking nominal simulation status...
+
+queued=68 done=0
+
+queued=67 done=0
 
 queued=66 done=0
 
@@ -322,105 +344,226 @@ queued=54 done=0
 
 queued=53 done=0
 
-queued=52 done=0
+[1/68] And2::A cAf.sp
 
-queued=51 done=0
+[2/68] And2::A cAr.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApr/cApr.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[3/68] And2::Ap cApf.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApr/cApr.sp] fails for cell And2. (NCXFL-5)
+[4/68] And3::Cp cCpr.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000f/tOut_A_0000f.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[5/68] And3::combinational arc [1] B -> Out r () tOut_B_0001r.sp
+Error: Failed to read nc_delay_B_Out measurement (NCXMD-3)
+Error: PassTransistor::And3::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp] of cell [And3]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000f/tOut_A_0000f.sp] fails for cell And3. (NCXFL-5)
+[6/68] And2::combinational arc [1] GND -> Out r () tOut_GND_0001r.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001r/tOut_GND_0001r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001r/tOut_GND_0001r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001r/tOut_GND_0001r.sp] of cell [And2]. (NCXFL-6)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDr/cGNDr.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[7/68] And2::Ap cApr.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDr/cGNDr.sp] fails for cell And2. (NCXFL-5)
+[8/68] And3::combinational arc [0] A -> Out f () tOut_A_0000f.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[9/68] And2::combinational arc [0] B -> Out r () tOut_B_0000r.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000r/tOut_B_0000r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000r/tOut_B_0000r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000r/tOut_B_0000r.sp] of cell [And2]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp] fails for cell And3. (NCXFL-5)
+[10/68] And2::combinational arc [0] B -> Out f () tOut_B_0000f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000f/tOut_B_0000f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000f/tOut_B_0000f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0000f/tOut_B_0000f.sp] of cell [And2]. (NCXFL-6)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApf/cApf.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[11/68] And2::combinational arc [1] GND -> Out f () tOut_GND_0001f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001f/tOut_GND_0001f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001f/tOut_GND_0001f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_GND_0001f/tOut_GND_0001f.sp] of cell [And2]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cApf/cApf.sp] fails for cell And2. (NCXFL-5)
+[12/68] And3::Bp cBpr.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001f/tOut_B_0001f.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[13/68] And3::Bp cBpf.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001f/tOut_B_0001f.sp] fails for cell And2. (NCXFL-5)
+[14/68] And3::Cp cCpf.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpf/cBpf.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[15/68] And3::combinational arc [0] A -> Out r () tOut_A_0000r.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpf/cBpf.sp] fails for cell And3. (NCXFL-5)
+[16/68] And3::combinational arc [1] B -> Out f () tOut_B_0001f.sp
+Error: Failed to read nc_delay_B_Out measurement (NCXMD-3)
+Error: PassTransistor::And3::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp] of cell [And3]. (NCXFL-6)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000r/tOut_A_0000r.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[17/68] And3::combinational arc [2] C -> Out r () tOut_C_0002r.sp
+Error: Failed to read nc_delay_C_Out measurement (NCXMD-3)
+Error: PassTransistor::And3::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002r/tOut_C_0002r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002r/tOut_C_0002r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002r/tOut_C_0002r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002r/tOut_C_0002r.sp] of cell [And3]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000r/tOut_A_0000r.sp] fails for cell And3. (NCXFL-5)
+[18/68] And3::combinational arc [2] C -> Out f () tOut_C_0002f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002f/tOut_C_0002f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002f/tOut_C_0002f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_C_0002f/tOut_C_0002f.sp] of cell [And3]. (NCXFL-6)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000f/tOut_A_0000f.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/inv/tZN_I_0000r/tZN_I_0000r.sp
+ (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/inv.spc:12) Reference nmos_rf not found.   It was referenced in element x_inv.mm2. The channel width=   1.000E-04 and length=   1.000E-04
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000f/tOut_A_0000f.sp] fails for cell And2. (NCXFL-5)
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/inv/tZN_I_0000r/tZN_I_0000r.sp] fails for cell inv. (NCXFL-5)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/inv/tZN_I_0000f/tZN_I_0000f.sp
+ (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/inv.spc:12) Reference nmos_rf not found.   It was referenced in element x_inv.mm2. The channel width=   1.000E-04 and length=   1.000E-04
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpr/cCpr.sp] fails for cell And3. (NCXFL-5)
+Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/inv/tZN_I_0000f/tZN_I_0000f.sp] fails for cell inv. (NCXFL-5)
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDf/cGNDf.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[21/68] Or2::Ap cApr.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/cGNDf/cGNDf.sp] fails for cell And2. (NCXFL-5)
+[22/68] Or2::Ap cApf.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[23/68] Or2::VCC cVCCr.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp] fails for cell And3. (NCXFL-5)
+[24/68] Or2::VCC cVCCf.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpf/cCpf.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[25/68] Or2::combinational arc [1] B -> Out r () tOut_B_0001r.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001r/tOut_B_0001r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001r/tOut_B_0001r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001r/tOut_B_0001r.sp] of cell [Or2]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cCpf/cCpf.sp] fails for cell And3. (NCXFL-5)
+[26/68] Or3::Bp cBpr.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000r/tOut_A_0000r.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[27/68] Or2::combinational arc [0] A -> Out f () tOut_A_0000f.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Or2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000f/tOut_A_0000f.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000f/tOut_A_0000f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000f/tOut_A_0000f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000f/tOut_A_0000f.sp] of cell [Or2]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_A_0000r/tOut_A_0000r.sp] fails for cell And2. (NCXFL-5)
+[28/68] Or3::Bp cBpf.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpr/cBpr.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[29/68] Or2::combinational arc [0] A -> Out r () tOut_A_0000r.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Or2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp] of cell [Or2]. (NCXFL-6)
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/cBpr/cBpr.sp] fails for cell And3. (NCXFL-5)
+[30/68] Or3::Cp cCpf.sp
 
-netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001r/tOut_B_0001r.sp
- (/ICIC/90/TSMC/CDB/models/hspice/hspice.mdl:1) unable to open file "/root/Desktop/PDK_Jasmine_90/90nm Mixed-singnal/T-N90-CM-SP-013-K1.tar.gz_FILES/tn90cmsp013k1_1_0a.zip_FILES/tsmcN90rfg_pdk_v10a.tar.gz_FILES/models/hspice/crn90g_2d5_lk_v1d2p1.l" .Either file doesn't exists or path is wrong. Please enter the correct file location. 
+[31/68] Or3::Cp cCpr.sp
 
-Error: Simulating netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And2/tOut_B_0001r/tOut_B_0001r.sp] fails for cell And2. (NCXFL-5)
+[32/68] Or2::combinational arc [1] B -> Out f () tOut_B_0001f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001f/tOut_B_0001f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001f/tOut_B_0001f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001f/tOut_B_0001f.sp] of cell [Or2]. (NCXFL-6)
+
+[33/68] Or3::combinational arc [0] A -> Out r () tOut_A_0000r.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Or3::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000r/tOut_A_0000r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000r/tOut_A_0000r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000r/tOut_A_0000r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000r/tOut_A_0000r.sp] of cell [Or3]. (NCXFL-6)
+
+[34/68] Or3::combinational arc [0] A -> Out f () tOut_A_0000f.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Or3::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000f/tOut_A_0000f.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000f/tOut_A_0000f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000f/tOut_A_0000f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_A_0000f/tOut_A_0000f.sp] of cell [Or3]. (NCXFL-6)
+
+[35/68] Or3::combinational arc [1] B -> Out r () tOut_B_0001r.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001r/tOut_B_0001r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001r/tOut_B_0001r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001r/tOut_B_0001r.sp] of cell [Or3]. (NCXFL-6)
+
+[36/68] Or3::combinational arc [2] C -> Out r () tOut_C_0002r.sp
+
+[37/68] Or3::combinational arc [1] B -> Out f () tOut_B_0001f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001f/tOut_B_0001f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001f/tOut_B_0001f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_B_0001f/tOut_B_0001f.sp] of cell [Or3]. (NCXFL-6)
+
+[38/68] Or3::combinational arc [2] C -> Out f () tOut_C_0002f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_C_0002f/tOut_C_0002f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_C_0002f/tOut_C_0002f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or3/tOut_C_0002f/tOut_C_0002f.sp] of cell [Or3]. (NCXFL-6)
+
+[39/68] Xor2::Ap cApr.sp
+
+[40/68] Xor2::Ap cApf.sp
+
+[41/68] Xor2::combinational arc [2] B -> Out r () tOut_B_0002r.sp
+Error: Failed to read nc_delay_B_Out measurement (NCXMD-3)
+Error: PassTransistor::Xor2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002r/tOut_B_0002r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002r/tOut_B_0002r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002r/tOut_B_0002r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002r/tOut_B_0002r.sp] of cell [Xor2]. (NCXFL-6)
+
+[42/68] Xor2::Bp cBpf.sp
+
+[43/68] Xor2::Bp cBpr.sp
+
+[44/68] Xor2::combinational arc [0] A -> Out f () tOut_A_0000f.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000f/tOut_A_0000f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000f/tOut_A_0000f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000f/tOut_A_0000f.sp] of cell [Xor2]. (NCXFL-6)
+
+[45/68] Xor2::combinational arc [2] B -> Out f () tOut_B_0002f.sp
+Error: Failed to read nc_delay_B_Out measurement (NCXMD-3)
+Error: PassTransistor::Xor2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002f/tOut_B_0002f.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002f/tOut_B_0002f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002f/tOut_B_0002f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_B_0002f/tOut_B_0002f.sp] of cell [Xor2]. (NCXFL-6)
+
+[46/68] Xor2::combinational arc [1] A -> Out r () tOut_A_0001r.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Xor2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001r/tOut_A_0001r.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001r/tOut_A_0001r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001r/tOut_A_0001r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001r/tOut_A_0001r.sp] of cell [Xor2]. (NCXFL-6)
+
+[47/68] Xor2::combinational arc [0] A -> Out r () tOut_A_0000r.sp
+Error: Failed to read nc_optr_Out measurement (NCXMD-3)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000r/tOut_A_0000r.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000r/tOut_A_0000r.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0000r/tOut_A_0000r.sp] of cell [Xor2]. (NCXFL-6)
+
+[48/68] Xor2::combinational arc [1] A -> Out f () tOut_A_0001f.sp
+Error: Failed to read nc_delay_A_Out measurement (NCXMD-3)
+Error: PassTransistor::Xor2::Out: Failed to read delays in /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001f/tOut_A_0001f.sp (NCXMD-8)
+  netlist: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001f/tOut_A_0001f.sp
+check /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001f/tOut_A_0001f.sp.bat.log for errors
+Error: Model extractor fails for netlist [/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor2/tOut_A_0001f/tOut_A_0001f.sp] of cell [Xor2]. (NCXFL-6)
 
 user-interrupt detected.  Cleaning up...
-  \pkill -P 8135
-  \pkill -P 8144
-  \pkill -P 8180
-  \pkill -P 8198
-  \pkill -P 8207
-  \pkill -P 8219
-  \pkill -P 8225
-  \pkill -P 8231
-  \pkill -P 8237
-  \pkill -P 8245
-  \pkill -P 8247
-  \pkill -P 8251
-  \pkill -P 8255
-  \pkill -P 8268
-  \pkill -P 8275
-  \pkill -P 8282
+  \pkill -P 5433
+  \pkill -P 5437
+  \pkill -P 5446
+  \pkill -P 5452
+  \pkill -P 5460
+  \pkill -P 5467
+  \pkill -P 5474
+  \pkill -P 5482
+  \pkill -P 5494
+  \pkill -P 5496
+  \pkill -P 5508
+  \pkill -P 5516
+  \pkill -P 5523
+  \pkill -P 5525
+  \pkill -P 5531
+  \pkill -P 5533
 
