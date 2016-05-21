@@ -1,9 +1,11 @@
 ** Generated for: hspiceD
-** Generated on: May  9 16:09:26 2016
+** Generated on: May 21 14:09:44 2016
 ** Design library name: PassTransistor
 ** Design cell name: And3
 ** Design view name: schematic
 .subckt and3 out cp c bp b a
+
+
 
 .TEMP 25
 .OPTION
@@ -17,8 +19,8 @@
 ** Library name: PassTransistor
 ** Cell name: And3
 ** View name: schematic
-xm3 out cp c c nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
-xm2 out c net15 net15 nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
-xm1 net15 bp b b nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
-xm0 net15 b a a nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
+m3 out cp c c nch l=100e-9 w=200e-9 m=1 ad=46e-15 as=46e-15 pd=860e-9 ps=860e-9 nrd=650e-3 nrs=650e-3 sa=230e-9 sb=230e-9
+m2 out c net15 net15 nch l=100e-9 w=200e-9 m=1 ad=46e-15 as=46e-15 pd=860e-9 ps=860e-9 nrd=650e-3 nrs=650e-3 sa=230e-9 sb=230e-9
+m1 net15 bp b b nch l=100e-9 w=200e-9 m=1 ad=46e-15 as=46e-15 pd=860e-9 ps=860e-9 nrd=650e-3 nrs=650e-3 sa=230e-9 sb=230e-9
+m0 net15 b a a nch l=100e-9 w=200e-9 m=1 ad=46e-15 as=46e-15 pd=860e-9 ps=860e-9 nrd=650e-3 nrs=650e-3 sa=230e-9 sb=230e-9
 .ends

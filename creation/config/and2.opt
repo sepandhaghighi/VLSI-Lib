@@ -22,13 +22,6 @@ pin B {
   ncx_internal_power_rise_input_transition_time_index : 0 ;
   ncx_internal_power_fall_input_transition_time_index : 0 ;
 }
-pin GND {
-  input_voltage : DC_0 ;
-  direction : input ;
-  fanout_load : 2.2390000 ;
-  ncx_internal_power_rise_input_transition_time_index : 0 ;
-  ncx_internal_power_fall_input_transition_time_index : 0 ;
-}
 pin Out {
   output_voltage : DC_6 ;
   direction : output ;

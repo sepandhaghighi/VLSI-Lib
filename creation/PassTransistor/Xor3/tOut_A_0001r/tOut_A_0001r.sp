@@ -73,7 +73,7 @@ Vn_VDD VDD 0 DC 1.320000e+00
 Vn_VSS VSS 0 DC 0.000000e+00
 
 * ACQUISITION CIRCUIT ==================
-X_Xor3 n_out n_a n_ap n_b n_bp n_c n_cp Xor3 
+X_Xor3 n_a n_ap n_b n_bp n_c n_cp n_out Xor3 
 Vn_A n_A n_A2 DC 0
 Vn_Ap n_Ap n_Ap2 DC 0
 Vn_Bp n_Bp n_Bp2 DC 0

@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "F-2011.09-SP1 64-BIT"
 * "format" "HSP"
-* "rundate" "16:57:03 05/14/2016 "
+* "rundate" "14:39:46 05/21/2016 "
 * "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_B_0001f/tOut_B_0001f.sp "
 * "runtitle" "* hspice timing acquisition"
 * time =  0.000000000e+00 
@@ -16,22 +16,9 @@
 + n_ap2 = 0.000000000e+00 
 + n_b = 1.320000000e+00 
 + n_b2 = 1.320000000e+00 
-+ n_out = 9.565887498e-01 
-+ n_out1 = 9.565887498e-01 
-+ n_vcc = 0.000000000e+00 
-+ n_vcc2 = 0.000000000e+00 
++ n_out = 8.744094891e-01 
++ n_out1 = 8.744094891e-01 
++ vcc! = 2.423348059e-01 
 + vdd = 1.320000000e+00 
 + vss = 0.000000000e+00 
-+ x_or2.xm1.bi = 1.319974525e+00 
-+ x_or2.xm1.db = 1.319974524e+00 
-+ x_or2.xm1.di = 9.565887780e-01 
-+ x_or2.xm1.gi = 2.200875716e-07 
-+ x_or2.xm1.sb = 1.319974525e+00 
-+ x_or2.xm1.si = 1.319999996e+00 
-+ x_or2.xm0.bi = 2.252211675e-09 
-+ x_or2.xm0.db = 2.316813477e-09 
-+ x_or2.xm0.di = 9.565887215e-01 
-+ x_or2.xm0.gi = 6.068111416e-08 
-+ x_or2.xm0.sb = 2.252211680e-09 
-+ x_or2.xm0.si = 7.423937954e-08 
 ***   END: Saved Operating Point ***                     

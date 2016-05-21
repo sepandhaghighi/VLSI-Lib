@@ -27,7 +27,6 @@
 * Pin A:		 H=1.320000	 L=0.000000
 * Pin Ap:		 H=1.320000	 L=0.000000
 * Pin B:		 H=1.320000	 L=0.000000
-* Pin VCC:		 H=1.320000	 L=0.000000
 * Pin Out:		 H=1.320000	 L=0.000000
 
 * Lib Slew Index(ps): 10.000000
@@ -71,29 +70,26 @@ Vn_VDD VDD 0 DC 1.320000e+00
 Vn_VSS VSS 0 DC 0.000000e+00
 
 * ACQUISITION CIRCUIT ==================
-X_Or2 n_a n_ap n_b n_vcc n_out Or2 
+X_Or2 n_a n_ap n_b n_out Or2 
 Vn_A n_A n_A2 DC 0
 Vn_Ap n_Ap n_Ap2 DC 0
 Vn_B n_B n_B2 DC 0
-Vn_VCC n_VCC n_VCC2 DC 0
 Vn_Out n_Out n_Out1 DC 0
 CLD_Out n_Out1 0 cap_Out
 .PROBE TRAN V(n_Out1)
 .PARAM SideCap = 0.0000000000e+00
 
 * PROBE ================================
-.PROBE TRAN V(n_Out) I(Vn_Out) V(n_A) I(Vn_A) V(n_Ap) I(Vn_Ap) V(n_B) I(Vn_B) V(n_VCC) I(Vn_VCC) I(Vn_VDD) I(Vn_VSS)
+.PROBE TRAN V(n_Out) I(Vn_Out) V(n_A) I(Vn_A) V(n_Ap) I(Vn_Ap) V(n_B) I(Vn_B) I(Vn_VDD) I(Vn_VSS)
 
 * STIMULI ==============================
 * InPin A PWL length=2 
 * InPin Ap PWL length=2 
 * InPin B PWL length=16 
-* InPin VCC PWL length=2 
-* Sensitization Template Name: Or2_wave_0_18
+* Sensitization Template Name: Or2_wave_0_2
 * SensInputs= A: 	0
 * SensInputs= Ap: 	0
 * SensInputs= B: 	10
-* SensInputs= VCC: 	0
 * SensOuputs= Out: 	10
 
 * nc_td: Measurement Starting time
@@ -106,7 +102,6 @@ index nc_td adrv_cap iptr cap_Out
 + t_Ap0 v_Ap0 t_Ap1 v_Ap1
 + t_B0 v_B0 t_B1 v_B1 t_B2 v_B2 t_B3 v_B3 t_B4 v_B4 t_B5 v_B5 t_B6 v_B6 t_B7 v_B7 t_B8 v_B8 t_B9 v_B9
 + t_B10 v_B10 t_B11 v_B11 t_B12 v_B12 t_B13 v_B13 t_B14 v_B14 t_B15 v_B15
-+ t_VCC0 v_VCC0 t_VCC1 v_VCC1
 * Input Slew Index= 1.0000000000e-11 (IPTR = 1.0000000000e-11) ======================================================================
 * Waveform to Side Pin A (Full swing = 1.000000e-11):
 * 0.0000000000e+00 0.0000000000e+00 1.0000000000e-07 0.0000000000e+00
@@ -117,15 +112,12 @@ index nc_td adrv_cap iptr cap_Out
 * 1.0150000000e-09 8.8107387772e-01 1.0166666667e-09 7.2861915717e-01 1.0183333333e-09 5.9400000000e-01 1.0200000000e-09 4.7353693886e-01 1.0216666667e-09 3.6430957859e-01
 * 1.0233333333e-09 2.6400000000e-01 1.0250000000e-09 1.7076846943e-01 1.0266666667e-09 8.3154789293e-02 1.0283333333e-09 0.0000000000e+00 1.0300000000e-09 0.0000000000e+00
 * 1.0316666667e-09 0.0000000000e+00
-* Waveform to Side Pin VCC (Full swing = 1.000000e-11):
-* 0.0000000000e+00 0.0000000000e+00 1.0000000000e-07 0.0000000000e+00
 * Input Slew Index = 1.000000e-11, IPTR = 1.000000e-11, Output Load = 0.000000e+00 *************************************
   1 1.0100000000e-09 5.0000000000e-12 1.0000000000e-11 0.0000000000e+00
 + 0.0000000000e+00 0.0000000000e+00 1.0000000000e-07 0.0000000000e+00 0.0000000000e+00 0.0000000000e+00 1.0000000000e-07 0.0000000000e+00 0.0000000000e+00 1.3200000000e+00
 + 1.0000000000e-09 1.3200000000e+00 1.0100000000e-09 1.3200000000e+00 1.0116666667e-09 1.2540000000e+00 1.0133333333e-09 1.0560000000e+00 1.0150000000e-09 8.8107387772e-01
 + 1.0166666667e-09 7.2861915717e-01 1.0183333333e-09 5.9400000000e-01 1.0200000000e-09 4.7353693886e-01 1.0216666667e-09 3.6430957859e-01 1.0233333333e-09 2.6400000000e-01
 + 1.0250000000e-09 1.7076846943e-01 1.0266666667e-09 8.3154789293e-02 1.0283333333e-09 0.0000000000e+00 1.0300000000e-09 0.0000000000e+00 1.0316666667e-09 0.0000000000e+00
-+ 0.0000000000e+00 0.0000000000e+00 1.0000000000e-07 0.0000000000e+00
 .ENDDATA 
 
 * for Input Pin A
@@ -157,18 +149,12 @@ Vn_B2 n_B2 0 PWL(
 +'t_B14' 'v_B14'
 +'t_B15' 'v_B15'
 +)
-* for Input Pin VCC
-Vn_VCC2 n_VCC2 0 PWL(
-+'t_VCC0' 'v_VCC0'
-+'t_VCC1' 'v_VCC1'
-+)
 
 * .TRAN ==========================
 .TRAN 1.0000000000e-10 1.2000000000e-08 START = 0.0 sweep data=stimdata
 * InPin A PWL length=2 Sens=0
 * InPin Ap PWL length=2 Sens=0
 * InPin B PWL length=16 Sens=10
-* InPin VCC PWL length=2 Sens=0
 
 * MEASUREMENT ==========================
 
@@ -222,14 +208,12 @@ Vn_VCC2 n_VCC2 0 PWL(
 .MEASURE TRAN nc_when_A param = '0' 
 .MEASURE TRAN nc_when_Ap param = '0' 
 .MEASURE TRAN nc_when_B param = '0' 
-.MEASURE TRAN nc_when_VCC param = '0' 
 .MEASURE TRAN nc_when_Out param = '0' 
 
 * Measure Leakage Currents
 .MEASURE TRAN nc_leak_i_A AVG I(Vn_A) FROM = 't_B0' TO = 't_B1'
 .MEASURE TRAN nc_leak_i_Ap AVG I(Vn_Ap) FROM = 't_B0' TO = 't_B1'
 .MEASURE TRAN nc_leak_i_B AVG I(Vn_B) FROM = 't_B0' TO = 't_B1'
-.MEASURE TRAN nc_leak_i_VCC AVG I(Vn_VCC) FROM = 't_B0' TO = 't_B1'
 .MEASURE TRAN nc_leak_i_VDD AVG I(Vn_VDD) FROM = 't_B0' TO = 't_B1'
 .MEASURE TRAN nc_leak_i_VSS AVG I(Vn_VSS) FROM = 't_B0' TO = 't_B1'
 

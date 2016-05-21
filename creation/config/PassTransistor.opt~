@@ -645,6 +645,7 @@ scaling_factors Training_average_factors {
 include test2cell.indices ;
 
 do {
+  inv
   And2
   And3
   Or2

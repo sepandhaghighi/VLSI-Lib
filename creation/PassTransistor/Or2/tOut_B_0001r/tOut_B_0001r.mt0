@@ -15,17 +15,15 @@ $DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP1 64-BIT'
                   v_b11            t_b12            v_b12             
                   t_b13            v_b13            t_b14             
                   v_b14            t_b15            v_b15             
-                  t_vcc0           v_vcc0           t_vcc1            
-                  v_vcc1           nc_delay_b_out   nc_inref_b        
-                  nc_optr_out      nc_fulloptr_out  t_b_trip1         
-                  t_b_trip2        t_stop_b         t_stop_out        
-                  t_simstop        t_b_trip_incap1  t_b_trip_incap2   
-                  nc_intg_i_b      nc_intg_i1_b     nc_intg_i2_b      
-                  nc_incap_b       nc_incap_c1_b    nc_incap_c2_b     
-                  nc_iptr_b        real_iptr_b      nc_when_a         
-                  nc_when_ap       nc_when_b        nc_when_vcc       
-                  nc_when_out      nc_leak_i_a      nc_leak_i_ap      
-                  nc_leak_i_b      nc_leak_i_vcc    nc_leak_i_vdd     
+                  nc_delay_b_out   nc_inref_b       nc_optr_out       
+                  nc_fulloptr_out  t_b_trip1        t_b_trip2         
+                  t_stop_b         t_stop_out       t_simstop         
+                  t_b_trip_incap1  t_b_trip_incap2  nc_intg_i_b       
+                  nc_intg_i1_b     nc_intg_i2_b     nc_incap_b        
+                  nc_incap_c1_b    nc_incap_c2_b    nc_iptr_b         
+                  real_iptr_b      nc_when_a        nc_when_ap        
+                  nc_when_b        nc_when_out      nc_leak_i_a       
+                  nc_leak_i_ap     nc_leak_i_b      nc_leak_i_vdd     
                   nc_leak_i_vss    nc_dyn_energy    t_int_energy      
                   nc_int_energy    nc_dyn_eng_vdd   nc_dyn_eng_vss    
                   nc_dyn_abs_energy nc_charge_vdd    nc_charge_vss     
@@ -46,17 +44,15 @@ $DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP1 64-BIT'
                    1.149231530e+00  1.026666667e-09  1.236845210e+00  
                    1.028333333e-09  1.320000000e+00  1.030000000e-09  
                    1.320000000e+00  1.031666667e-09  1.320000000e+00  
-                   0.000000000e+00  0.000000000e+00  1.000000000e-07  
-                   0.000000000e+00  2.112634327e-11  1.011953333e-09  
-                     failed           failed         1.013353034e-09  
-                   1.023333333e-09  1.027010659e-09    failed         
-                     failed         1.010166667e-09  1.023333333e-09  
-                  -1.223963308e-14 -7.830260720e-16 -1.145660701e-14  
-                   1.166345825e-14  8.378553245e-15  1.198460057e-14  
-                   1.000000000e-11  9.980299040e-12  0.000000000e+00  
-                   0.000000000e+00  1.000000000e+00  0.000000000e+00  
-                   1.000000000e+00  1.959773144e-18  1.959773144e-18  
-                  -1.959773144e-18 -1.959773144e-18 -1.320000000e-06  
+                   2.784426299e-11  1.011953333e-09    failed         
+                     failed         1.013339494e-09  1.023333333e-09  
+                   1.027029009e-09    failed           failed         
+                   1.010166667e-09  1.023333333e-09 -2.074277007e-16  
+                  -1.566810746e-17 -1.917595933e-16  1.976631416e-16  
+                   1.676522369e-16  2.005970991e-16  1.000000000e-11  
+                   9.993839497e-12  0.000000000e+00  0.000000000e+00  
+                   1.000000000e+00  1.000000000e+00  2.383357757e-20  
+                   2.383689237e-20 -4.767046994e-20 -1.320000000e-06  
                    0.000000000e+00    failed           failed         
                      failed           failed           failed         
                      failed           failed           failed         

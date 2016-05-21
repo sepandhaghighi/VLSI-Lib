@@ -3,16 +3,16 @@
  lic:
  lic: FLEXlm: v10.8
  lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu
- lic: HOSTID: ac162d8b13a0         PID:      5140
+ lic: HOSTID: ac162d8b13a0         PID:      27398
  lic: Using FLEXlm license file:
  lic: /opt/Admin/cadence.dat
  lic: Checkout 1 hspice
  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12
  lic: NODE LOCKED license on hostid ac162d8b13a0
  lic:
- init: begin read circuit files,  cpu clock=  3.36E+00
+ init: begin read circuit files,  cpu clock=  6.00E+00
        option brief
- init: end read circuit files,  cpu clock=  3.58E+00 memory=      1313 kb
- init: begin check errors,  cpu clock=  3.58E+00
+ init: end read circuit files,  cpu clock=  6.21E+00 memory=      1313 kb
+ init: begin check errors,  cpu clock=  6.21E+00
 >error          ***** hspice job aborted
  lic: Release hspice token(s)

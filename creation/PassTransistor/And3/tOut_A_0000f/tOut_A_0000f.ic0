@@ -1,0 +1,28 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "14:39:46 05/21/2016 "
+* "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_A_0000f/tOut_A_0000f.sp "
+* "runtitle" "* hspice timing acquisition"
+* time =  0.000000000e+00 
+* temperature =  2.500000000e+01 
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000000e-12 
+.nodeset
++ n_a = 1.320000000e+00 
++ n_a2 = 1.320000000e+00 
++ n_b = 1.320000000e+00 
++ n_b2 = 1.320000000e+00 
++ n_bp = 0.000000000e+00 
++ n_bp2 = 0.000000000e+00 
++ n_c = 1.320000000e+00 
++ n_c2 = 1.320000000e+00 
++ n_cp = 0.000000000e+00 
++ n_cp2 = 0.000000000e+00 
++ n_out = 1.302605415e+00 
++ n_out1 = 1.302605415e+00 
++ vdd = 1.320000000e+00 
++ vss = 0.000000000e+00 
++ x_and3.net15 = 1.307622272e+00 
+***   END: Saved Operating Point ***                     

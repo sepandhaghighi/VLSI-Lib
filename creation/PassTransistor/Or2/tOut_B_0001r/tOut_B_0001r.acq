@@ -34,20 +34,20 @@ related_pin_edge rise
 timing_type combinational
 timing_sense positive_unate
 
-input_state !A&!Ap&!VCC
+input_state !A&!Ap
 output_state Out
-input_pins A Ap B VCC
+input_pins A Ap B
 output_pins Out
 power_pins VDD VSS
 intrinsic_power_pins VDD VSS
-pin_related_power VDD VDD VDD VDD
-pin_related_ground VSS VSS VSS VSS
+pin_related_power VDD VDD VDD
+pin_related_ground VSS VSS VSS
 
 clk_width 1000
 pin_edge rise
 
 input_net_transition 10
 total_output_net_capacitance 0
-input_voltage_level_high 1.32 1.32 1.32 1.32
-input_voltage_level_low 0 0 0 0
+input_voltage_level_high 1.32 1.32 1.32
+input_voltage_level_low 0 0 0
 ccs_power_tolerance 0.05

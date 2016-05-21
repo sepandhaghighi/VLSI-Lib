@@ -10,19 +10,17 @@
  lic:  
  lic: FLEXlm: v10.8 
  lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu 
- lic: HOSTID: ac162d8b13a0         PID:      5185 
+ lic: HOSTID: ac162d8b13a0         PID:      27968 
  lic: Using FLEXlm license file: 
  lic: /opt/Admin/cadence.dat 
  lic: Checkout 1 hspice 
  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
  lic: NODE LOCKED license on hostid ac162d8b13a0 
  lic:   
-  **warning** Warning(s) associated with encrypted block(s) were suppressed due to encrypted content.
-
-  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/or2.spc:9) Above line is not allowed within subcircuit. The line is ignored.
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/or2.spc:11) Above line is not allowed within subcircuit. The line is ignored.
   **info**  the obsolete option nopage is ignored
-  **info** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:132) DC voltage reset to initial transient source value              in source        0:vn_a2               new dc=  0.0000D+00
-  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:80) Capacitance value for element cld_out <=0; check the value.
+  **info** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:124) DC voltage reset to initial transient source value              in source        0:vn_a2               new dc=  0.0000D+00
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:78) Capacitance value for element cld_out <=0; check the value.
   
 
  **warning** the following singular supplies were terminated to 1 meg resistor 
@@ -44,36 +42,33 @@
  * hspice timing acquisition
 
   ******  transient analysis tnom=  25.000 temp=  25.000 *****
-  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:176) .MEASURE  nc_delay_a_out never reached the target value, Measurement failed!
- nc_delay_a_out= failed       targ= not found    trig= 1.011953333e-09
+ nc_delay_a_out= 1.600138543e-11  targ= 1.027954719e-09   trig= 1.011953333e-09
  nc_inref_a= 1.011953333e-09
-  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:187) .MEASURE  nc_optr_out never reached the trigger value, Measurement failed!
-   nc_optr_out= failed                          trig= not found
- nc_fulloptr_out= failed       targ= not found    trig= 1.010995286e-09
- t_a_trip1= 1.013349048e-09
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_0000r/tOut_A_0000r.sp:173) .MEASURE  nc_optr_out never reached the target value, Measurement failed!
+ nc_optr_out= failed       targ= not found    trig= 1.017240643e-09
+ nc_fulloptr_out= failed       targ= not found    trig= 1.010459110e-09
+ t_a_trip1= 1.013338101e-09
  t_a_trip2= 1.023333333e-09
- t_stop_a= 1.027030063e-09
+ t_stop_a= 1.027023166e-09
    t_stop_out= failed
    t_simstop= failed                         measure parameter failed
  t_a_trip_incap1= 1.010166667e-09
  t_a_trip_incap2= 1.023333333e-09
- nc_intg_i_a=-1.175610556e-14  from= 1.010166667e-09     to= 1.023333333e-09
- nc_intg_i1_a=-6.413517213e-16  from= 1.010166667e-09     to= 1.011953333e-09
- nc_intg_i2_a=-1.111475384e-14  from= 1.011953333e-09     to= 1.023333333e-09
- nc_incap_a= 1.120269254e-14
- nc_incap_c1_a= 6.862606160e-15
- nc_incap_c2_a= 1.162699262e-14
+ nc_intg_i_a=-1.005052697e-16  from= 1.010166667e-09     to= 1.023333333e-09
+ nc_intg_i1_a=-7.058380377e-18  from= 1.010166667e-09     to= 1.011953333e-09
+ nc_intg_i2_a=-9.344688934e-17  from= 1.011953333e-09     to= 1.023333333e-09
+ nc_incap_a= 9.577403251e-17
+ nc_incap_c1_a= 7.552624098e-17
+ nc_incap_c2_a= 9.775351834e-17
  nc_iptr_a= 1.000000000e-11
- real_iptr_a= 9.984285361e-12  targ= 1.023333333e-09   trig= 1.013349048e-09
+ real_iptr_a= 9.995231999e-12  targ= 1.023333333e-09   trig= 1.013338101e-09
  nc_when_a= 1.000000000e+00
  nc_when_ap= 0.000000000e+00
  nc_when_b= 0.000000000e+00
- nc_when_vcc= 0.000000000e+00
  nc_when_out= 1.000000000e+00
- nc_leak_i_a= 1.959773144e-18  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_ap= 1.959773144e-18  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_b=-1.959773144e-18  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_vcc=-1.959773144e-18  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_a= 2.383357757e-20  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_ap= 2.383689237e-20  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_b=-4.767046994e-20  from= 0.000000000e+00     to= 1.000000000e-09
  nc_leak_i_vdd=-1.320000000e-06  from= 0.000000000e+00     to= 1.000000000e-09
  nc_leak_i_vss= 0.000000000e+00  from= 0.000000000e+00     to= 1.000000000e-09
    nc_dyn_energy= failed                         measure parameter failed
@@ -113,11 +108,11 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      25 # elements   =      42
-  # resistors   =      14 # capacitors =       7 # inductors   =       0
+  # nodes       =      16 # elements   =      14
+  # resistors   =       2 # capacitors =       1 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
-  # cccs        =       0 # ccvs       =       0 # volt_srcs   =      11
-  # curr_srcs   =       0 # diodes     =       8 # bjts        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       9
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
   # jfets       =       0 # mosfets    =       2 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
   # S elements  =       0 # P elements =       0 # va device   =       0
@@ -127,8 +122,8 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1          23
-  transient          0.00         121         149          69 rev=         7
+  op point           0.00           1           3
+  transient          0.01         121         154          69 rev=         9
   readin             0.71
   errchk             0.02
   setup              0.00
@@ -136,10 +131,10 @@
 
 
            peak memory used        183.46 megabytes
-           total cpu time            0.73 seconds
-           total elapsed time        8.00 seconds
-           job started at     16:57:03 05/14/2016
-           job ended   at     16:57:11 05/14/2016
+           total cpu time            0.74 seconds
+           total elapsed time       10.26 seconds
+           job started at     14:39:46 05/21/2016
+           job ended   at     14:39:56 05/21/2016
 
 
  lic: Release hspice token(s) 

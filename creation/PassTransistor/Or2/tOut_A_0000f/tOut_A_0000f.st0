@@ -3,37 +3,37 @@
  lic:
  lic: FLEXlm: v10.8
  lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu
- lic: HOSTID: ac162d8b13a0         PID:      5192
+ lic: HOSTID: ac162d8b13a0         PID:      27973
  lic: Using FLEXlm license file:
  lic: /opt/Admin/cadence.dat
  lic: Checkout 1 hspice
  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12
  lic: NODE LOCKED license on hostid ac162d8b13a0
  lic:
- init: begin read circuit files,  cpu clock=  3.72E+00
+ init: begin read circuit files,  cpu clock=  6.03E+00
        option brief
- init: end read circuit files,  cpu clock=  3.94E+00 memory=      1315 kb
- init: begin check errors,  cpu clock=  3.94E+00
- init: end check errors,  cpu clock=  3.96E+00 memory=      1754 kb
- init: begin setup matrix, pivot=     0 cpu clock=  3.96E+00
-       establish matrix -- done,  cpu clock=  3.96E+00 memory=      1765 kb
-       re-order matrix -- done,  cpu clock=  3.96E+00 memory=      1766 kb
- init: end setup matrix,  cpu clock=  3.96E+00 memory=      1781 kb
+ init: end read circuit files,  cpu clock=  6.24E+00 memory=      1314 kb
+ init: begin check errors,  cpu clock=  6.24E+00
+ init: end check errors,  cpu clock=  6.26E+00 memory=      1752 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  6.26E+00
+       establish matrix -- done,  cpu clock=  6.26E+00 memory=      1759 kb
+       re-order matrix -- done,  cpu clock=  6.26E+00 memory=      1760 kb
+ init: end setup matrix,  cpu clock=  6.26E+00 memory=      1772 kb
  data: data=stimdata        index           =    1.00E+00
- dcop: begin dcop,  cpu clock=  3.96E+00
- dcop: end dcop,  cpu clock=  3.96E+00 memory=      1781 kb  tot_iter=      10
+ dcop: begin dcop,  cpu clock=  6.26E+00
+ dcop: end dcop,  cpu clock=  6.26E+00 memory=      1772 kb  tot_iter=       8
  output: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Or2/tOut_A_000
- sweep: tran tran1    begin, stop_t=  1.20E-08 #sweeps= 121 cpu clock=  3.96E+00
- tran: time= 1.2569E-09 tot_iter=     106 conv_iter=      49 cpu clock= 3.97E+00
- tran: time= 2.8879E-09 tot_iter=     112 conv_iter=      52 cpu clock= 3.97E+00
- tran: time= 4.0879E-09 tot_iter=     116 conv_iter=      54 cpu clock= 3.97E+00
- tran: time= 5.2879E-09 tot_iter=     120 conv_iter=      56 cpu clock= 3.97E+00
- tran: time= 6.4879E-09 tot_iter=     124 conv_iter=      58 cpu clock= 3.97E+00
- tran: time= 7.6879E-09 tot_iter=     128 conv_iter=      60 cpu clock= 3.97E+00
- tran: time= 8.8879E-09 tot_iter=     132 conv_iter=      62 cpu clock= 3.97E+00
- tran: time= 1.0088E-08 tot_iter=     136 conv_iter=      64 cpu clock= 3.97E+00
- tran: time= 1.1288E-08 tot_iter=     140 conv_iter=      66 cpu clock= 3.97E+00
- tran: time= 1.2000E-08 tot_iter=     144 conv_iter=      68 cpu clock= 3.97E+00
- sweep: tran tran1    end,  cpu clock=  3.97E+00 memory=      1781 kb
+ sweep: tran tran1    begin, stop_t=  1.20E-08 #sweeps= 121 cpu clock=  6.26E+00
+ tran: time= 1.2303E-09 tot_iter=     117 conv_iter=      47 cpu clock= 6.26E+00
+ tran: time= 2.8796E-09 tot_iter=     138 conv_iter=      54 cpu clock= 6.26E+00
+ tran: time= 4.0796E-09 tot_iter=     144 conv_iter=      56 cpu clock= 6.27E+00
+ tran: time= 5.2796E-09 tot_iter=     148 conv_iter=      58 cpu clock= 6.27E+00
+ tran: time= 6.4796E-09 tot_iter=     152 conv_iter=      60 cpu clock= 6.27E+00
+ tran: time= 7.6796E-09 tot_iter=     156 conv_iter=      62 cpu clock= 6.27E+00
+ tran: time= 8.8796E-09 tot_iter=     160 conv_iter=      64 cpu clock= 6.27E+00
+ tran: time= 1.0080E-08 tot_iter=     164 conv_iter=      66 cpu clock= 6.27E+00
+ tran: time= 1.1280E-08 tot_iter=     168 conv_iter=      68 cpu clock= 6.27E+00
+ tran: time= 1.2000E-08 tot_iter=     172 conv_iter=      70 cpu clock= 6.27E+00
+ sweep: tran tran1    end,  cpu clock=  6.27E+00 memory=      1773 kb
 >info:         ***** hspice job concluded
  lic: Release hspice token(s)

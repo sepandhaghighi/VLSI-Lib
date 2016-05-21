@@ -1,7 +1,7 @@
 * "simulator" "HSPICE" 
 * "version" "F-2011.09-SP1 64-BIT"
 * "format" "HSP"
-* "rundate" "16:56:52 05/14/2016 "
+* "rundate" "14:39:46 05/21/2016 "
 * "netlist" "/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001f/tOut_B_0001f.sp "
 * "runtitle" "* hspice timing acquisition"
 * time =  0.000000000e+00 
@@ -20,33 +20,9 @@
 + n_c2 = 1.320000000e+00 
 + n_cp = 0.000000000e+00 
 + n_cp2 = 0.000000000e+00 
-+ n_out = 1.292183194e+00 
-+ n_out1 = 1.292183194e+00 
++ n_out = 1.302605415e+00 
++ n_out1 = 1.302605415e+00 
 + vdd = 1.320000000e+00 
 + vss = 0.000000000e+00 
-+ x_and3.net15 = 1.299560664e+00 
-+ x_and3.xm3.bi = 1.319999891e+00 
-+ x_and3.xm3.db = 1.319999891e+00 
-+ x_and3.xm3.di = 1.292183193e+00 
-+ x_and3.xm3.gi = 2.972575828e-07 
-+ x_and3.xm3.sb = 1.319999891e+00 
-+ x_and3.xm3.si = 1.319999996e+00 
-+ x_and3.xm2.bi = 1.299560664e+00 
-+ x_and3.xm2.db = 1.299560664e+00 
-+ x_and3.xm2.di = 1.292183195e+00 
-+ x_and3.xm2.gi = 1.320000000e+00 
-+ x_and3.xm2.sb = 1.299560664e+00 
-+ x_and3.xm2.si = 1.299560661e+00 
-+ x_and3.xm1.bi = 1.319999891e+00 
-+ x_and3.xm1.db = 1.319999891e+00 
-+ x_and3.xm1.di = 1.299560663e+00 
-+ x_and3.xm1.gi = 2.995155619e-07 
-+ x_and3.xm1.sb = 1.319999891e+00 
-+ x_and3.xm1.si = 1.319999996e+00 
-+ x_and3.xm0.bi = 1.319999999e+00 
-+ x_and3.xm0.db = 1.319999999e+00 
-+ x_and3.xm0.di = 1.299560667e+00 
-+ x_and3.xm0.gi = 1.320000000e+00 
-+ x_and3.xm0.sb = 1.319999999e+00 
-+ x_and3.xm0.si = 1.319999993e+00 
++ x_and3.net15 = 1.307622272e+00 
 ***   END: Saved Operating Point ***                     

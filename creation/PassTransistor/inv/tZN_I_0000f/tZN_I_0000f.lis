@@ -10,7 +10,7 @@
  lic:  
  lic: FLEXlm: v10.8 
  lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu 
- lic: HOSTID: ac162d8b13a0         PID:      5148 
+ lic: HOSTID: ac162d8b13a0         PID:      27400 
  lic: Using FLEXlm license file: 
  lic: /opt/Admin/cadence.dat 
  lic: Checkout 1 hspice 
@@ -75,17 +75,17 @@
   analysis           time    # points   tot. iter  conv.iter
   op point           0.00           1           0
   transient          0.00         121           0           0 rev=         0
-  readin             0.72
+  readin             0.71
   errchk             0.00
   setup              0.00
   output             0.00
 
 
            peak memory used        183.25 megabytes
-           total cpu time            0.73 seconds
-           total elapsed time        7.61 seconds
-           job started at     16:57:02 05/14/2016
-           job ended   at     16:57:10 05/14/2016
+           total cpu time            0.72 seconds
+           total elapsed time       10.13 seconds
+           job started at     14:35:49 05/21/2016
+           job ended   at     14:35:59 05/21/2016
 
 
  lic: Release hspice token(s) 

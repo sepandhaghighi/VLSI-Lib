@@ -1,8 +1,0 @@
-***** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******
- Input File: /home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/Xor3/cCpf/
- lic:
- lic: FLEXlm: v10.8
- lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu
- lic: HOSTID: ac162d8b13a0         PID:      5490
- **error** stop simulation by signal SIGINT = 2
-

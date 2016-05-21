@@ -15,17 +15,15 @@ $DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP1 64-BIT'
                   v_a15            t_ap0            v_ap0             
                   t_ap1            v_ap1            t_b0              
                   v_b0             t_b1             v_b1              
-                  t_vcc0           v_vcc0           t_vcc1            
-                  v_vcc1           nc_delay_a_out   nc_inref_a        
-                  nc_optr_out      nc_fulloptr_out  t_a_trip1         
-                  t_a_trip2        t_stop_a         t_stop_out        
-                  t_simstop        t_a_trip_incap1  t_a_trip_incap2   
-                  nc_intg_i_a      nc_intg_i1_a     nc_intg_i2_a      
-                  nc_incap_a       nc_incap_c1_a    nc_incap_c2_a     
-                  nc_iptr_a        real_iptr_a      nc_when_a         
-                  nc_when_ap       nc_when_b        nc_when_vcc       
-                  nc_when_out      nc_leak_i_a      nc_leak_i_ap      
-                  nc_leak_i_b      nc_leak_i_vcc    nc_leak_i_vdd     
+                  nc_delay_a_out   nc_inref_a       nc_optr_out       
+                  nc_fulloptr_out  t_a_trip1        t_a_trip2         
+                  t_stop_a         t_stop_out       t_simstop         
+                  t_a_trip_incap1  t_a_trip_incap2  nc_intg_i_a       
+                  nc_intg_i1_a     nc_intg_i2_a     nc_incap_a        
+                  nc_incap_c1_a    nc_incap_c2_a    nc_iptr_a         
+                  real_iptr_a      nc_when_a        nc_when_ap        
+                  nc_when_b        nc_when_out      nc_leak_i_a       
+                  nc_leak_i_ap     nc_leak_i_b      nc_leak_i_vdd     
                   nc_leak_i_vss    nc_dyn_energy    t_int_energy      
                   nc_int_energy    nc_dyn_eng_vdd   nc_dyn_eng_vss    
                   nc_dyn_abs_energy nc_charge_vdd    nc_charge_vss     
@@ -46,19 +44,17 @@ $DATA1 SOURCE='HSPICE' VERSION='F-2011.09-SP1 64-BIT'
                    0.000000000e+00  0.000000000e+00  0.000000000e+00  
                    1.000000000e-07  0.000000000e+00  0.000000000e+00  
                    0.000000000e+00  1.000000000e-07  0.000000000e+00  
-                   0.000000000e+00  0.000000000e+00  1.000000000e-07  
-                   0.000000000e+00    failed         1.011953333e-09  
-                     failed           failed         1.013339953e-09  
-                   1.023333333e-09  1.027024399e-09    failed         
-                     failed         1.010166667e-09  1.023333333e-09  
-                   1.244353228e-14  8.175152155e-16  1.162601707e-14  
-                   1.185775899e-14  8.747594755e-15  1.216181812e-14  
-                   1.000000000e-11  9.993380276e-12  0.000000000e+00  
-                   0.000000000e+00  0.000000000e+00  0.000000000e+00  
-                   0.000000000e+00 -5.941198887e-08  4.937520702e-17  
-                   3.411961699e-13  5.941164762e-08 -1.320000000e-06  
-                   0.000000000e+00    failed           failed         
-                     failed           failed           failed         
-                     failed           failed           failed         
+                     failed         1.011953333e-09    failed         
+                     failed         1.013372223e-09  1.023333333e-09  
+                   1.027023049e-09  1.013762898e-09  1.027023049e-09  
+                   1.010166667e-09  1.023333333e-09  1.353526865e-16  
+                   1.008067513e-17  1.252720114e-16  1.289810239e-16  
+                   1.078654675e-16  1.310453451e-16  1.000000000e-11  
+                   9.961110445e-12  0.000000000e+00  0.000000000e+00  
+                   0.000000000e+00  0.000000000e+00 -5.551860683e-10  
+                   1.048124544e-12  5.541379434e-10 -1.320000000e-06  
+                   0.000000000e+00  2.966096124e-17  1.702304938e-11  
+                   2.966096124e-17  2.966096124e-17  0.000000000e+00  
+                   2.966096124e-17 -2.247042518e-17  0.000000000e+00  
                    0.000000000e+00  0.000000000e+00  2.500000000e+01  
                   1                 

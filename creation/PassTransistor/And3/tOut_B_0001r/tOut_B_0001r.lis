@@ -10,16 +10,14 @@
  lic:  
  lic: FLEXlm: v10.8 
  lic: USER:   Rezayi               HOSTNAME: Microelectronic.lab.edu 
- lic: HOSTID: ac162d8b13a0         PID:      5077 
+ lic: HOSTID: ac162d8b13a0         PID:      27931 
  lic: Using FLEXlm license file: 
  lic: /opt/Admin/cadence.dat 
  lic: Checkout 1 hspice 
  lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12 
  lic: NODE LOCKED license on hostid ac162d8b13a0 
  lic:   
-  **warning** Warning(s) associated with encrypted block(s) were suppressed due to encrypted content.
-
-  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/and3.spc:9) Above line is not allowed within subcircuit. The line is ignored.
+  **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/../netlists/and3.spc:11) Above line is not allowed within subcircuit. The line is ignored.
   **info**  the obsolete option nopage is ignored
   **info** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp:139) DC voltage reset to initial transient source value              in source        0:vn_a2               new dc=  0.1320D+01
   **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp:82) Capacitance value for element cld_out <=0; check the value.
@@ -30,6 +28,7 @@
   vn_vdd                  0:vdd              defined in subckt 0                     0:0                defined in subckt 0               
   vn_vss                  0:vss              defined in subckt 0                     0:0                defined in subckt 0               
       
+ **info** set option symb=1 internally to help for convergence.
  *****************************************************************
  ******  option summary
  ******
@@ -50,32 +49,32 @@
   **warning** (/home/Rezayi/Desktop/NCXtemplate/creation/PassTransistor/And3/tOut_B_0001r/tOut_B_0001r.sp:200) .MEASURE  nc_optr_out never reached the trigger value, Measurement failed!
    nc_optr_out= failed                          trig= not found
    nc_fulloptr_out= failed                          trig= not found
- t_b_trip1= 1.013351234e-09
+ t_b_trip1= 1.013344598e-09
  t_b_trip2= 1.023333333e-09
- t_stop_b= 1.027022808e-09
+ t_stop_b= 1.027022857e-09
    t_stop_out= failed
    t_simstop= failed                         measure parameter failed
  t_b_trip_incap1= 1.010166667e-09
  t_b_trip_incap2= 1.023333333e-09
- nc_intg_i_b=-2.103195679e-14  from= 1.010166667e-09     to= 1.023333333e-09
- nc_intg_i1_b=-1.418641985e-15  from= 1.010166667e-09     to= 1.011953333e-09
- nc_intg_i2_b=-1.961331480e-14  from= 1.011953333e-09     to= 1.023333333e-09
- nc_incap_b= 2.004188754e-14
- nc_incap_c1_b= 1.517978498e-14
- nc_incap_c2_b= 2.051722151e-14
+ nc_intg_i_b=-4.059267192e-16  from= 1.010166667e-09     to= 1.023333333e-09
+ nc_intg_i1_b=-3.820988807e-17  from= 1.010166667e-09     to= 1.011953333e-09
+ nc_intg_i2_b=-3.677168311e-16  from= 1.011953333e-09     to= 1.023333333e-09
+ nc_incap_b= 3.868179142e-16
+ nc_incap_c1_b= 4.088543065e-16
+ nc_incap_c2_b= 3.846635693e-16
  nc_iptr_b= 1.000000000e-11
- real_iptr_b= 9.982099342e-12  targ= 1.023333333e-09   trig= 1.013351234e-09
+ real_iptr_b= 9.988735027e-12  targ= 1.023333333e-09   trig= 1.013344598e-09
  nc_when_a= 1.000000000e+00
  nc_when_bp= 0.000000000e+00
  nc_when_b= 1.000000000e+00
  nc_when_c= 1.000000000e+00
  nc_when_cp= 0.000000000e+00
  nc_when_out= 1.000000000e+00
- nc_leak_i_a=-6.401010431e-08  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_bp= 2.314020230e-09  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_b= 1.179530807e-07  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_c=-6.438196561e-08  from= 0.000000000e+00     to= 1.000000000e-09
- nc_leak_i_cp= 8.124969018e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_a=-1.113044957e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_bp= 2.963972916e-11  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_b= 2.076076143e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_c=-1.141068685e-09  from= 0.000000000e+00     to= 1.000000000e-09
+ nc_leak_i_cp= 1.483977721e-10  from= 0.000000000e+00     to= 1.000000000e-09
  nc_leak_i_vdd=-1.320000000e-06  from= 0.000000000e+00     to= 1.000000000e-09
  nc_leak_i_vss= 0.000000000e+00  from= 0.000000000e+00     to= 1.000000000e-09
    nc_dyn_energy= failed                         measure parameter failed
@@ -115,11 +114,11 @@
 
 
   ******  Circuit Statistics  ******
-  # nodes       =      40 # elements   =      72
-  # resistors   =      26 # capacitors =      13 # inductors   =       0
+  # nodes       =      24 # elements   =      20
+  # resistors   =       2 # capacitors =       1 # inductors   =       0
   # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
   # cccs        =       0 # ccvs       =       0 # volt_srcs   =      13
-  # curr_srcs   =       0 # diodes     =      16 # bjts        =       0
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
   # jfets       =       0 # mosfets    =       4 # U elements  =       0
   # T elements  =       0 # W elements =       0 # B elements  =       0
   # S elements  =       0 # P elements =       0 # va device   =       0
@@ -129,8 +128,8 @@
   ******  Runtime Statistics (seconds)  ******
 
   analysis           time    # points   tot. iter  conv.iter
-  op point           0.00           1          21
-  transient          0.01         121         161          73 rev=         7
+  op point           0.00           1          15
+  transient          0.01         121         158          69 rev=         9
   readin             0.72
   errchk             0.02
   setup              0.00
@@ -139,9 +138,9 @@
 
            peak memory used        183.46 megabytes
            total cpu time            0.75 seconds
-           total elapsed time       10.23 seconds
-           job started at     16:56:52 05/14/2016
-           job ended   at     16:57:02 05/14/2016
+           total elapsed time       10.29 seconds
+           job started at     14:39:46 05/21/2016
+           job ended   at     14:39:56 05/21/2016
 
 
  lic: Release hspice token(s) 
