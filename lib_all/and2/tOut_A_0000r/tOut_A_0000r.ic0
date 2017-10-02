@@ -1,0 +1,22 @@
+* "simulator" "HSPICE" 
+* "version" "F-2011.09-SP1 64-BIT"
+* "format" "HSP"
+* "rundate" "16:13:14 10/02/2017 "
+* "netlist" "/home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000r/tOut_A_0000r.sp "
+* "runtitle" "* hspice timing acquisition"
+* time =  0.000000000e+00 
+* temperature =  2.500000000e+01 
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000000000e-12 
+.nodeset
++ n_a = 0.000000000e+00 
++ n_a2 = 0.000000000e+00 
++ n_b = 1.200000000e+00 
++ n_b2 = 1.200000000e+00 
++ n_out = 8.850197452e-02 
++ n_out1 = 8.850197452e-02 
++ vdd = 1.200000000e+00 
++ vss = 0.000000000e+00 
++ x_and2.ap = 1.199971606e+00 
+***   END: Saved Operating Point ***                     

@@ -1,0 +1,224 @@
+
+                       Liberty NCX (TM) C-2009.06-SP1
+               Synopsys Inc. Proprietary and Confidential
+   Your use of this program and its documentation are covered by a license
+      agreement, a copy of which may be found in the file "license.txt"
+     located in the install directory. Your use of this program is your
+            consent to be bound by its terms and conditions.
+    Parts of this program are protected by law and international treaties.
+
+           Unpublished - Copyright (c) 2006 Synopsys Inc.
+                          All rights reserved.
+  All rights for unpublished material are reserved under U.S. copyright laws.
+Copyright notice is precautionary and does not imply publication or disclosure.
+                  Liberty NCX is a Trademark of Synopsys Inc.
+
+
+Build date: Jul 16 2009
+
+Local host: Microelectronic.lab.edu Linux (2.6.18-406.el5) (x86_64 X 16)
+
+Command-line: /opt/Synopsys/NCX/ncx/amd64/bin/ncx \
+   -f script
+Process id: 3711
+netlist_dir changed to /home/mrezaie/Downloads/ncx_inv/work/netlists
+Total: 2 cells in netlist file /home/mrezaie/Downloads/ncx_inv/library.spi
+
+Program configuration:
+  Files/folders:
+    output_library      : /home/mrezaie/Downloads/ncx_inv/out.lib (user)
+    log_file            : /home/mrezaie/Downloads/ncx_inv/ncx.log
+    work_dir            : /home/mrezaie/Downloads/ncx_inv/work
+  Flows:
+    preanalysis_opt     : auto
+    prechar             : false
+    timing              : true (user)
+    power               : true (user)
+    noise               : false
+    compact             : true
+    templates           : false
+    ibis                : false
+  Simulation settings:
+    simulator_exec      : /opt/Synopsys/HSPICE/hspice/amd64/hspice (user)
+    simulator_type      : hspice
+    model_file          : /home/mrezaie/Desktop/hspice.mdl (user)
+    netlist_file        : /home/mrezaie/Downloads/ncx_inv/library.spi (user)
+    netlist_dir         : /home/mrezaie/Downloads/ncx_inv/work/netlists
+    netlist_suffix      : .spc
+    simulation_dir      : /home/mrezaie/Downloads/ncx_inv
+  Compute farm:
+    farm_type           : NoFarm (user)
+    queue_name          : normal
+    project_name        : NcxProj
+    bundle_size         : 50
+    constraint_bundle_size: 10
+    max_jobs            : 100
+    max_job_time        : 600
+    update_interval     : 60
+    farm_retry_limit    : 3
+    farm_retry_interval : 3
+    model_extraction_to_farm: false
+    backup_failed_sims  : false
+  Output format control:
+    precision           : 7
+    only_active_cells_to_library: false
+    failed_cells_to_library: false
+    sensitization_to_library: false
+    driver_waveform_to_library: true
+    use_driver_waveform_from_library: true
+  Program control:
+    autofix             : true
+    fix_nldm_timing     : delay
+    cleanup             : 1
+    reuse               : false
+    test_simulator      : true
+  Timing model acquisition options:
+    ccs_timing          : false (user)
+    compact_timing      : true
+    nldm                : true (user)
+    capacitance         : true
+    delay               : true
+    constraint          : true
+    shpr_constraint     : false
+    design_rules        : false
+    max_capacitance     : true
+    max_transition      : true
+    variation           : false
+    mismatch            : false
+  Power model acquisition options:
+    ccs_power           : false (user)
+    compact_power       : true
+    nlpm                : true (user)
+    variation_leakage   : false
+  Template usage options:
+    input_template_dir  : /home/mrezaie/Downloads/ncx_inv/config (user)
+    output_template_dir : /home/mrezaie/Downloads/ncx_inv/work
+    library_template_file: lib_all (user)
+    template_suffix     : .opt
+    timing_arcs_to_template: false
+    sensitization_to_template: false
+
+Mon Oct  2 16:12:03 2017
+
+--- begin flow...
+--- testing simulation setup...
+using HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011)
+done
+
+creating library lib_all
+initializing database...
+
+reading /home/mrezaie/Downloads/ncx_inv/config/lib_all.opt...
+Warning: the use of ncx_internal_power_mode is deprecated in favor of ncx_create_arcs
+  ncx_internal_power_mode : all -> ncx_create_arcs :  * * * internal_power states all
+Warning: the use of ncx_leakage_power_mode is deprecated in favor of ncx_create_arcs
+  ncx_leakage_power_mode : all -> ncx_create_arcs :  * * * leakage_power states all
+
+  
+reading /home/mrezaie/Downloads/ncx_inv/config/lib.indexes...done
+do 1 cells...done
+  adding new cell and2
+
+reading /home/mrezaie/Downloads/ncx_inv/config/and2.opt...done
+
+cell types:
+  combinational  : 1
+done
+
+Mon Oct  2 16:12:09 2017
+
+--- generating sensitizations...
+
+cell lib_all::and2 (1 of 1) (3in/1out pins)
+creating delay arcs...
+   combinational (positive_unate) A -> Out
+   combinational (negative_unate) Ap -> Out
+   combinational (positive_unate) B -> Out
+3 delay arcs created
+
+done
+
+Mon Oct  2 16:12:09 2017
+
+--- checking indices and signal levels...
+
+Mon Oct  2 16:12:09 2017
+
+--- pre-analyzing cells...
+
+cell lib_all::and2 (1 of 1) ()
+done
+
+--- checking pre-analysis simulations...
+
+--- processing pre-analysis results...
+
+cell lib_all::and2 (1 of 1)
+done
+
+Mon Oct  2 16:12:09 2017
+
+--- building netlists for nominal analysis ...
+
+cell lib_all::and2 (1 of 1) ()
+  applying optimizations...done
+  building non-propagated power netlists...
+Error: input pin Ap not detected in subckt interface
+Error: Failed net initialization
+  building dc leakage power netlists...
+done
+
+Mon Oct  2 16:12:09 2017
+
+--- checking nominal simulation status...
+
+queued=27 done=0
+
+queued=26 done=0
+
+queued=25 done=0
+
+queued=24 done=0
+
+queued=23 done=0
+
+queued=22 done=0
+
+queued=21 done=0
+
+queued=20 done=0
+
+queued=19 done=0
+
+queued=18 done=0
+
+queued=17 done=0
+
+queued=16 done=0
+
+queued=15 done=0
+
+queued=14 done=0
+
+queued=13 done=0
+
+queued=12 done=0
+
+user-interrupt detected.  Cleaning up...
+  \pkill -P 3734
+  \pkill -P 3736
+  \pkill -P 3738
+  \pkill -P 3756
+  \pkill -P 3759
+  \pkill -P 3761
+  \pkill -P 3765
+  \pkill -P 3776
+  \pkill -P 3784
+  \pkill -P 3789
+  \pkill -P 3792
+  \pkill -P 3795
+  \pkill -P 3797
+  \pkill -P 3799
+  \pkill -P 3802
+  \pkill -P 3805
+

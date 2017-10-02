@@ -1,0 +1,23 @@
+*EE6325 VLSI DESIGN COURSE WORK
+*PLEASE COPY ALL SPICE FILES GENERATED AFTER THE RCX OVER HERE
+*THE FORMAT IS BEEN GIVEN BELOW
+*PLEASE REPLACE GND! TO VSS AND VDD! TO VDD IN ALL CELL 
+
+.GLOBAL vdd vss
+
+.SUBCKT and2 ap a b out
+xm1 out ap vss vss nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
+xm0 out a b b nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
+.ENDS
+
+.SUBCKT inv a out
+.TEMP 25
+.OPTION
++    ARTIST=2
++    INGOLD=2
++    MEASOUT=1
++    PARHIER=LOCAL
++    PSF=2
+xm1 out a vss vss nmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
+xm0 out a vdd vdd pmos_rf lr=100e-9 wr=1.2e-6 nr=8 m=1 mismatchflag=0
+.ENDS

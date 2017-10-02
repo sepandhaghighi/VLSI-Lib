@@ -1,0 +1,1689 @@
+***** HSPICE -- F-2011.09-SP1 64-BIT (Nov 18 2011) linux ******
+ Input File: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_00
+ lic:
+ lic: FLEXlm: v10.8
+ lic: USER:   mrezaie              HOSTNAME: Microelectronic.lab.edu
+ lic: HOSTID: ac162d8b13a0         PID:      4045
+ lic: Using FLEXlm license file:
+ lic: /opt/Admin/cadence.dat
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 31-dec-2019/2019.12
+ lic: NODE LOCKED license on hostid ac162d8b13a0
+ lic:
+ init: begin read circuit files,  cpu clock=  3.20E+00
+       option brief
+ init: end read circuit files,  cpu clock=  3.34E+00 memory=      1373 kb
+ init: begin check errors,  cpu clock=  3.34E+00
+ init: end check errors,  cpu clock=  3.35E+00 memory=      1679 kb
+ init: begin setup matrix, pivot=     0 cpu clock=  3.35E+00
+       establish matrix -- done,  cpu clock=  3.35E+00 memory=      1694 kb
+       re-order matrix -- done,  cpu clock=  3.35E+00 memory=      1695 kb
+ init: end setup matrix,  cpu clock=  3.35E+00 memory=      1713 kb
+ sweep: data            data1            begin, #sweeps = 104
+ data: data=stimdata        index           =    1.00E+00
+ dcop: begin dcop,  cpu clock=  3.35E+00
+ dcop: end dcop,  cpu clock=  3.35E+00 memory=      1713 kb  tot_iter=      19
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran1    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.35E+00
+ tran: time= 5.0042E-09 tot_iter=     173 conv_iter=      71 cpu clock= 3.36E+00
+ tran: time= 1.1943E-08 tot_iter=     183 conv_iter=      76 cpu clock= 3.36E+00
+ tran: time= 1.6743E-08 tot_iter=     187 conv_iter=      78 cpu clock= 3.36E+00
+ tran: time= 2.1543E-08 tot_iter=     191 conv_iter=      80 cpu clock= 3.36E+00
+ tran: time= 2.6343E-08 tot_iter=     195 conv_iter=      82 cpu clock= 3.36E+00
+ tran: time= 3.1143E-08 tot_iter=     199 conv_iter=      84 cpu clock= 3.36E+00
+ tran: time= 3.5943E-08 tot_iter=     203 conv_iter=      86 cpu clock= 3.36E+00
+ tran: time= 4.0743E-08 tot_iter=     207 conv_iter=      88 cpu clock= 3.36E+00
+ tran: time= 4.5543E-08 tot_iter=     211 conv_iter=      90 cpu clock= 3.36E+00
+ tran: time= 4.8000E-08 tot_iter=     213 conv_iter=      91 cpu clock= 3.36E+00
+ sweep: tran tran1    end,  cpu clock=  3.36E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.00E+00
+ dcop: begin dcop,  cpu clock=  3.36E+00
+ dcop: end dcop,  cpu clock=  3.36E+00 memory=      1714 kb  tot_iter=      38
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran2    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.36E+00
+ tran: time= 4.9225E-09 tot_iter=     176 conv_iter=      72 cpu clock= 3.36E+00
+ tran: time= 1.0785E-08 tot_iter=     186 conv_iter=      77 cpu clock= 3.36E+00
+ tran: time= 1.5585E-08 tot_iter=     190 conv_iter=      79 cpu clock= 3.36E+00
+ tran: time= 2.0385E-08 tot_iter=     194 conv_iter=      81 cpu clock= 3.36E+00
+ tran: time= 2.5185E-08 tot_iter=     198 conv_iter=      83 cpu clock= 3.36E+00
+ tran: time= 2.9985E-08 tot_iter=     202 conv_iter=      85 cpu clock= 3.36E+00
+ tran: time= 3.4785E-08 tot_iter=     206 conv_iter=      87 cpu clock= 3.36E+00
+ tran: time= 3.9585E-08 tot_iter=     210 conv_iter=      89 cpu clock= 3.36E+00
+ tran: time= 4.4385E-08 tot_iter=     214 conv_iter=      91 cpu clock= 3.36E+00
+ tran: time= 4.8000E-08 tot_iter=     218 conv_iter=      93 cpu clock= 3.36E+00
+ sweep: tran tran2    end,  cpu clock=  3.36E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.00E+00
+ dcop: begin dcop,  cpu clock=  3.37E+00
+ dcop: end dcop,  cpu clock=  3.37E+00 memory=      1714 kb  tot_iter=      57
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran3    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.37E+00
+ tran: time= 4.9092E-09 tot_iter=     176 conv_iter=      72 cpu clock= 3.37E+00
+ tran: time= 1.0307E-08 tot_iter=     186 conv_iter=      77 cpu clock= 3.37E+00
+ tran: time= 1.5037E-08 tot_iter=     190 conv_iter=      79 cpu clock= 3.37E+00
+ tran: time= 1.9837E-08 tot_iter=     194 conv_iter=      81 cpu clock= 3.37E+00
+ tran: time= 2.4637E-08 tot_iter=     198 conv_iter=      83 cpu clock= 3.37E+00
+ tran: time= 2.9437E-08 tot_iter=     202 conv_iter=      85 cpu clock= 3.37E+00
+ tran: time= 3.4237E-08 tot_iter=     206 conv_iter=      87 cpu clock= 3.37E+00
+ tran: time= 3.9037E-08 tot_iter=     210 conv_iter=      89 cpu clock= 3.37E+00
+ tran: time= 4.3837E-08 tot_iter=     214 conv_iter=      91 cpu clock= 3.37E+00
+ tran: time= 4.8000E-08 tot_iter=     218 conv_iter=      93 cpu clock= 3.37E+00
+ sweep: tran tran3    end,  cpu clock=  3.37E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.00E+00
+ dcop: begin dcop,  cpu clock=  3.37E+00
+ dcop: end dcop,  cpu clock=  3.37E+00 memory=      1714 kb  tot_iter=      76
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran4    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.37E+00
+ tran: time= 4.9526E-09 tot_iter=     174 conv_iter=      71 cpu clock= 3.38E+00
+ tran: time= 1.0214E-08 tot_iter=     184 conv_iter=      76 cpu clock= 3.38E+00
+ tran: time= 1.4833E-08 tot_iter=     188 conv_iter=      78 cpu clock= 3.38E+00
+ tran: time= 1.9633E-08 tot_iter=     192 conv_iter=      80 cpu clock= 3.38E+00
+ tran: time= 2.4433E-08 tot_iter=     196 conv_iter=      82 cpu clock= 3.38E+00
+ tran: time= 2.9233E-08 tot_iter=     200 conv_iter=      84 cpu clock= 3.38E+00
+ tran: time= 3.4033E-08 tot_iter=     204 conv_iter=      86 cpu clock= 3.38E+00
+ tran: time= 3.8833E-08 tot_iter=     208 conv_iter=      88 cpu clock= 3.38E+00
+ tran: time= 4.3633E-08 tot_iter=     212 conv_iter=      90 cpu clock= 3.38E+00
+ tran: time= 4.8000E-08 tot_iter=     216 conv_iter=      92 cpu clock= 3.38E+00
+ sweep: tran tran4    end,  cpu clock=  3.38E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.00E+00
+ dcop: begin dcop,  cpu clock=  3.38E+00
+ dcop: end dcop,  cpu clock=  3.38E+00 memory=      1714 kb  tot_iter=      95
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran5    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.38E+00
+ tran: time= 5.0627E-09 tot_iter=     175 conv_iter=      71 cpu clock= 3.39E+00
+ tran: time= 1.0814E-08 tot_iter=     185 conv_iter=      76 cpu clock= 3.39E+00
+ tran: time= 1.5583E-08 tot_iter=     189 conv_iter=      78 cpu clock= 3.39E+00
+ tran: time= 2.0383E-08 tot_iter=     193 conv_iter=      80 cpu clock= 3.39E+00
+ tran: time= 2.5183E-08 tot_iter=     197 conv_iter=      82 cpu clock= 3.39E+00
+ tran: time= 2.9983E-08 tot_iter=     201 conv_iter=      84 cpu clock= 3.39E+00
+ tran: time= 3.4783E-08 tot_iter=     205 conv_iter=      86 cpu clock= 3.39E+00
+ tran: time= 3.9583E-08 tot_iter=     209 conv_iter=      88 cpu clock= 3.39E+00
+ tran: time= 4.4383E-08 tot_iter=     213 conv_iter=      90 cpu clock= 3.39E+00
+ tran: time= 4.8000E-08 tot_iter=     217 conv_iter=      92 cpu clock= 3.39E+00
+ sweep: tran tran5    end,  cpu clock=  3.39E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.00E+00
+ dcop: begin dcop,  cpu clock=  3.39E+00
+ dcop: end dcop,  cpu clock=  3.39E+00 memory=      1714 kb  tot_iter=     114
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran6    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.39E+00
+ tran: time= 5.0429E-09 tot_iter=     191 conv_iter=      76 cpu clock= 3.40E+00
+ tran: time= 1.1473E-08 tot_iter=     199 conv_iter=      80 cpu clock= 3.40E+00
+ tran: time= 1.6273E-08 tot_iter=     203 conv_iter=      82 cpu clock= 3.40E+00
+ tran: time= 2.1073E-08 tot_iter=     207 conv_iter=      84 cpu clock= 3.40E+00
+ tran: time= 2.5873E-08 tot_iter=     211 conv_iter=      86 cpu clock= 3.40E+00
+ tran: time= 3.0673E-08 tot_iter=     215 conv_iter=      88 cpu clock= 3.40E+00
+ tran: time= 3.5473E-08 tot_iter=     219 conv_iter=      90 cpu clock= 3.40E+00
+ tran: time= 4.0273E-08 tot_iter=     223 conv_iter=      92 cpu clock= 3.40E+00
+ tran: time= 4.5073E-08 tot_iter=     227 conv_iter=      94 cpu clock= 3.40E+00
+ tran: time= 4.8000E-08 tot_iter=     231 conv_iter=      96 cpu clock= 3.40E+00
+ sweep: tran tran6    end,  cpu clock=  3.40E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.00E+00
+ dcop: begin dcop,  cpu clock=  3.40E+00
+ dcop: end dcop,  cpu clock=  3.40E+00 memory=      1714 kb  tot_iter=     133
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran7    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.40E+00
+ tran: time= 5.4443E-09 tot_iter=     197 conv_iter=      78 cpu clock= 3.40E+00
+ tran: time= 1.1363E-08 tot_iter=     203 conv_iter=      81 cpu clock= 3.40E+00
+ tran: time= 1.6163E-08 tot_iter=     207 conv_iter=      83 cpu clock= 3.40E+00
+ tran: time= 2.0963E-08 tot_iter=     211 conv_iter=      85 cpu clock= 3.40E+00
+ tran: time= 2.5763E-08 tot_iter=     215 conv_iter=      87 cpu clock= 3.40E+00
+ tran: time= 3.0563E-08 tot_iter=     219 conv_iter=      89 cpu clock= 3.40E+00
+ tran: time= 3.5363E-08 tot_iter=     223 conv_iter=      91 cpu clock= 3.40E+00
+ tran: time= 4.0163E-08 tot_iter=     227 conv_iter=      93 cpu clock= 3.40E+00
+ tran: time= 4.4963E-08 tot_iter=     231 conv_iter=      95 cpu clock= 3.40E+00
+ tran: time= 4.8000E-08 tot_iter=     235 conv_iter=      97 cpu clock= 3.40E+00
+ sweep: tran tran7    end,  cpu clock=  3.40E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.00E+00
+ dcop: begin dcop,  cpu clock=  3.40E+00
+ dcop: end dcop,  cpu clock=  3.41E+00 memory=      1714 kb  tot_iter=     152
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran8    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.41E+00
+ tran: time= 4.8513E-09 tot_iter=     195 conv_iter=      77 cpu clock= 3.41E+00
+ tran: time= 9.6570E-09 tot_iter=     201 conv_iter=      80 cpu clock= 3.41E+00
+ tran: time= 1.4457E-08 tot_iter=     205 conv_iter=      82 cpu clock= 3.41E+00
+ tran: time= 1.9257E-08 tot_iter=     209 conv_iter=      84 cpu clock= 3.41E+00
+ tran: time= 2.4057E-08 tot_iter=     213 conv_iter=      86 cpu clock= 3.41E+00
+ tran: time= 2.8857E-08 tot_iter=     217 conv_iter=      88 cpu clock= 3.41E+00
+ tran: time= 3.3657E-08 tot_iter=     221 conv_iter=      90 cpu clock= 3.41E+00
+ tran: time= 3.8457E-08 tot_iter=     225 conv_iter=      92 cpu clock= 3.41E+00
+ tran: time= 4.3257E-08 tot_iter=     229 conv_iter=      94 cpu clock= 3.41E+00
+ tran: time= 4.8000E-08 tot_iter=     233 conv_iter=      96 cpu clock= 3.41E+00
+ sweep: tran tran8    end,  cpu clock=  3.41E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.00E+00
+ dcop: begin dcop,  cpu clock=  3.41E+00
+ dcop: end dcop,  cpu clock=  3.41E+00 memory=      1714 kb  tot_iter=     171
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran9    begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.41E+00
+ tran: time= 5.0543E-09 tot_iter=     176 conv_iter=      71 cpu clock= 3.42E+00
+ tran: time= 1.1265E-08 tot_iter=     184 conv_iter=      75 cpu clock= 3.42E+00
+ tran: time= 1.6065E-08 tot_iter=     188 conv_iter=      77 cpu clock= 3.42E+00
+ tran: time= 2.0865E-08 tot_iter=     192 conv_iter=      79 cpu clock= 3.42E+00
+ tran: time= 2.5665E-08 tot_iter=     196 conv_iter=      81 cpu clock= 3.42E+00
+ tran: time= 3.0465E-08 tot_iter=     200 conv_iter=      83 cpu clock= 3.42E+00
+ tran: time= 3.5265E-08 tot_iter=     204 conv_iter=      85 cpu clock= 3.42E+00
+ tran: time= 4.0065E-08 tot_iter=     208 conv_iter=      87 cpu clock= 3.42E+00
+ tran: time= 4.4865E-08 tot_iter=     212 conv_iter=      89 cpu clock= 3.42E+00
+ tran: time= 4.8000E-08 tot_iter=     216 conv_iter=      91 cpu clock= 3.42E+00
+ sweep: tran tran9    end,  cpu clock=  3.42E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.00E+01
+ dcop: begin dcop,  cpu clock=  3.42E+00
+ dcop: end dcop,  cpu clock=  3.42E+00 memory=      1714 kb  tot_iter=     190
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran10   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.42E+00
+ tran: time= 5.2521E-09 tot_iter=     177 conv_iter=      71 cpu clock= 3.43E+00
+ tran: time= 9.9726E-09 tot_iter=     183 conv_iter=      74 cpu clock= 3.43E+00
+ tran: time= 1.4773E-08 tot_iter=     187 conv_iter=      76 cpu clock= 3.43E+00
+ tran: time= 1.9573E-08 tot_iter=     191 conv_iter=      78 cpu clock= 3.43E+00
+ tran: time= 2.4373E-08 tot_iter=     195 conv_iter=      80 cpu clock= 3.43E+00
+ tran: time= 2.9173E-08 tot_iter=     199 conv_iter=      82 cpu clock= 3.43E+00
+ tran: time= 3.3973E-08 tot_iter=     203 conv_iter=      84 cpu clock= 3.43E+00
+ tran: time= 3.8773E-08 tot_iter=     207 conv_iter=      86 cpu clock= 3.43E+00
+ tran: time= 4.3573E-08 tot_iter=     211 conv_iter=      88 cpu clock= 3.43E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      90 cpu clock= 3.43E+00
+ sweep: tran tran10   end,  cpu clock=  3.43E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.10E+01
+ dcop: begin dcop,  cpu clock=  3.43E+00
+ dcop: end dcop,  cpu clock=  3.43E+00 memory=      1714 kb  tot_iter=     209
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran11   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.43E+00
+ tran: time= 4.8862E-09 tot_iter=     175 conv_iter=      70 cpu clock= 3.43E+00
+ tran: time= 1.1394E-08 tot_iter=     183 conv_iter=      74 cpu clock= 3.43E+00
+ tran: time= 1.6194E-08 tot_iter=     187 conv_iter=      76 cpu clock= 3.43E+00
+ tran: time= 2.0994E-08 tot_iter=     191 conv_iter=      78 cpu clock= 3.43E+00
+ tran: time= 2.5794E-08 tot_iter=     195 conv_iter=      80 cpu clock= 3.43E+00
+ tran: time= 3.0594E-08 tot_iter=     199 conv_iter=      82 cpu clock= 3.43E+00
+ tran: time= 3.5394E-08 tot_iter=     203 conv_iter=      84 cpu clock= 3.43E+00
+ tran: time= 4.0194E-08 tot_iter=     207 conv_iter=      86 cpu clock= 3.43E+00
+ tran: time= 4.4994E-08 tot_iter=     211 conv_iter=      88 cpu clock= 3.43E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      90 cpu clock= 3.43E+00
+ sweep: tran tran11   end,  cpu clock=  3.43E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.20E+01
+ dcop: begin dcop,  cpu clock=  3.43E+00
+ dcop: end dcop,  cpu clock=  3.44E+00 memory=      1714 kb  tot_iter=     228
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran12   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.44E+00
+ tran: time= 5.3402E-09 tot_iter=     175 conv_iter=      70 cpu clock= 3.44E+00
+ tran: time= 1.1478E-08 tot_iter=     181 conv_iter=      73 cpu clock= 3.44E+00
+ tran: time= 1.6278E-08 tot_iter=     185 conv_iter=      75 cpu clock= 3.44E+00
+ tran: time= 2.1078E-08 tot_iter=     189 conv_iter=      77 cpu clock= 3.44E+00
+ tran: time= 2.5878E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.44E+00
+ tran: time= 3.0678E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.44E+00
+ tran: time= 3.5478E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.44E+00
+ tran: time= 4.0278E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.44E+00
+ tran: time= 4.5078E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.44E+00
+ tran: time= 4.8000E-08 tot_iter=     213 conv_iter=      89 cpu clock= 3.44E+00
+ sweep: tran tran12   end,  cpu clock=  3.44E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.30E+01
+ dcop: begin dcop,  cpu clock=  3.44E+00
+ dcop: end dcop,  cpu clock=  3.44E+00 memory=      1714 kb  tot_iter=     247
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran13   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.44E+00
+ tran: time= 4.8586E-09 tot_iter=     168 conv_iter=      69 cpu clock= 3.45E+00
+ tran: time= 1.0627E-08 tot_iter=     174 conv_iter=      72 cpu clock= 3.45E+00
+ tran: time= 1.5427E-08 tot_iter=     178 conv_iter=      74 cpu clock= 3.45E+00
+ tran: time= 2.0227E-08 tot_iter=     182 conv_iter=      76 cpu clock= 3.45E+00
+ tran: time= 2.5027E-08 tot_iter=     186 conv_iter=      78 cpu clock= 3.45E+00
+ tran: time= 2.9827E-08 tot_iter=     190 conv_iter=      80 cpu clock= 3.45E+00
+ tran: time= 3.4627E-08 tot_iter=     194 conv_iter=      82 cpu clock= 3.45E+00
+ tran: time= 3.9427E-08 tot_iter=     198 conv_iter=      84 cpu clock= 3.45E+00
+ tran: time= 4.4227E-08 tot_iter=     202 conv_iter=      86 cpu clock= 3.45E+00
+ tran: time= 4.8000E-08 tot_iter=     206 conv_iter=      88 cpu clock= 3.45E+00
+ sweep: tran tran13   end,  cpu clock=  3.45E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.40E+01
+ dcop: begin dcop,  cpu clock=  3.45E+00
+ dcop: end dcop,  cpu clock=  3.45E+00 memory=      1714 kb  tot_iter=     266
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran14   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.45E+00
+ tran: time= 4.9174E-09 tot_iter=     185 conv_iter=      74 cpu clock= 3.45E+00
+ tran: time= 1.1005E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.45E+00
+ tran: time= 1.5805E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.45E+00
+ tran: time= 2.0605E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.45E+00
+ tran: time= 2.5405E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.45E+00
+ tran: time= 3.0205E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.45E+00
+ tran: time= 3.5005E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.45E+00
+ tran: time= 3.9805E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.45E+00
+ tran: time= 4.4605E-08 tot_iter=     219 conv_iter=      91 cpu clock= 3.45E+00
+ tran: time= 4.8000E-08 tot_iter=     223 conv_iter=      93 cpu clock= 3.46E+00
+ sweep: tran tran14   end,  cpu clock=  3.46E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.50E+01
+ dcop: begin dcop,  cpu clock=  3.46E+00
+ dcop: end dcop,  cpu clock=  3.46E+00 memory=      1714 kb  tot_iter=     285
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran15   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.46E+00
+ tran: time= 5.2653E-09 tot_iter=     190 conv_iter=      75 cpu clock= 3.46E+00
+ tran: time= 1.1465E-08 tot_iter=     196 conv_iter=      78 cpu clock= 3.46E+00
+ tran: time= 1.6265E-08 tot_iter=     200 conv_iter=      80 cpu clock= 3.46E+00
+ tran: time= 2.1065E-08 tot_iter=     204 conv_iter=      82 cpu clock= 3.46E+00
+ tran: time= 2.5865E-08 tot_iter=     208 conv_iter=      84 cpu clock= 3.46E+00
+ tran: time= 3.0665E-08 tot_iter=     212 conv_iter=      86 cpu clock= 3.46E+00
+ tran: time= 3.5465E-08 tot_iter=     216 conv_iter=      88 cpu clock= 3.46E+00
+ tran: time= 4.0265E-08 tot_iter=     220 conv_iter=      90 cpu clock= 3.46E+00
+ tran: time= 4.5065E-08 tot_iter=     224 conv_iter=      92 cpu clock= 3.46E+00
+ tran: time= 4.8000E-08 tot_iter=     228 conv_iter=      94 cpu clock= 3.46E+00
+ sweep: tran tran15   end,  cpu clock=  3.46E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.60E+01
+ dcop: begin dcop,  cpu clock=  3.46E+00
+ dcop: end dcop,  cpu clock=  3.46E+00 memory=      1714 kb  tot_iter=     304
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran16   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.46E+00
+ tran: time= 4.9235E-09 tot_iter=     188 conv_iter=      75 cpu clock= 3.47E+00
+ tran: time= 9.6777E-09 tot_iter=     194 conv_iter=      78 cpu clock= 3.47E+00
+ tran: time= 1.4478E-08 tot_iter=     198 conv_iter=      80 cpu clock= 3.47E+00
+ tran: time= 1.9278E-08 tot_iter=     202 conv_iter=      82 cpu clock= 3.47E+00
+ tran: time= 2.4078E-08 tot_iter=     206 conv_iter=      84 cpu clock= 3.47E+00
+ tran: time= 2.8878E-08 tot_iter=     210 conv_iter=      86 cpu clock= 3.47E+00
+ tran: time= 3.3678E-08 tot_iter=     214 conv_iter=      88 cpu clock= 3.47E+00
+ tran: time= 3.8478E-08 tot_iter=     218 conv_iter=      90 cpu clock= 3.47E+00
+ tran: time= 4.3278E-08 tot_iter=     222 conv_iter=      92 cpu clock= 3.47E+00
+ tran: time= 4.8000E-08 tot_iter=     226 conv_iter=      94 cpu clock= 3.47E+00
+ sweep: tran tran16   end,  cpu clock=  3.47E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.70E+01
+ dcop: begin dcop,  cpu clock=  3.47E+00
+ dcop: end dcop,  cpu clock=  3.47E+00 memory=      1714 kb  tot_iter=     323
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran17   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.47E+00
+ tran: time= 4.9175E-09 tot_iter=     185 conv_iter=      75 cpu clock= 3.48E+00
+ tran: time= 9.7123E-09 tot_iter=     191 conv_iter=      78 cpu clock= 3.48E+00
+ tran: time= 1.4512E-08 tot_iter=     195 conv_iter=      80 cpu clock= 3.48E+00
+ tran: time= 1.9312E-08 tot_iter=     199 conv_iter=      82 cpu clock= 3.48E+00
+ tran: time= 2.4112E-08 tot_iter=     203 conv_iter=      84 cpu clock= 3.48E+00
+ tran: time= 2.8912E-08 tot_iter=     207 conv_iter=      86 cpu clock= 3.48E+00
+ tran: time= 3.3712E-08 tot_iter=     211 conv_iter=      88 cpu clock= 3.48E+00
+ tran: time= 3.8512E-08 tot_iter=     215 conv_iter=      90 cpu clock= 3.48E+00
+ tran: time= 4.3312E-08 tot_iter=     219 conv_iter=      92 cpu clock= 3.48E+00
+ tran: time= 4.8000E-08 tot_iter=     223 conv_iter=      94 cpu clock= 3.48E+00
+ sweep: tran tran17   end,  cpu clock=  3.48E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.80E+01
+ dcop: begin dcop,  cpu clock=  3.48E+00
+ dcop: end dcop,  cpu clock=  3.48E+00 memory=      1714 kb  tot_iter=     342
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran18   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.48E+00
+ tran: time= 5.6669E-09 tot_iter=     187 conv_iter=      75 cpu clock= 3.48E+00
+ tran: time= 1.0032E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.48E+00
+ tran: time= 1.4832E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.48E+00
+ tran: time= 1.9632E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.48E+00
+ tran: time= 2.4432E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.48E+00
+ tran: time= 2.9232E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.48E+00
+ tran: time= 3.4032E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.48E+00
+ tran: time= 3.8832E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.48E+00
+ tran: time= 4.3632E-08 tot_iter=     219 conv_iter=      91 cpu clock= 3.49E+00
+ tran: time= 4.8000E-08 tot_iter=     223 conv_iter=      93 cpu clock= 3.49E+00
+ sweep: tran tran18   end,  cpu clock=  3.49E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.90E+01
+ dcop: begin dcop,  cpu clock=  3.49E+00
+ dcop: end dcop,  cpu clock=  3.49E+00 memory=      1714 kb  tot_iter=     361
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran19   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.49E+00
+ tran: time= 5.4717E-09 tot_iter=     187 conv_iter=      76 cpu clock= 3.49E+00
+ tran: time= 1.1149E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.49E+00
+ tran: time= 1.5949E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.49E+00
+ tran: time= 2.0749E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.49E+00
+ tran: time= 2.5549E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.49E+00
+ tran: time= 3.0349E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.49E+00
+ tran: time= 3.5149E-08 tot_iter=     213 conv_iter=      89 cpu clock= 3.49E+00
+ tran: time= 3.9949E-08 tot_iter=     217 conv_iter=      91 cpu clock= 3.49E+00
+ tran: time= 4.4749E-08 tot_iter=     221 conv_iter=      93 cpu clock= 3.49E+00
+ tran: time= 4.8000E-08 tot_iter=     225 conv_iter=      95 cpu clock= 3.49E+00
+ sweep: tran tran19   end,  cpu clock=  3.49E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.00E+01
+ dcop: begin dcop,  cpu clock=  3.49E+00
+ dcop: end dcop,  cpu clock=  3.49E+00 memory=      1714 kb  tot_iter=     380
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran20   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.49E+00
+ tran: time= 5.3412E-09 tot_iter=     186 conv_iter=      76 cpu clock= 3.50E+00
+ tran: time= 1.0409E-08 tot_iter=     192 conv_iter=      79 cpu clock= 3.50E+00
+ tran: time= 1.5209E-08 tot_iter=     196 conv_iter=      81 cpu clock= 3.50E+00
+ tran: time= 2.0009E-08 tot_iter=     200 conv_iter=      83 cpu clock= 3.50E+00
+ tran: time= 2.4809E-08 tot_iter=     204 conv_iter=      85 cpu clock= 3.50E+00
+ tran: time= 2.9609E-08 tot_iter=     208 conv_iter=      87 cpu clock= 3.50E+00
+ tran: time= 3.4409E-08 tot_iter=     212 conv_iter=      89 cpu clock= 3.50E+00
+ tran: time= 3.9209E-08 tot_iter=     216 conv_iter=      91 cpu clock= 3.50E+00
+ tran: time= 4.4009E-08 tot_iter=     220 conv_iter=      93 cpu clock= 3.50E+00
+ tran: time= 4.8000E-08 tot_iter=     224 conv_iter=      95 cpu clock= 3.50E+00
+ sweep: tran tran20   end,  cpu clock=  3.50E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.10E+01
+ dcop: begin dcop,  cpu clock=  3.50E+00
+ dcop: end dcop,  cpu clock=  3.50E+00 memory=      1714 kb  tot_iter=     399
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran21   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.50E+00
+ tran: time= 5.4513E-09 tot_iter=     190 conv_iter=      77 cpu clock= 3.51E+00
+ tran: time= 1.1509E-08 tot_iter=     196 conv_iter=      80 cpu clock= 3.51E+00
+ tran: time= 1.6309E-08 tot_iter=     200 conv_iter=      82 cpu clock= 3.51E+00
+ tran: time= 2.1109E-08 tot_iter=     204 conv_iter=      84 cpu clock= 3.51E+00
+ tran: time= 2.5909E-08 tot_iter=     208 conv_iter=      86 cpu clock= 3.51E+00
+ tran: time= 3.0709E-08 tot_iter=     212 conv_iter=      88 cpu clock= 3.51E+00
+ tran: time= 3.5509E-08 tot_iter=     216 conv_iter=      90 cpu clock= 3.51E+00
+ tran: time= 4.0309E-08 tot_iter=     220 conv_iter=      92 cpu clock= 3.51E+00
+ tran: time= 4.5109E-08 tot_iter=     224 conv_iter=      94 cpu clock= 3.51E+00
+ tran: time= 4.8000E-08 tot_iter=     228 conv_iter=      96 cpu clock= 3.51E+00
+ sweep: tran tran21   end,  cpu clock=  3.51E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.20E+01
+ dcop: begin dcop,  cpu clock=  3.51E+00
+ dcop: end dcop,  cpu clock=  3.51E+00 memory=      1714 kb  tot_iter=     418
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran22   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.51E+00
+ tran: time= 4.8722E-09 tot_iter=     189 conv_iter=      77 cpu clock= 3.52E+00
+ tran: time= 1.1515E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.52E+00
+ tran: time= 1.6315E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.52E+00
+ tran: time= 2.1115E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.52E+00
+ tran: time= 2.5915E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.52E+00
+ tran: time= 3.0715E-08 tot_iter=     213 conv_iter=      89 cpu clock= 3.52E+00
+ tran: time= 3.5515E-08 tot_iter=     217 conv_iter=      91 cpu clock= 3.52E+00
+ tran: time= 4.0315E-08 tot_iter=     221 conv_iter=      93 cpu clock= 3.52E+00
+ tran: time= 4.5115E-08 tot_iter=     225 conv_iter=      95 cpu clock= 3.52E+00
+ tran: time= 4.8000E-08 tot_iter=     229 conv_iter=      97 cpu clock= 3.52E+00
+ sweep: tran tran22   end,  cpu clock=  3.52E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.30E+01
+ dcop: begin dcop,  cpu clock=  3.52E+00
+ dcop: end dcop,  cpu clock=  3.52E+00 memory=      1714 kb  tot_iter=     437
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran23   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.52E+00
+ tran: time= 4.8833E-09 tot_iter=     185 conv_iter=      75 cpu clock= 3.52E+00
+ tran: time= 1.1094E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.52E+00
+ tran: time= 1.5894E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.52E+00
+ tran: time= 2.0694E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.52E+00
+ tran: time= 2.5494E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.52E+00
+ tran: time= 3.0294E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.52E+00
+ tran: time= 3.5094E-08 tot_iter=     213 conv_iter=      89 cpu clock= 3.53E+00
+ tran: time= 3.9894E-08 tot_iter=     217 conv_iter=      91 cpu clock= 3.53E+00
+ tran: time= 4.4694E-08 tot_iter=     221 conv_iter=      93 cpu clock= 3.53E+00
+ tran: time= 4.8000E-08 tot_iter=     225 conv_iter=      95 cpu clock= 3.53E+00
+ sweep: tran tran23   end,  cpu clock=  3.53E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.40E+01
+ dcop: begin dcop,  cpu clock=  3.53E+00
+ dcop: end dcop,  cpu clock=  3.53E+00 memory=      1714 kb  tot_iter=     456
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran24   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.53E+00
+ tran: time= 4.9842E-09 tot_iter=     185 conv_iter=      76 cpu clock= 3.53E+00
+ tran: time= 1.0429E-08 tot_iter=     193 conv_iter=      80 cpu clock= 3.53E+00
+ tran: time= 1.5229E-08 tot_iter=     197 conv_iter=      82 cpu clock= 3.53E+00
+ tran: time= 2.0029E-08 tot_iter=     201 conv_iter=      84 cpu clock= 3.53E+00
+ tran: time= 2.4829E-08 tot_iter=     205 conv_iter=      86 cpu clock= 3.53E+00
+ tran: time= 2.9629E-08 tot_iter=     209 conv_iter=      88 cpu clock= 3.53E+00
+ tran: time= 3.4429E-08 tot_iter=     213 conv_iter=      90 cpu clock= 3.53E+00
+ tran: time= 3.9229E-08 tot_iter=     217 conv_iter=      92 cpu clock= 3.53E+00
+ tran: time= 4.4029E-08 tot_iter=     221 conv_iter=      94 cpu clock= 3.53E+00
+ tran: time= 4.8000E-08 tot_iter=     225 conv_iter=      96 cpu clock= 3.53E+00
+ sweep: tran tran24   end,  cpu clock=  3.53E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.50E+01
+ dcop: begin dcop,  cpu clock=  3.53E+00
+ dcop: end dcop,  cpu clock=  3.53E+00 memory=      1714 kb  tot_iter=     475
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran25   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.53E+00
+ tran: time= 4.9113E-09 tot_iter=     184 conv_iter=      76 cpu clock= 3.54E+00
+ tran: time= 1.1932E-08 tot_iter=     194 conv_iter=      81 cpu clock= 3.54E+00
+ tran: time= 1.6732E-08 tot_iter=     198 conv_iter=      83 cpu clock= 3.54E+00
+ tran: time= 2.1532E-08 tot_iter=     202 conv_iter=      85 cpu clock= 3.54E+00
+ tran: time= 2.6332E-08 tot_iter=     206 conv_iter=      87 cpu clock= 3.54E+00
+ tran: time= 3.1132E-08 tot_iter=     210 conv_iter=      89 cpu clock= 3.54E+00
+ tran: time= 3.5932E-08 tot_iter=     214 conv_iter=      91 cpu clock= 3.54E+00
+ tran: time= 4.0732E-08 tot_iter=     218 conv_iter=      93 cpu clock= 3.54E+00
+ tran: time= 4.5532E-08 tot_iter=     222 conv_iter=      95 cpu clock= 3.54E+00
+ tran: time= 4.8000E-08 tot_iter=     224 conv_iter=      96 cpu clock= 3.54E+00
+ sweep: tran tran25   end,  cpu clock=  3.54E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.60E+01
+ dcop: begin dcop,  cpu clock=  3.54E+00
+ dcop: end dcop,  cpu clock=  3.54E+00 memory=      1714 kb  tot_iter=     494
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran26   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.54E+00
+ tran: time= 4.8054E-09 tot_iter=     183 conv_iter=      75 cpu clock= 3.55E+00
+ tran: time= 1.0629E-08 tot_iter=     191 conv_iter=      79 cpu clock= 3.55E+00
+ tran: time= 1.5429E-08 tot_iter=     195 conv_iter=      81 cpu clock= 3.55E+00
+ tran: time= 2.0229E-08 tot_iter=     199 conv_iter=      83 cpu clock= 3.55E+00
+ tran: time= 2.5029E-08 tot_iter=     203 conv_iter=      85 cpu clock= 3.55E+00
+ tran: time= 2.9829E-08 tot_iter=     207 conv_iter=      87 cpu clock= 3.55E+00
+ tran: time= 3.4629E-08 tot_iter=     211 conv_iter=      89 cpu clock= 3.55E+00
+ tran: time= 3.9429E-08 tot_iter=     215 conv_iter=      91 cpu clock= 3.55E+00
+ tran: time= 4.4229E-08 tot_iter=     219 conv_iter=      93 cpu clock= 3.55E+00
+ tran: time= 4.8000E-08 tot_iter=     223 conv_iter=      95 cpu clock= 3.55E+00
+ sweep: tran tran26   end,  cpu clock=  3.55E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.70E+01
+ dcop: begin dcop,  cpu clock=  3.55E+00
+ dcop: end dcop,  cpu clock=  3.55E+00 memory=      1714 kb  tot_iter=     513
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran27   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.55E+00
+ tran: time= 5.0246E-09 tot_iter=     199 conv_iter=      77 cpu clock= 3.56E+00
+ tran: time= 1.1679E-08 tot_iter=     205 conv_iter=      80 cpu clock= 3.56E+00
+ tran: time= 1.6479E-08 tot_iter=     209 conv_iter=      82 cpu clock= 3.56E+00
+ tran: time= 2.1279E-08 tot_iter=     213 conv_iter=      84 cpu clock= 3.56E+00
+ tran: time= 2.6079E-08 tot_iter=     217 conv_iter=      86 cpu clock= 3.56E+00
+ tran: time= 3.0879E-08 tot_iter=     221 conv_iter=      88 cpu clock= 3.56E+00
+ tran: time= 3.5679E-08 tot_iter=     225 conv_iter=      90 cpu clock= 3.56E+00
+ tran: time= 4.0479E-08 tot_iter=     229 conv_iter=      92 cpu clock= 3.56E+00
+ tran: time= 4.5279E-08 tot_iter=     233 conv_iter=      94 cpu clock= 3.56E+00
+ tran: time= 4.8000E-08 tot_iter=     237 conv_iter=      96 cpu clock= 3.56E+00
+ sweep: tran tran27   end,  cpu clock=  3.56E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.80E+01
+ dcop: begin dcop,  cpu clock=  3.56E+00
+ dcop: end dcop,  cpu clock=  3.56E+00 memory=      1714 kb  tot_iter=     532
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran28   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.56E+00
+ tran: time= 5.0185E-09 tot_iter=     210 conv_iter=      83 cpu clock= 3.56E+00
+ tran: time= 1.1758E-08 tot_iter=     216 conv_iter=      86 cpu clock= 3.56E+00
+ tran: time= 1.6558E-08 tot_iter=     220 conv_iter=      88 cpu clock= 3.56E+00
+ tran: time= 2.1358E-08 tot_iter=     224 conv_iter=      90 cpu clock= 3.56E+00
+ tran: time= 2.6158E-08 tot_iter=     228 conv_iter=      92 cpu clock= 3.57E+00
+ tran: time= 3.0958E-08 tot_iter=     232 conv_iter=      94 cpu clock= 3.57E+00
+ tran: time= 3.5758E-08 tot_iter=     236 conv_iter=      96 cpu clock= 3.57E+00
+ tran: time= 4.0558E-08 tot_iter=     240 conv_iter=      98 cpu clock= 3.57E+00
+ tran: time= 4.5358E-08 tot_iter=     244 conv_iter=     100 cpu clock= 3.57E+00
+ tran: time= 4.8000E-08 tot_iter=     248 conv_iter=     102 cpu clock= 3.57E+00
+ sweep: tran tran28   end,  cpu clock=  3.57E+00 memory=      1714 kb
+ data: data=stimdata        index           =    2.90E+01
+ dcop: begin dcop,  cpu clock=  3.57E+00
+ dcop: end dcop,  cpu clock=  3.57E+00 memory=      1714 kb  tot_iter=     551
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran29   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.57E+00
+ tran: time= 5.7087E-09 tot_iter=     197 conv_iter=      76 cpu clock= 3.57E+00
+ tran: time= 1.0503E-08 tot_iter=     201 conv_iter=      78 cpu clock= 3.57E+00
+ tran: time= 1.5303E-08 tot_iter=     205 conv_iter=      80 cpu clock= 3.57E+00
+ tran: time= 2.0103E-08 tot_iter=     209 conv_iter=      82 cpu clock= 3.57E+00
+ tran: time= 2.4903E-08 tot_iter=     213 conv_iter=      84 cpu clock= 3.57E+00
+ tran: time= 2.9703E-08 tot_iter=     217 conv_iter=      86 cpu clock= 3.57E+00
+ tran: time= 3.4503E-08 tot_iter=     221 conv_iter=      88 cpu clock= 3.57E+00
+ tran: time= 3.9303E-08 tot_iter=     225 conv_iter=      90 cpu clock= 3.57E+00
+ tran: time= 4.4103E-08 tot_iter=     229 conv_iter=      92 cpu clock= 3.57E+00
+ tran: time= 4.8000E-08 tot_iter=     233 conv_iter=      94 cpu clock= 3.57E+00
+ sweep: tran tran29   end,  cpu clock=  3.57E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.00E+01
+ dcop: begin dcop,  cpu clock=  3.57E+00
+ dcop: end dcop,  cpu clock=  3.57E+00 memory=      1714 kb  tot_iter=     570
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran30   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.57E+00
+ tran: time= 4.9371E-09 tot_iter=     198 conv_iter=      77 cpu clock= 3.58E+00
+ tran: time= 1.1475E-08 tot_iter=     204 conv_iter=      80 cpu clock= 3.58E+00
+ tran: time= 1.6275E-08 tot_iter=     208 conv_iter=      82 cpu clock= 3.58E+00
+ tran: time= 2.1075E-08 tot_iter=     212 conv_iter=      84 cpu clock= 3.58E+00
+ tran: time= 2.5875E-08 tot_iter=     216 conv_iter=      86 cpu clock= 3.58E+00
+ tran: time= 3.0675E-08 tot_iter=     220 conv_iter=      88 cpu clock= 3.58E+00
+ tran: time= 3.5475E-08 tot_iter=     224 conv_iter=      90 cpu clock= 3.58E+00
+ tran: time= 4.0275E-08 tot_iter=     228 conv_iter=      92 cpu clock= 3.58E+00
+ tran: time= 4.5075E-08 tot_iter=     232 conv_iter=      94 cpu clock= 3.58E+00
+ tran: time= 4.8000E-08 tot_iter=     236 conv_iter=      96 cpu clock= 3.58E+00
+ sweep: tran tran30   end,  cpu clock=  3.58E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.10E+01
+ dcop: begin dcop,  cpu clock=  3.58E+00
+ dcop: end dcop,  cpu clock=  3.58E+00 memory=      1714 kb  tot_iter=     589
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran31   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.58E+00
+ tran: time= 4.9161E-09 tot_iter=     172 conv_iter=      68 cpu clock= 3.59E+00
+ tran: time= 1.1247E-08 tot_iter=     178 conv_iter=      71 cpu clock= 3.59E+00
+ tran: time= 1.6047E-08 tot_iter=     182 conv_iter=      73 cpu clock= 3.59E+00
+ tran: time= 2.0847E-08 tot_iter=     186 conv_iter=      75 cpu clock= 3.59E+00
+ tran: time= 2.5647E-08 tot_iter=     190 conv_iter=      77 cpu clock= 3.59E+00
+ tran: time= 3.0447E-08 tot_iter=     194 conv_iter=      79 cpu clock= 3.59E+00
+ tran: time= 3.5247E-08 tot_iter=     198 conv_iter=      81 cpu clock= 3.59E+00
+ tran: time= 4.0047E-08 tot_iter=     202 conv_iter=      83 cpu clock= 3.59E+00
+ tran: time= 4.4847E-08 tot_iter=     206 conv_iter=      85 cpu clock= 3.59E+00
+ tran: time= 4.8000E-08 tot_iter=     210 conv_iter=      87 cpu clock= 3.59E+00
+ sweep: tran tran31   end,  cpu clock=  3.59E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.20E+01
+ dcop: begin dcop,  cpu clock=  3.59E+00
+ dcop: end dcop,  cpu clock=  3.59E+00 memory=      1714 kb  tot_iter=     608
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran32   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.59E+00
+ tran: time= 4.8999E-09 tot_iter=     173 conv_iter=      68 cpu clock= 3.59E+00
+ tran: time= 1.1160E-08 tot_iter=     179 conv_iter=      71 cpu clock= 3.59E+00
+ tran: time= 1.5960E-08 tot_iter=     183 conv_iter=      73 cpu clock= 3.59E+00
+ tran: time= 2.0760E-08 tot_iter=     187 conv_iter=      75 cpu clock= 3.59E+00
+ tran: time= 2.5560E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.59E+00
+ tran: time= 3.0360E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.59E+00
+ tran: time= 3.5160E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.59E+00
+ tran: time= 3.9960E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.59E+00
+ tran: time= 4.4760E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.60E+00
+ tran: time= 4.8000E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.60E+00
+ sweep: tran tran32   end,  cpu clock=  3.60E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.30E+01
+ dcop: begin dcop,  cpu clock=  3.60E+00
+ dcop: end dcop,  cpu clock=  3.60E+00 memory=      1714 kb  tot_iter=     627
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran33   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.60E+00
+ tran: time= 4.8614E-09 tot_iter=     174 conv_iter=      69 cpu clock= 3.60E+00
+ tran: time= 1.0983E-08 tot_iter=     180 conv_iter=      72 cpu clock= 3.60E+00
+ tran: time= 1.5783E-08 tot_iter=     184 conv_iter=      74 cpu clock= 3.60E+00
+ tran: time= 2.0583E-08 tot_iter=     188 conv_iter=      76 cpu clock= 3.60E+00
+ tran: time= 2.5383E-08 tot_iter=     192 conv_iter=      78 cpu clock= 3.60E+00
+ tran: time= 3.0183E-08 tot_iter=     196 conv_iter=      80 cpu clock= 3.60E+00
+ tran: time= 3.4983E-08 tot_iter=     200 conv_iter=      82 cpu clock= 3.60E+00
+ tran: time= 3.9783E-08 tot_iter=     204 conv_iter=      84 cpu clock= 3.60E+00
+ tran: time= 4.4583E-08 tot_iter=     208 conv_iter=      86 cpu clock= 3.60E+00
+ tran: time= 4.8000E-08 tot_iter=     212 conv_iter=      88 cpu clock= 3.60E+00
+ sweep: tran tran33   end,  cpu clock=  3.60E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.40E+01
+ dcop: begin dcop,  cpu clock=  3.60E+00
+ dcop: end dcop,  cpu clock=  3.60E+00 memory=      1714 kb  tot_iter=     646
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran34   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.60E+00
+ tran: time= 4.8799E-09 tot_iter=     176 conv_iter=      70 cpu clock= 3.61E+00
+ tran: time= 1.1035E-08 tot_iter=     182 conv_iter=      73 cpu clock= 3.61E+00
+ tran: time= 1.5835E-08 tot_iter=     186 conv_iter=      75 cpu clock= 3.61E+00
+ tran: time= 2.0635E-08 tot_iter=     190 conv_iter=      77 cpu clock= 3.61E+00
+ tran: time= 2.5435E-08 tot_iter=     194 conv_iter=      79 cpu clock= 3.61E+00
+ tran: time= 3.0235E-08 tot_iter=     198 conv_iter=      81 cpu clock= 3.61E+00
+ tran: time= 3.5035E-08 tot_iter=     202 conv_iter=      83 cpu clock= 3.61E+00
+ tran: time= 3.9835E-08 tot_iter=     206 conv_iter=      85 cpu clock= 3.61E+00
+ tran: time= 4.4635E-08 tot_iter=     210 conv_iter=      87 cpu clock= 3.61E+00
+ tran: time= 4.8000E-08 tot_iter=     214 conv_iter=      89 cpu clock= 3.61E+00
+ sweep: tran tran34   end,  cpu clock=  3.61E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.50E+01
+ dcop: begin dcop,  cpu clock=  3.61E+00
+ dcop: end dcop,  cpu clock=  3.61E+00 memory=      1714 kb  tot_iter=     665
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran35   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.61E+00
+ tran: time= 5.3302E-09 tot_iter=     169 conv_iter=      68 cpu clock= 3.62E+00
+ tran: time= 1.1921E-08 tot_iter=     175 conv_iter=      71 cpu clock= 3.62E+00
+ tran: time= 1.6721E-08 tot_iter=     179 conv_iter=      73 cpu clock= 3.62E+00
+ tran: time= 2.1521E-08 tot_iter=     183 conv_iter=      75 cpu clock= 3.62E+00
+ tran: time= 2.6321E-08 tot_iter=     187 conv_iter=      77 cpu clock= 3.62E+00
+ tran: time= 3.1121E-08 tot_iter=     191 conv_iter=      79 cpu clock= 3.62E+00
+ tran: time= 3.5921E-08 tot_iter=     195 conv_iter=      81 cpu clock= 3.62E+00
+ tran: time= 4.0721E-08 tot_iter=     199 conv_iter=      83 cpu clock= 3.62E+00
+ tran: time= 4.5521E-08 tot_iter=     203 conv_iter=      85 cpu clock= 3.62E+00
+ tran: time= 4.8000E-08 tot_iter=     205 conv_iter=      86 cpu clock= 3.62E+00
+ sweep: tran tran35   end,  cpu clock=  3.62E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.60E+01
+ dcop: begin dcop,  cpu clock=  3.62E+00
+ dcop: end dcop,  cpu clock=  3.62E+00 memory=      1714 kb  tot_iter=     684
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran36   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.62E+00
+ tran: time= 5.3266E-09 tot_iter=     171 conv_iter=      68 cpu clock= 3.62E+00
+ tran: time= 1.1912E-08 tot_iter=     177 conv_iter=      71 cpu clock= 3.62E+00
+ tran: time= 1.6712E-08 tot_iter=     181 conv_iter=      73 cpu clock= 3.62E+00
+ tran: time= 2.1512E-08 tot_iter=     185 conv_iter=      75 cpu clock= 3.62E+00
+ tran: time= 2.6312E-08 tot_iter=     189 conv_iter=      77 cpu clock= 3.62E+00
+ tran: time= 3.1112E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.62E+00
+ tran: time= 3.5912E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.62E+00
+ tran: time= 4.0712E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.62E+00
+ tran: time= 4.5512E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.62E+00
+ tran: time= 4.8000E-08 tot_iter=     207 conv_iter=      86 cpu clock= 3.62E+00
+ sweep: tran tran36   end,  cpu clock=  3.62E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.70E+01
+ dcop: begin dcop,  cpu clock=  3.62E+00
+ dcop: end dcop,  cpu clock=  3.62E+00 memory=      1714 kb  tot_iter=     703
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran37   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.62E+00
+ tran: time= 5.4395E-09 tot_iter=     166 conv_iter=      66 cpu clock= 3.63E+00
+ tran: time= 9.8005E-09 tot_iter=     170 conv_iter=      68 cpu clock= 3.63E+00
+ tran: time= 1.4601E-08 tot_iter=     174 conv_iter=      70 cpu clock= 3.63E+00
+ tran: time= 1.9401E-08 tot_iter=     178 conv_iter=      72 cpu clock= 3.63E+00
+ tran: time= 2.4201E-08 tot_iter=     182 conv_iter=      74 cpu clock= 3.63E+00
+ tran: time= 2.9001E-08 tot_iter=     186 conv_iter=      76 cpu clock= 3.63E+00
+ tran: time= 3.3801E-08 tot_iter=     190 conv_iter=      78 cpu clock= 3.63E+00
+ tran: time= 3.8601E-08 tot_iter=     194 conv_iter=      80 cpu clock= 3.63E+00
+ tran: time= 4.3401E-08 tot_iter=     198 conv_iter=      82 cpu clock= 3.63E+00
+ tran: time= 4.8000E-08 tot_iter=     202 conv_iter=      84 cpu clock= 3.63E+00
+ sweep: tran tran37   end,  cpu clock=  3.63E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.80E+01
+ dcop: begin dcop,  cpu clock=  3.63E+00
+ dcop: end dcop,  cpu clock=  3.63E+00 memory=      1714 kb  tot_iter=     722
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran38   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.63E+00
+ tran: time= 5.8900E-09 tot_iter=     167 conv_iter=      67 cpu clock= 3.63E+00
+ tran: time= 1.0690E-08 tot_iter=     171 conv_iter=      69 cpu clock= 3.63E+00
+ tran: time= 1.5490E-08 tot_iter=     175 conv_iter=      71 cpu clock= 3.63E+00
+ tran: time= 2.0290E-08 tot_iter=     179 conv_iter=      73 cpu clock= 3.63E+00
+ tran: time= 2.5090E-08 tot_iter=     183 conv_iter=      75 cpu clock= 3.63E+00
+ tran: time= 2.9890E-08 tot_iter=     187 conv_iter=      77 cpu clock= 3.63E+00
+ tran: time= 3.4690E-08 tot_iter=     191 conv_iter=      79 cpu clock= 3.63E+00
+ tran: time= 3.9490E-08 tot_iter=     195 conv_iter=      81 cpu clock= 3.63E+00
+ tran: time= 4.4290E-08 tot_iter=     199 conv_iter=      83 cpu clock= 3.63E+00
+ tran: time= 4.8000E-08 tot_iter=     203 conv_iter=      85 cpu clock= 3.64E+00
+ sweep: tran tran38   end,  cpu clock=  3.64E+00 memory=      1714 kb
+ data: data=stimdata        index           =    3.90E+01
+ dcop: begin dcop,  cpu clock=  3.64E+00
+ dcop: end dcop,  cpu clock=  3.64E+00 memory=      1714 kb  tot_iter=     741
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran39   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.64E+00
+ tran: time= 5.6159E-09 tot_iter=     167 conv_iter=      67 cpu clock= 3.64E+00
+ tran: time= 1.0236E-08 tot_iter=     171 conv_iter=      69 cpu clock= 3.64E+00
+ tran: time= 1.5036E-08 tot_iter=     175 conv_iter=      71 cpu clock= 3.64E+00
+ tran: time= 1.9836E-08 tot_iter=     179 conv_iter=      73 cpu clock= 3.64E+00
+ tran: time= 2.4636E-08 tot_iter=     183 conv_iter=      75 cpu clock= 3.64E+00
+ tran: time= 2.9436E-08 tot_iter=     187 conv_iter=      77 cpu clock= 3.64E+00
+ tran: time= 3.4236E-08 tot_iter=     191 conv_iter=      79 cpu clock= 3.64E+00
+ tran: time= 3.9036E-08 tot_iter=     195 conv_iter=      81 cpu clock= 3.64E+00
+ tran: time= 4.3836E-08 tot_iter=     199 conv_iter=      83 cpu clock= 3.64E+00
+ tran: time= 4.8000E-08 tot_iter=     203 conv_iter=      85 cpu clock= 3.64E+00
+ sweep: tran tran39   end,  cpu clock=  3.64E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.00E+01
+ dcop: begin dcop,  cpu clock=  3.64E+00
+ dcop: end dcop,  cpu clock=  3.64E+00 memory=      1714 kb  tot_iter=     760
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran40   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.64E+00
+ tran: time= 5.3483E-09 tot_iter=     194 conv_iter=      78 cpu clock= 3.65E+00
+ tran: time= 1.0148E-08 tot_iter=     198 conv_iter=      80 cpu clock= 3.65E+00
+ tran: time= 1.4948E-08 tot_iter=     202 conv_iter=      82 cpu clock= 3.65E+00
+ tran: time= 1.9748E-08 tot_iter=     206 conv_iter=      84 cpu clock= 3.65E+00
+ tran: time= 2.4548E-08 tot_iter=     210 conv_iter=      86 cpu clock= 3.65E+00
+ tran: time= 2.9348E-08 tot_iter=     214 conv_iter=      88 cpu clock= 3.65E+00
+ tran: time= 3.4148E-08 tot_iter=     218 conv_iter=      90 cpu clock= 3.65E+00
+ tran: time= 3.8948E-08 tot_iter=     222 conv_iter=      92 cpu clock= 3.65E+00
+ tran: time= 4.3748E-08 tot_iter=     226 conv_iter=      94 cpu clock= 3.65E+00
+ tran: time= 4.8000E-08 tot_iter=     230 conv_iter=      96 cpu clock= 3.65E+00
+ sweep: tran tran40   end,  cpu clock=  3.65E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.10E+01
+ dcop: begin dcop,  cpu clock=  3.65E+00
+ dcop: end dcop,  cpu clock=  3.65E+00 memory=      1714 kb  tot_iter=     779
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran41   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.65E+00
+ tran: time= 5.1503E-09 tot_iter=     190 conv_iter=      75 cpu clock= 3.66E+00
+ tran: time= 1.1695E-08 tot_iter=     196 conv_iter=      78 cpu clock= 3.66E+00
+ tran: time= 1.6495E-08 tot_iter=     200 conv_iter=      80 cpu clock= 3.66E+00
+ tran: time= 2.1295E-08 tot_iter=     204 conv_iter=      82 cpu clock= 3.66E+00
+ tran: time= 2.6095E-08 tot_iter=     208 conv_iter=      84 cpu clock= 3.66E+00
+ tran: time= 3.0895E-08 tot_iter=     212 conv_iter=      86 cpu clock= 3.66E+00
+ tran: time= 3.5695E-08 tot_iter=     216 conv_iter=      88 cpu clock= 3.66E+00
+ tran: time= 4.0495E-08 tot_iter=     220 conv_iter=      90 cpu clock= 3.66E+00
+ tran: time= 4.5295E-08 tot_iter=     224 conv_iter=      92 cpu clock= 3.66E+00
+ tran: time= 4.8000E-08 tot_iter=     228 conv_iter=      94 cpu clock= 3.66E+00
+ sweep: tran tran41   end,  cpu clock=  3.66E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.20E+01
+ dcop: begin dcop,  cpu clock=  3.66E+00
+ dcop: end dcop,  cpu clock=  3.66E+00 memory=      1714 kb  tot_iter=     798
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran42   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.66E+00
+ tran: time= 5.3212E-09 tot_iter=     194 conv_iter=      78 cpu clock= 3.66E+00
+ tran: time= 9.9862E-09 tot_iter=     198 conv_iter=      80 cpu clock= 3.66E+00
+ tran: time= 1.4786E-08 tot_iter=     202 conv_iter=      82 cpu clock= 3.66E+00
+ tran: time= 1.9586E-08 tot_iter=     206 conv_iter=      84 cpu clock= 3.66E+00
+ tran: time= 2.4386E-08 tot_iter=     210 conv_iter=      86 cpu clock= 3.66E+00
+ tran: time= 2.9186E-08 tot_iter=     214 conv_iter=      88 cpu clock= 3.66E+00
+ tran: time= 3.3986E-08 tot_iter=     218 conv_iter=      90 cpu clock= 3.67E+00
+ tran: time= 3.8786E-08 tot_iter=     222 conv_iter=      92 cpu clock= 3.67E+00
+ tran: time= 4.3586E-08 tot_iter=     226 conv_iter=      94 cpu clock= 3.67E+00
+ tran: time= 4.8000E-08 tot_iter=     230 conv_iter=      96 cpu clock= 3.67E+00
+ sweep: tran tran42   end,  cpu clock=  3.67E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.30E+01
+ dcop: begin dcop,  cpu clock=  3.67E+00
+ dcop: end dcop,  cpu clock=  3.67E+00 memory=      1714 kb  tot_iter=     817
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran43   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.67E+00
+ tran: time= 5.3981E-09 tot_iter=     194 conv_iter=      78 cpu clock= 3.67E+00
+ tran: time= 1.0198E-08 tot_iter=     198 conv_iter=      80 cpu clock= 3.67E+00
+ tran: time= 1.4998E-08 tot_iter=     202 conv_iter=      82 cpu clock= 3.67E+00
+ tran: time= 1.9798E-08 tot_iter=     206 conv_iter=      84 cpu clock= 3.67E+00
+ tran: time= 2.4598E-08 tot_iter=     210 conv_iter=      86 cpu clock= 3.67E+00
+ tran: time= 2.9398E-08 tot_iter=     214 conv_iter=      88 cpu clock= 3.67E+00
+ tran: time= 3.4198E-08 tot_iter=     218 conv_iter=      90 cpu clock= 3.67E+00
+ tran: time= 3.8998E-08 tot_iter=     222 conv_iter=      92 cpu clock= 3.67E+00
+ tran: time= 4.3798E-08 tot_iter=     226 conv_iter=      94 cpu clock= 3.67E+00
+ tran: time= 4.8000E-08 tot_iter=     230 conv_iter=      96 cpu clock= 3.67E+00
+ sweep: tran tran43   end,  cpu clock=  3.67E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.40E+01
+ dcop: begin dcop,  cpu clock=  3.67E+00
+ dcop: end dcop,  cpu clock=  3.67E+00 memory=      1714 kb  tot_iter=     836
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran44   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.67E+00
+ tran: time= 5.3343E-09 tot_iter=     199 conv_iter=      80 cpu clock= 3.68E+00
+ tran: time= 1.0134E-08 tot_iter=     203 conv_iter=      82 cpu clock= 3.68E+00
+ tran: time= 1.4934E-08 tot_iter=     207 conv_iter=      84 cpu clock= 3.68E+00
+ tran: time= 1.9734E-08 tot_iter=     211 conv_iter=      86 cpu clock= 3.68E+00
+ tran: time= 2.4534E-08 tot_iter=     215 conv_iter=      88 cpu clock= 3.68E+00
+ tran: time= 2.9334E-08 tot_iter=     219 conv_iter=      90 cpu clock= 3.68E+00
+ tran: time= 3.4134E-08 tot_iter=     223 conv_iter=      92 cpu clock= 3.68E+00
+ tran: time= 3.8934E-08 tot_iter=     227 conv_iter=      94 cpu clock= 3.68E+00
+ tran: time= 4.3734E-08 tot_iter=     231 conv_iter=      96 cpu clock= 3.68E+00
+ tran: time= 4.8000E-08 tot_iter=     235 conv_iter=      98 cpu clock= 3.68E+00
+ sweep: tran tran44   end,  cpu clock=  3.68E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.50E+01
+ dcop: begin dcop,  cpu clock=  3.68E+00
+ dcop: end dcop,  cpu clock=  3.68E+00 memory=      1714 kb  tot_iter=     855
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran45   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.68E+00
+ tran: time= 5.3567E-09 tot_iter=     196 conv_iter=      78 cpu clock= 3.69E+00
+ tran: time= 1.0157E-08 tot_iter=     200 conv_iter=      80 cpu clock= 3.69E+00
+ tran: time= 1.4957E-08 tot_iter=     204 conv_iter=      82 cpu clock= 3.69E+00
+ tran: time= 1.9757E-08 tot_iter=     208 conv_iter=      84 cpu clock= 3.69E+00
+ tran: time= 2.4557E-08 tot_iter=     212 conv_iter=      86 cpu clock= 3.69E+00
+ tran: time= 2.9357E-08 tot_iter=     216 conv_iter=      88 cpu clock= 3.69E+00
+ tran: time= 3.4157E-08 tot_iter=     220 conv_iter=      90 cpu clock= 3.69E+00
+ tran: time= 3.8957E-08 tot_iter=     224 conv_iter=      92 cpu clock= 3.69E+00
+ tran: time= 4.3757E-08 tot_iter=     228 conv_iter=      94 cpu clock= 3.69E+00
+ tran: time= 4.8000E-08 tot_iter=     232 conv_iter=      96 cpu clock= 3.69E+00
+ sweep: tran tran45   end,  cpu clock=  3.69E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.60E+01
+ dcop: begin dcop,  cpu clock=  3.69E+00
+ dcop: end dcop,  cpu clock=  3.69E+00 memory=      1714 kb  tot_iter=     874
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran46   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.69E+00
+ tran: time= 5.1368E-09 tot_iter=     177 conv_iter=      71 cpu clock= 3.70E+00
+ tran: time= 1.1658E-08 tot_iter=     183 conv_iter=      74 cpu clock= 3.70E+00
+ tran: time= 1.6458E-08 tot_iter=     187 conv_iter=      76 cpu clock= 3.70E+00
+ tran: time= 2.1258E-08 tot_iter=     191 conv_iter=      78 cpu clock= 3.70E+00
+ tran: time= 2.6058E-08 tot_iter=     195 conv_iter=      80 cpu clock= 3.70E+00
+ tran: time= 3.0858E-08 tot_iter=     199 conv_iter=      82 cpu clock= 3.70E+00
+ tran: time= 3.5658E-08 tot_iter=     203 conv_iter=      84 cpu clock= 3.70E+00
+ tran: time= 4.0458E-08 tot_iter=     207 conv_iter=      86 cpu clock= 3.70E+00
+ tran: time= 4.5258E-08 tot_iter=     211 conv_iter=      88 cpu clock= 3.70E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      90 cpu clock= 3.70E+00
+ sweep: tran tran46   end,  cpu clock=  3.70E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.70E+01
+ dcop: begin dcop,  cpu clock=  3.70E+00
+ dcop: end dcop,  cpu clock=  3.70E+00 memory=      1714 kb  tot_iter=     893
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran47   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.70E+00
+ tran: time= 5.6959E-09 tot_iter=     190 conv_iter=      78 cpu clock= 3.70E+00
+ tran: time= 1.0241E-08 tot_iter=     194 conv_iter=      80 cpu clock= 3.70E+00
+ tran: time= 1.5041E-08 tot_iter=     198 conv_iter=      82 cpu clock= 3.70E+00
+ tran: time= 1.9841E-08 tot_iter=     202 conv_iter=      84 cpu clock= 3.70E+00
+ tran: time= 2.4641E-08 tot_iter=     206 conv_iter=      86 cpu clock= 3.70E+00
+ tran: time= 2.9441E-08 tot_iter=     210 conv_iter=      88 cpu clock= 3.70E+00
+ tran: time= 3.4241E-08 tot_iter=     214 conv_iter=      90 cpu clock= 3.70E+00
+ tran: time= 3.9041E-08 tot_iter=     218 conv_iter=      92 cpu clock= 3.70E+00
+ tran: time= 4.3841E-08 tot_iter=     222 conv_iter=      94 cpu clock= 3.70E+00
+ tran: time= 4.8000E-08 tot_iter=     226 conv_iter=      96 cpu clock= 3.70E+00
+ sweep: tran tran47   end,  cpu clock=  3.70E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.80E+01
+ dcop: begin dcop,  cpu clock=  3.70E+00
+ dcop: end dcop,  cpu clock=  3.71E+00 memory=      1714 kb  tot_iter=     912
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran48   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.71E+00
+ tran: time= 5.2459E-09 tot_iter=     186 conv_iter=      76 cpu clock= 3.71E+00
+ tran: time= 1.1954E-08 tot_iter=     192 conv_iter=      79 cpu clock= 3.71E+00
+ tran: time= 1.6754E-08 tot_iter=     196 conv_iter=      81 cpu clock= 3.71E+00
+ tran: time= 2.1554E-08 tot_iter=     200 conv_iter=      83 cpu clock= 3.71E+00
+ tran: time= 2.6354E-08 tot_iter=     204 conv_iter=      85 cpu clock= 3.71E+00
+ tran: time= 3.1154E-08 tot_iter=     208 conv_iter=      87 cpu clock= 3.71E+00
+ tran: time= 3.5954E-08 tot_iter=     212 conv_iter=      89 cpu clock= 3.71E+00
+ tran: time= 4.0754E-08 tot_iter=     216 conv_iter=      91 cpu clock= 3.71E+00
+ tran: time= 4.5554E-08 tot_iter=     220 conv_iter=      93 cpu clock= 3.71E+00
+ tran: time= 4.8000E-08 tot_iter=     222 conv_iter=      94 cpu clock= 3.71E+00
+ sweep: tran tran48   end,  cpu clock=  3.71E+00 memory=      1714 kb
+ data: data=stimdata        index           =    4.90E+01
+ dcop: begin dcop,  cpu clock=  3.71E+00
+ dcop: end dcop,  cpu clock=  3.71E+00 memory=      1714 kb  tot_iter=     931
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran49   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.71E+00
+ tran: time= 5.1044E-09 tot_iter=     184 conv_iter=      74 cpu clock= 3.72E+00
+ tran: time= 1.1560E-08 tot_iter=     190 conv_iter=      77 cpu clock= 3.72E+00
+ tran: time= 1.6360E-08 tot_iter=     194 conv_iter=      79 cpu clock= 3.72E+00
+ tran: time= 2.1160E-08 tot_iter=     198 conv_iter=      81 cpu clock= 3.72E+00
+ tran: time= 2.5960E-08 tot_iter=     202 conv_iter=      83 cpu clock= 3.72E+00
+ tran: time= 3.0760E-08 tot_iter=     206 conv_iter=      85 cpu clock= 3.72E+00
+ tran: time= 3.5560E-08 tot_iter=     210 conv_iter=      87 cpu clock= 3.72E+00
+ tran: time= 4.0360E-08 tot_iter=     214 conv_iter=      89 cpu clock= 3.72E+00
+ tran: time= 4.5160E-08 tot_iter=     218 conv_iter=      91 cpu clock= 3.72E+00
+ tran: time= 4.8000E-08 tot_iter=     222 conv_iter=      93 cpu clock= 3.72E+00
+ sweep: tran tran49   end,  cpu clock=  3.72E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.00E+01
+ dcop: begin dcop,  cpu clock=  3.72E+00
+ dcop: end dcop,  cpu clock=  3.72E+00 memory=      1714 kb  tot_iter=     950
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran50   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.72E+00
+ tran: time= 5.1018E-09 tot_iter=     180 conv_iter=      72 cpu clock= 3.73E+00
+ tran: time= 1.1552E-08 tot_iter=     186 conv_iter=      75 cpu clock= 3.73E+00
+ tran: time= 1.6352E-08 tot_iter=     190 conv_iter=      77 cpu clock= 3.73E+00
+ tran: time= 2.1152E-08 tot_iter=     194 conv_iter=      79 cpu clock= 3.73E+00
+ tran: time= 2.5952E-08 tot_iter=     198 conv_iter=      81 cpu clock= 3.73E+00
+ tran: time= 3.0752E-08 tot_iter=     202 conv_iter=      83 cpu clock= 3.73E+00
+ tran: time= 3.5552E-08 tot_iter=     206 conv_iter=      85 cpu clock= 3.73E+00
+ tran: time= 4.0352E-08 tot_iter=     210 conv_iter=      87 cpu clock= 3.73E+00
+ tran: time= 4.5152E-08 tot_iter=     214 conv_iter=      89 cpu clock= 3.73E+00
+ tran: time= 4.8000E-08 tot_iter=     218 conv_iter=      91 cpu clock= 3.73E+00
+ sweep: tran tran50   end,  cpu clock=  3.73E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.10E+01
+ dcop: begin dcop,  cpu clock=  3.73E+00
+ dcop: end dcop,  cpu clock=  3.73E+00 memory=      1714 kb  tot_iter=     969
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran51   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.73E+00
+ tran: time= 5.0912E-09 tot_iter=     169 conv_iter=      68 cpu clock= 3.73E+00
+ tran: time= 1.1520E-08 tot_iter=     175 conv_iter=      71 cpu clock= 3.73E+00
+ tran: time= 1.6320E-08 tot_iter=     179 conv_iter=      73 cpu clock= 3.73E+00
+ tran: time= 2.1120E-08 tot_iter=     183 conv_iter=      75 cpu clock= 3.73E+00
+ tran: time= 2.5920E-08 tot_iter=     187 conv_iter=      77 cpu clock= 3.73E+00
+ tran: time= 3.0720E-08 tot_iter=     191 conv_iter=      79 cpu clock= 3.73E+00
+ tran: time= 3.5520E-08 tot_iter=     195 conv_iter=      81 cpu clock= 3.73E+00
+ tran: time= 4.0320E-08 tot_iter=     199 conv_iter=      83 cpu clock= 3.73E+00
+ tran: time= 4.5120E-08 tot_iter=     203 conv_iter=      85 cpu clock= 3.73E+00
+ tran: time= 4.8000E-08 tot_iter=     207 conv_iter=      87 cpu clock= 3.73E+00
+ sweep: tran tran51   end,  cpu clock=  3.73E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.20E+01
+ dcop: begin dcop,  cpu clock=  3.73E+00
+ dcop: end dcop,  cpu clock=  3.73E+00 memory=      1714 kb  tot_iter=     988
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran52   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.73E+00
+ tran: time= 5.0801E-09 tot_iter=     171 conv_iter=      68 cpu clock= 3.74E+00
+ tran: time= 1.1487E-08 tot_iter=     177 conv_iter=      71 cpu clock= 3.74E+00
+ tran: time= 1.6287E-08 tot_iter=     181 conv_iter=      73 cpu clock= 3.74E+00
+ tran: time= 2.1087E-08 tot_iter=     185 conv_iter=      75 cpu clock= 3.74E+00
+ tran: time= 2.5887E-08 tot_iter=     189 conv_iter=      77 cpu clock= 3.74E+00
+ tran: time= 3.0687E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.74E+00
+ tran: time= 3.5487E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.74E+00
+ tran: time= 4.0287E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.74E+00
+ tran: time= 4.5087E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.74E+00
+ tran: time= 4.8000E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.74E+00
+ sweep: tran tran52   end,  cpu clock=  3.74E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.30E+01
+ dcop: begin dcop,  cpu clock=  3.74E+00
+ dcop: end dcop,  cpu clock=  3.74E+00 memory=      1714 kb  tot_iter=    1007
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran53   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.74E+00
+ tran: time= 5.0145E-09 tot_iter=     193 conv_iter=      77 cpu clock= 3.75E+00
+ tran: time= 1.0995E-08 tot_iter=     199 conv_iter=      80 cpu clock= 3.75E+00
+ tran: time= 1.5795E-08 tot_iter=     203 conv_iter=      82 cpu clock= 3.75E+00
+ tran: time= 2.0595E-08 tot_iter=     207 conv_iter=      84 cpu clock= 3.75E+00
+ tran: time= 2.5395E-08 tot_iter=     211 conv_iter=      86 cpu clock= 3.75E+00
+ tran: time= 3.0195E-08 tot_iter=     215 conv_iter=      88 cpu clock= 3.75E+00
+ tran: time= 3.4995E-08 tot_iter=     219 conv_iter=      90 cpu clock= 3.75E+00
+ tran: time= 3.9795E-08 tot_iter=     223 conv_iter=      92 cpu clock= 3.75E+00
+ tran: time= 4.4595E-08 tot_iter=     227 conv_iter=      94 cpu clock= 3.75E+00
+ tran: time= 4.8000E-08 tot_iter=     231 conv_iter=      96 cpu clock= 3.75E+00
+ sweep: tran tran53   end,  cpu clock=  3.75E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.40E+01
+ dcop: begin dcop,  cpu clock=  3.75E+00
+ dcop: end dcop,  cpu clock=  3.75E+00 memory=      1714 kb  tot_iter=    1026
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran54   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.75E+00
+ tran: time= 5.0141E-09 tot_iter=     194 conv_iter=      77 cpu clock= 3.76E+00
+ tran: time= 1.0991E-08 tot_iter=     200 conv_iter=      80 cpu clock= 3.76E+00
+ tran: time= 1.5791E-08 tot_iter=     204 conv_iter=      82 cpu clock= 3.76E+00
+ tran: time= 2.0591E-08 tot_iter=     208 conv_iter=      84 cpu clock= 3.76E+00
+ tran: time= 2.5391E-08 tot_iter=     212 conv_iter=      86 cpu clock= 3.76E+00
+ tran: time= 3.0191E-08 tot_iter=     216 conv_iter=      88 cpu clock= 3.76E+00
+ tran: time= 3.4991E-08 tot_iter=     220 conv_iter=      90 cpu clock= 3.76E+00
+ tran: time= 3.9791E-08 tot_iter=     224 conv_iter=      92 cpu clock= 3.76E+00
+ tran: time= 4.4591E-08 tot_iter=     228 conv_iter=      94 cpu clock= 3.76E+00
+ tran: time= 4.8000E-08 tot_iter=     232 conv_iter=      96 cpu clock= 3.76E+00
+ sweep: tran tran54   end,  cpu clock=  3.76E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.50E+01
+ dcop: begin dcop,  cpu clock=  3.76E+00
+ dcop: end dcop,  cpu clock=  3.76E+00 memory=      1714 kb  tot_iter=    1045
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran55   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.76E+00
+ tran: time= 4.9930E-09 tot_iter=     196 conv_iter=      77 cpu clock= 3.76E+00
+ tran: time= 1.1117E-08 tot_iter=     202 conv_iter=      80 cpu clock= 3.76E+00
+ tran: time= 1.5917E-08 tot_iter=     206 conv_iter=      82 cpu clock= 3.76E+00
+ tran: time= 2.0717E-08 tot_iter=     210 conv_iter=      84 cpu clock= 3.76E+00
+ tran: time= 2.5517E-08 tot_iter=     214 conv_iter=      86 cpu clock= 3.76E+00
+ tran: time= 3.0317E-08 tot_iter=     218 conv_iter=      88 cpu clock= 3.76E+00
+ tran: time= 3.5117E-08 tot_iter=     222 conv_iter=      90 cpu clock= 3.76E+00
+ tran: time= 3.9917E-08 tot_iter=     226 conv_iter=      92 cpu clock= 3.76E+00
+ tran: time= 4.4717E-08 tot_iter=     230 conv_iter=      94 cpu clock= 3.76E+00
+ tran: time= 4.8000E-08 tot_iter=     234 conv_iter=      96 cpu clock= 3.76E+00
+ sweep: tran tran55   end,  cpu clock=  3.76E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.60E+01
+ dcop: begin dcop,  cpu clock=  3.76E+00
+ dcop: end dcop,  cpu clock=  3.77E+00 memory=      1714 kb  tot_iter=    1064
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran56   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.77E+00
+ tran: time= 4.9925E-09 tot_iter=     196 conv_iter=      77 cpu clock= 3.77E+00
+ tran: time= 1.1116E-08 tot_iter=     202 conv_iter=      80 cpu clock= 3.77E+00
+ tran: time= 1.5916E-08 tot_iter=     206 conv_iter=      82 cpu clock= 3.77E+00
+ tran: time= 2.0716E-08 tot_iter=     210 conv_iter=      84 cpu clock= 3.77E+00
+ tran: time= 2.5516E-08 tot_iter=     214 conv_iter=      86 cpu clock= 3.77E+00
+ tran: time= 3.0316E-08 tot_iter=     218 conv_iter=      88 cpu clock= 3.77E+00
+ tran: time= 3.5116E-08 tot_iter=     222 conv_iter=      90 cpu clock= 3.77E+00
+ tran: time= 3.9916E-08 tot_iter=     226 conv_iter=      92 cpu clock= 3.77E+00
+ tran: time= 4.4716E-08 tot_iter=     230 conv_iter=      94 cpu clock= 3.77E+00
+ tran: time= 4.8000E-08 tot_iter=     234 conv_iter=      96 cpu clock= 3.77E+00
+ sweep: tran tran56   end,  cpu clock=  3.77E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.70E+01
+ dcop: begin dcop,  cpu clock=  3.77E+00
+ dcop: end dcop,  cpu clock=  3.77E+00 memory=      1714 kb  tot_iter=    1083
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran57   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.77E+00
+ tran: time= 4.9940E-09 tot_iter=     194 conv_iter=      76 cpu clock= 3.78E+00
+ tran: time= 1.1119E-08 tot_iter=     200 conv_iter=      79 cpu clock= 3.78E+00
+ tran: time= 1.5919E-08 tot_iter=     204 conv_iter=      81 cpu clock= 3.78E+00
+ tran: time= 2.0719E-08 tot_iter=     208 conv_iter=      83 cpu clock= 3.78E+00
+ tran: time= 2.5519E-08 tot_iter=     212 conv_iter=      85 cpu clock= 3.78E+00
+ tran: time= 3.0319E-08 tot_iter=     216 conv_iter=      87 cpu clock= 3.78E+00
+ tran: time= 3.5119E-08 tot_iter=     220 conv_iter=      89 cpu clock= 3.78E+00
+ tran: time= 3.9919E-08 tot_iter=     224 conv_iter=      91 cpu clock= 3.78E+00
+ tran: time= 4.4719E-08 tot_iter=     228 conv_iter=      93 cpu clock= 3.78E+00
+ tran: time= 4.8000E-08 tot_iter=     232 conv_iter=      95 cpu clock= 3.78E+00
+ sweep: tran tran57   end,  cpu clock=  3.78E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.80E+01
+ dcop: begin dcop,  cpu clock=  3.78E+00
+ dcop: end dcop,  cpu clock=  3.78E+00 memory=      1714 kb  tot_iter=    1102
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran58   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.78E+00
+ tran: time= 4.9968E-09 tot_iter=     177 conv_iter=      70 cpu clock= 3.78E+00
+ tran: time= 1.1122E-08 tot_iter=     183 conv_iter=      73 cpu clock= 3.78E+00
+ tran: time= 1.5922E-08 tot_iter=     187 conv_iter=      75 cpu clock= 3.78E+00
+ tran: time= 2.0722E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.78E+00
+ tran: time= 2.5522E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.78E+00
+ tran: time= 3.0322E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.78E+00
+ tran: time= 3.5122E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.78E+00
+ tran: time= 3.9922E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.78E+00
+ tran: time= 4.4722E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.78E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.78E+00
+ sweep: tran tran58   end,  cpu clock=  3.78E+00 memory=      1714 kb
+ data: data=stimdata        index           =    5.90E+01
+ dcop: begin dcop,  cpu clock=  3.78E+00
+ dcop: end dcop,  cpu clock=  3.78E+00 memory=      1714 kb  tot_iter=    1121
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran59   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.78E+00
+ tran: time= 4.9964E-09 tot_iter=     177 conv_iter=      70 cpu clock= 3.79E+00
+ tran: time= 1.1121E-08 tot_iter=     183 conv_iter=      73 cpu clock= 3.79E+00
+ tran: time= 1.5921E-08 tot_iter=     187 conv_iter=      75 cpu clock= 3.79E+00
+ tran: time= 2.0721E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.79E+00
+ tran: time= 2.5521E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.79E+00
+ tran: time= 3.0321E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.79E+00
+ tran: time= 3.5121E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.79E+00
+ tran: time= 3.9921E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.79E+00
+ tran: time= 4.4721E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.79E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.79E+00
+ sweep: tran tran59   end,  cpu clock=  3.79E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.00E+01
+ dcop: begin dcop,  cpu clock=  3.79E+00
+ dcop: end dcop,  cpu clock=  3.79E+00 memory=      1714 kb  tot_iter=    1140
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran60   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.79E+00
+ tran: time= 4.9939E-09 tot_iter=     177 conv_iter=      70 cpu clock= 3.80E+00
+ tran: time= 1.1118E-08 tot_iter=     183 conv_iter=      73 cpu clock= 3.80E+00
+ tran: time= 1.5918E-08 tot_iter=     187 conv_iter=      75 cpu clock= 3.80E+00
+ tran: time= 2.0718E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.80E+00
+ tran: time= 2.5518E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.80E+00
+ tran: time= 3.0318E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.80E+00
+ tran: time= 3.5118E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.80E+00
+ tran: time= 3.9918E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.80E+00
+ tran: time= 4.4718E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.80E+00
+ tran: time= 4.8000E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.80E+00
+ sweep: tran tran60   end,  cpu clock=  3.80E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.10E+01
+ dcop: begin dcop,  cpu clock=  3.80E+00
+ dcop: end dcop,  cpu clock=  3.80E+00 memory=      1714 kb  tot_iter=    1159
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran61   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.80E+00
+ tran: time= 4.9399E-09 tot_iter=     179 conv_iter=      72 cpu clock= 3.80E+00
+ tran: time= 1.0502E-08 tot_iter=     185 conv_iter=      75 cpu clock= 3.81E+00
+ tran: time= 1.5302E-08 tot_iter=     189 conv_iter=      77 cpu clock= 3.81E+00
+ tran: time= 2.0102E-08 tot_iter=     193 conv_iter=      79 cpu clock= 3.81E+00
+ tran: time= 2.4902E-08 tot_iter=     197 conv_iter=      81 cpu clock= 3.81E+00
+ tran: time= 2.9702E-08 tot_iter=     201 conv_iter=      83 cpu clock= 3.81E+00
+ tran: time= 3.4502E-08 tot_iter=     205 conv_iter=      85 cpu clock= 3.81E+00
+ tran: time= 3.9302E-08 tot_iter=     209 conv_iter=      87 cpu clock= 3.81E+00
+ tran: time= 4.4102E-08 tot_iter=     213 conv_iter=      89 cpu clock= 3.81E+00
+ tran: time= 4.8000E-08 tot_iter=     217 conv_iter=      91 cpu clock= 3.81E+00
+ sweep: tran tran61   end,  cpu clock=  3.81E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.20E+01
+ dcop: begin dcop,  cpu clock=  3.81E+00
+ dcop: end dcop,  cpu clock=  3.81E+00 memory=      1714 kb  tot_iter=    1178
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran62   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.81E+00
+ tran: time= 5.0025E-09 tot_iter=     185 conv_iter=      74 cpu clock= 3.81E+00
+ tran: time= 1.0974E-08 tot_iter=     191 conv_iter=      77 cpu clock= 3.81E+00
+ tran: time= 1.5774E-08 tot_iter=     195 conv_iter=      79 cpu clock= 3.81E+00
+ tran: time= 2.0574E-08 tot_iter=     199 conv_iter=      81 cpu clock= 3.81E+00
+ tran: time= 2.5374E-08 tot_iter=     203 conv_iter=      83 cpu clock= 3.81E+00
+ tran: time= 3.0174E-08 tot_iter=     207 conv_iter=      85 cpu clock= 3.81E+00
+ tran: time= 3.4974E-08 tot_iter=     211 conv_iter=      87 cpu clock= 3.81E+00
+ tran: time= 3.9774E-08 tot_iter=     215 conv_iter=      89 cpu clock= 3.81E+00
+ tran: time= 4.4574E-08 tot_iter=     219 conv_iter=      91 cpu clock= 3.81E+00
+ tran: time= 4.8000E-08 tot_iter=     223 conv_iter=      93 cpu clock= 3.81E+00
+ sweep: tran tran62   end,  cpu clock=  3.81E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.30E+01
+ dcop: begin dcop,  cpu clock=  3.81E+00
+ dcop: end dcop,  cpu clock=  3.81E+00 memory=      1714 kb  tot_iter=    1197
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran63   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.81E+00
+ tran: time= 5.0007E-09 tot_iter=     191 conv_iter=      75 cpu clock= 3.82E+00
+ tran: time= 1.1128E-08 tot_iter=     197 conv_iter=      78 cpu clock= 3.82E+00
+ tran: time= 1.5928E-08 tot_iter=     201 conv_iter=      80 cpu clock= 3.82E+00
+ tran: time= 2.0728E-08 tot_iter=     205 conv_iter=      82 cpu clock= 3.82E+00
+ tran: time= 2.5528E-08 tot_iter=     209 conv_iter=      84 cpu clock= 3.82E+00
+ tran: time= 3.0328E-08 tot_iter=     213 conv_iter=      86 cpu clock= 3.82E+00
+ tran: time= 3.5128E-08 tot_iter=     217 conv_iter=      88 cpu clock= 3.82E+00
+ tran: time= 3.9928E-08 tot_iter=     221 conv_iter=      90 cpu clock= 3.82E+00
+ tran: time= 4.4728E-08 tot_iter=     225 conv_iter=      92 cpu clock= 3.82E+00
+ tran: time= 4.8000E-08 tot_iter=     229 conv_iter=      94 cpu clock= 3.82E+00
+ sweep: tran tran63   end,  cpu clock=  3.82E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.40E+01
+ dcop: begin dcop,  cpu clock=  3.82E+00
+ dcop: end dcop,  cpu clock=  3.82E+00 memory=      1714 kb  tot_iter=    1216
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran64   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.82E+00
+ tran: time= 5.0290E-09 tot_iter=     186 conv_iter=      74 cpu clock= 3.83E+00
+ tran: time= 1.1034E-08 tot_iter=     192 conv_iter=      77 cpu clock= 3.83E+00
+ tran: time= 1.5834E-08 tot_iter=     196 conv_iter=      79 cpu clock= 3.83E+00
+ tran: time= 2.0634E-08 tot_iter=     200 conv_iter=      81 cpu clock= 3.83E+00
+ tran: time= 2.5434E-08 tot_iter=     204 conv_iter=      83 cpu clock= 3.83E+00
+ tran: time= 3.0234E-08 tot_iter=     208 conv_iter=      85 cpu clock= 3.83E+00
+ tran: time= 3.5034E-08 tot_iter=     212 conv_iter=      87 cpu clock= 3.83E+00
+ tran: time= 3.9834E-08 tot_iter=     216 conv_iter=      89 cpu clock= 3.83E+00
+ tran: time= 4.4634E-08 tot_iter=     220 conv_iter=      91 cpu clock= 3.83E+00
+ tran: time= 4.8000E-08 tot_iter=     224 conv_iter=      93 cpu clock= 3.83E+00
+ sweep: tran tran64   end,  cpu clock=  3.83E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.50E+01
+ dcop: begin dcop,  cpu clock=  3.83E+00
+ dcop: end dcop,  cpu clock=  3.83E+00 memory=      1714 kb  tot_iter=    1235
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran65   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.83E+00
+ tran: time= 5.0415E-09 tot_iter=     184 conv_iter=      74 cpu clock= 3.83E+00
+ tran: time= 1.1064E-08 tot_iter=     190 conv_iter=      77 cpu clock= 3.83E+00
+ tran: time= 1.5864E-08 tot_iter=     194 conv_iter=      79 cpu clock= 3.83E+00
+ tran: time= 2.0664E-08 tot_iter=     198 conv_iter=      81 cpu clock= 3.83E+00
+ tran: time= 2.5464E-08 tot_iter=     202 conv_iter=      83 cpu clock= 3.83E+00
+ tran: time= 3.0264E-08 tot_iter=     206 conv_iter=      85 cpu clock= 3.83E+00
+ tran: time= 3.5064E-08 tot_iter=     210 conv_iter=      87 cpu clock= 3.83E+00
+ tran: time= 3.9864E-08 tot_iter=     214 conv_iter=      89 cpu clock= 3.83E+00
+ tran: time= 4.4664E-08 tot_iter=     218 conv_iter=      91 cpu clock= 3.83E+00
+ tran: time= 4.8000E-08 tot_iter=     222 conv_iter=      93 cpu clock= 3.83E+00
+ sweep: tran tran65   end,  cpu clock=  3.84E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.60E+01
+ dcop: begin dcop,  cpu clock=  3.84E+00
+ dcop: end dcop,  cpu clock=  3.84E+00 memory=      1714 kb  tot_iter=    1254
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran66   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.84E+00
+ tran: time= 4.8101E-09 tot_iter=     188 conv_iter=      74 cpu clock= 3.84E+00
+ tran: time= 9.8136E-09 tot_iter=     194 conv_iter=      77 cpu clock= 3.84E+00
+ tran: time= 1.4614E-08 tot_iter=     198 conv_iter=      79 cpu clock= 3.84E+00
+ tran: time= 1.9414E-08 tot_iter=     202 conv_iter=      81 cpu clock= 3.84E+00
+ tran: time= 2.4214E-08 tot_iter=     206 conv_iter=      83 cpu clock= 3.84E+00
+ tran: time= 2.9014E-08 tot_iter=     210 conv_iter=      85 cpu clock= 3.84E+00
+ tran: time= 3.3814E-08 tot_iter=     214 conv_iter=      87 cpu clock= 3.84E+00
+ tran: time= 3.8614E-08 tot_iter=     218 conv_iter=      89 cpu clock= 3.84E+00
+ tran: time= 4.3414E-08 tot_iter=     222 conv_iter=      91 cpu clock= 3.84E+00
+ tran: time= 4.8000E-08 tot_iter=     226 conv_iter=      93 cpu clock= 3.84E+00
+ sweep: tran tran66   end,  cpu clock=  3.84E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.70E+01
+ dcop: begin dcop,  cpu clock=  3.84E+00
+ dcop: end dcop,  cpu clock=  3.84E+00 memory=      1714 kb  tot_iter=    1273
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran67   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.84E+00
+ tran: time= 4.8497E-09 tot_iter=     210 conv_iter=      82 cpu clock= 3.85E+00
+ tran: time= 1.0297E-08 tot_iter=     216 conv_iter=      85 cpu clock= 3.85E+00
+ tran: time= 1.5097E-08 tot_iter=     220 conv_iter=      87 cpu clock= 3.85E+00
+ tran: time= 1.9897E-08 tot_iter=     224 conv_iter=      89 cpu clock= 3.85E+00
+ tran: time= 2.4697E-08 tot_iter=     228 conv_iter=      91 cpu clock= 3.85E+00
+ tran: time= 2.9497E-08 tot_iter=     232 conv_iter=      93 cpu clock= 3.85E+00
+ tran: time= 3.4297E-08 tot_iter=     236 conv_iter=      95 cpu clock= 3.85E+00
+ tran: time= 3.9097E-08 tot_iter=     240 conv_iter=      97 cpu clock= 3.85E+00
+ tran: time= 4.3897E-08 tot_iter=     244 conv_iter=      99 cpu clock= 3.85E+00
+ tran: time= 4.8000E-08 tot_iter=     248 conv_iter=     101 cpu clock= 3.85E+00
+ sweep: tran tran67   end,  cpu clock=  3.85E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.80E+01
+ dcop: begin dcop,  cpu clock=  3.85E+00
+ dcop: end dcop,  cpu clock=  3.85E+00 memory=      1714 kb  tot_iter=    1292
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran68   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.85E+00
+ tran: time= 4.8299E-09 tot_iter=     217 conv_iter=      86 cpu clock= 3.86E+00
+ tran: time= 9.8273E-09 tot_iter=     223 conv_iter=      89 cpu clock= 3.86E+00
+ tran: time= 1.4627E-08 tot_iter=     227 conv_iter=      91 cpu clock= 3.86E+00
+ tran: time= 1.9427E-08 tot_iter=     231 conv_iter=      93 cpu clock= 3.86E+00
+ tran: time= 2.4227E-08 tot_iter=     235 conv_iter=      95 cpu clock= 3.86E+00
+ tran: time= 2.9027E-08 tot_iter=     239 conv_iter=      97 cpu clock= 3.86E+00
+ tran: time= 3.3827E-08 tot_iter=     243 conv_iter=      99 cpu clock= 3.86E+00
+ tran: time= 3.8627E-08 tot_iter=     247 conv_iter=     101 cpu clock= 3.86E+00
+ tran: time= 4.3427E-08 tot_iter=     251 conv_iter=     103 cpu clock= 3.86E+00
+ tran: time= 4.8000E-08 tot_iter=     255 conv_iter=     105 cpu clock= 3.86E+00
+ sweep: tran tran68   end,  cpu clock=  3.86E+00 memory=      1714 kb
+ data: data=stimdata        index           =    6.90E+01
+ dcop: begin dcop,  cpu clock=  3.86E+00
+ dcop: end dcop,  cpu clock=  3.86E+00 memory=      1714 kb  tot_iter=    1311
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran69   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.86E+00
+ tran: time= 5.0602E-09 tot_iter=     212 conv_iter=      84 cpu clock= 3.87E+00
+ tran: time= 1.0994E-08 tot_iter=     218 conv_iter=      87 cpu clock= 3.87E+00
+ tran: time= 1.5794E-08 tot_iter=     222 conv_iter=      89 cpu clock= 3.87E+00
+ tran: time= 2.0594E-08 tot_iter=     226 conv_iter=      91 cpu clock= 3.87E+00
+ tran: time= 2.5394E-08 tot_iter=     230 conv_iter=      93 cpu clock= 3.87E+00
+ tran: time= 3.0194E-08 tot_iter=     234 conv_iter=      95 cpu clock= 3.87E+00
+ tran: time= 3.4994E-08 tot_iter=     238 conv_iter=      97 cpu clock= 3.87E+00
+ tran: time= 3.9794E-08 tot_iter=     242 conv_iter=      99 cpu clock= 3.87E+00
+ tran: time= 4.4594E-08 tot_iter=     246 conv_iter=     101 cpu clock= 3.87E+00
+ tran: time= 4.8000E-08 tot_iter=     250 conv_iter=     103 cpu clock= 3.87E+00
+ sweep: tran tran69   end,  cpu clock=  3.87E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.00E+01
+ dcop: begin dcop,  cpu clock=  3.87E+00
+ dcop: end dcop,  cpu clock=  3.87E+00 memory=      1714 kb  tot_iter=    1330
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran70   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.87E+00
+ tran: time= 4.8020E-09 tot_iter=     205 conv_iter=      80 cpu clock= 3.88E+00
+ tran: time= 9.6715E-09 tot_iter=     211 conv_iter=      83 cpu clock= 3.88E+00
+ tran: time= 1.4472E-08 tot_iter=     215 conv_iter=      85 cpu clock= 3.88E+00
+ tran: time= 1.9272E-08 tot_iter=     219 conv_iter=      87 cpu clock= 3.88E+00
+ tran: time= 2.4072E-08 tot_iter=     223 conv_iter=      89 cpu clock= 3.88E+00
+ tran: time= 2.8872E-08 tot_iter=     227 conv_iter=      91 cpu clock= 3.88E+00
+ tran: time= 3.3672E-08 tot_iter=     231 conv_iter=      93 cpu clock= 3.88E+00
+ tran: time= 3.8472E-08 tot_iter=     235 conv_iter=      95 cpu clock= 3.88E+00
+ tran: time= 4.3272E-08 tot_iter=     239 conv_iter=      97 cpu clock= 3.88E+00
+ tran: time= 4.8000E-08 tot_iter=     243 conv_iter=      99 cpu clock= 3.88E+00
+ sweep: tran tran70   end,  cpu clock=  3.88E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.10E+01
+ dcop: begin dcop,  cpu clock=  3.88E+00
+ dcop: end dcop,  cpu clock=  3.88E+00 memory=      1714 kb  tot_iter=    1349
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran71   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.88E+00
+ tran: time= 4.8369E-09 tot_iter=     192 conv_iter=      77 cpu clock= 3.88E+00
+ tran: time= 1.0133E-08 tot_iter=     198 conv_iter=      80 cpu clock= 3.88E+00
+ tran: time= 1.4933E-08 tot_iter=     202 conv_iter=      82 cpu clock= 3.88E+00
+ tran: time= 1.9733E-08 tot_iter=     206 conv_iter=      84 cpu clock= 3.88E+00
+ tran: time= 2.4533E-08 tot_iter=     210 conv_iter=      86 cpu clock= 3.88E+00
+ tran: time= 2.9333E-08 tot_iter=     214 conv_iter=      88 cpu clock= 3.88E+00
+ tran: time= 3.4133E-08 tot_iter=     218 conv_iter=      90 cpu clock= 3.88E+00
+ tran: time= 3.8933E-08 tot_iter=     222 conv_iter=      92 cpu clock= 3.88E+00
+ tran: time= 4.3733E-08 tot_iter=     226 conv_iter=      94 cpu clock= 3.88E+00
+ tran: time= 4.8000E-08 tot_iter=     230 conv_iter=      96 cpu clock= 3.88E+00
+ sweep: tran tran71   end,  cpu clock=  3.88E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.20E+01
+ dcop: begin dcop,  cpu clock=  3.88E+00
+ dcop: end dcop,  cpu clock=  3.88E+00 memory=      1714 kb  tot_iter=    1368
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran72   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.88E+00
+ tran: time= 4.8522E-09 tot_iter=     195 conv_iter=      77 cpu clock= 3.89E+00
+ tran: time= 1.0323E-08 tot_iter=     201 conv_iter=      80 cpu clock= 3.89E+00
+ tran: time= 1.5123E-08 tot_iter=     205 conv_iter=      82 cpu clock= 3.89E+00
+ tran: time= 1.9923E-08 tot_iter=     209 conv_iter=      84 cpu clock= 3.89E+00
+ tran: time= 2.4723E-08 tot_iter=     213 conv_iter=      86 cpu clock= 3.89E+00
+ tran: time= 2.9523E-08 tot_iter=     217 conv_iter=      88 cpu clock= 3.89E+00
+ tran: time= 3.4323E-08 tot_iter=     221 conv_iter=      90 cpu clock= 3.89E+00
+ tran: time= 3.9123E-08 tot_iter=     225 conv_iter=      92 cpu clock= 3.89E+00
+ tran: time= 4.3923E-08 tot_iter=     229 conv_iter=      94 cpu clock= 3.89E+00
+ tran: time= 4.8000E-08 tot_iter=     233 conv_iter=      96 cpu clock= 3.89E+00
+ sweep: tran tran72   end,  cpu clock=  3.89E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.30E+01
+ dcop: begin dcop,  cpu clock=  3.89E+00
+ dcop: end dcop,  cpu clock=  3.89E+00 memory=      1714 kb  tot_iter=    1387
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran73   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.89E+00
+ tran: time= 5.3690E-09 tot_iter=     195 conv_iter=      78 cpu clock= 3.90E+00
+ tran: time= 9.6172E-09 tot_iter=     199 conv_iter=      80 cpu clock= 3.90E+00
+ tran: time= 1.4417E-08 tot_iter=     203 conv_iter=      82 cpu clock= 3.90E+00
+ tran: time= 1.9217E-08 tot_iter=     207 conv_iter=      84 cpu clock= 3.90E+00
+ tran: time= 2.4017E-08 tot_iter=     211 conv_iter=      86 cpu clock= 3.90E+00
+ tran: time= 2.8817E-08 tot_iter=     215 conv_iter=      88 cpu clock= 3.90E+00
+ tran: time= 3.3617E-08 tot_iter=     219 conv_iter=      90 cpu clock= 3.90E+00
+ tran: time= 3.8417E-08 tot_iter=     223 conv_iter=      92 cpu clock= 3.90E+00
+ tran: time= 4.3217E-08 tot_iter=     227 conv_iter=      94 cpu clock= 3.90E+00
+ tran: time= 4.8000E-08 tot_iter=     231 conv_iter=      96 cpu clock= 3.90E+00
+ sweep: tran tran73   end,  cpu clock=  3.90E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.40E+01
+ dcop: begin dcop,  cpu clock=  3.90E+00
+ dcop: end dcop,  cpu clock=  3.90E+00 memory=      1714 kb  tot_iter=    1406
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran74   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.90E+00
+ tran: time= 4.8110E-09 tot_iter=     191 conv_iter=      76 cpu clock= 3.91E+00
+ tran: time= 9.8600E-09 tot_iter=     197 conv_iter=      79 cpu clock= 3.91E+00
+ tran: time= 1.4660E-08 tot_iter=     201 conv_iter=      81 cpu clock= 3.91E+00
+ tran: time= 1.9460E-08 tot_iter=     205 conv_iter=      83 cpu clock= 3.91E+00
+ tran: time= 2.4260E-08 tot_iter=     209 conv_iter=      85 cpu clock= 3.91E+00
+ tran: time= 2.9060E-08 tot_iter=     213 conv_iter=      87 cpu clock= 3.91E+00
+ tran: time= 3.3860E-08 tot_iter=     217 conv_iter=      89 cpu clock= 3.91E+00
+ tran: time= 3.8660E-08 tot_iter=     221 conv_iter=      91 cpu clock= 3.91E+00
+ tran: time= 4.3460E-08 tot_iter=     225 conv_iter=      93 cpu clock= 3.91E+00
+ tran: time= 4.8000E-08 tot_iter=     229 conv_iter=      95 cpu clock= 3.91E+00
+ sweep: tran tran74   end,  cpu clock=  3.91E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.50E+01
+ dcop: begin dcop,  cpu clock=  3.91E+00
+ dcop: end dcop,  cpu clock=  3.91E+00 memory=      1714 kb  tot_iter=    1425
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran75   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.91E+00
+ tran: time= 4.8103E-09 tot_iter=     191 conv_iter=      76 cpu clock= 3.91E+00
+ tran: time= 9.8478E-09 tot_iter=     197 conv_iter=      79 cpu clock= 3.91E+00
+ tran: time= 1.4648E-08 tot_iter=     201 conv_iter=      81 cpu clock= 3.91E+00
+ tran: time= 1.9448E-08 tot_iter=     205 conv_iter=      83 cpu clock= 3.91E+00
+ tran: time= 2.4248E-08 tot_iter=     209 conv_iter=      85 cpu clock= 3.91E+00
+ tran: time= 2.9048E-08 tot_iter=     213 conv_iter=      87 cpu clock= 3.91E+00
+ tran: time= 3.3848E-08 tot_iter=     217 conv_iter=      89 cpu clock= 3.91E+00
+ tran: time= 3.8648E-08 tot_iter=     221 conv_iter=      91 cpu clock= 3.91E+00
+ tran: time= 4.3448E-08 tot_iter=     225 conv_iter=      93 cpu clock= 3.91E+00
+ tran: time= 4.8000E-08 tot_iter=     229 conv_iter=      95 cpu clock= 3.91E+00
+ sweep: tran tran75   end,  cpu clock=  3.91E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.60E+01
+ dcop: begin dcop,  cpu clock=  3.91E+00
+ dcop: end dcop,  cpu clock=  3.92E+00 memory=      1714 kb  tot_iter=    1444
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran76   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.92E+00
+ tran: time= 4.8102E-09 tot_iter=     202 conv_iter=      79 cpu clock= 3.92E+00
+ tran: time= 9.8466E-09 tot_iter=     208 conv_iter=      82 cpu clock= 3.92E+00
+ tran: time= 1.4647E-08 tot_iter=     212 conv_iter=      84 cpu clock= 3.92E+00
+ tran: time= 1.9447E-08 tot_iter=     216 conv_iter=      86 cpu clock= 3.92E+00
+ tran: time= 2.4247E-08 tot_iter=     220 conv_iter=      88 cpu clock= 3.92E+00
+ tran: time= 2.9047E-08 tot_iter=     224 conv_iter=      90 cpu clock= 3.92E+00
+ tran: time= 3.3847E-08 tot_iter=     228 conv_iter=      92 cpu clock= 3.92E+00
+ tran: time= 3.8647E-08 tot_iter=     232 conv_iter=      94 cpu clock= 3.92E+00
+ tran: time= 4.3447E-08 tot_iter=     236 conv_iter=      96 cpu clock= 3.92E+00
+ tran: time= 4.8000E-08 tot_iter=     240 conv_iter=      98 cpu clock= 3.92E+00
+ sweep: tran tran76   end,  cpu clock=  3.92E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.70E+01
+ dcop: begin dcop,  cpu clock=  3.92E+00
+ dcop: end dcop,  cpu clock=  3.92E+00 memory=      1714 kb  tot_iter=    1463
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran77   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.92E+00
+ tran: time= 4.8095E-09 tot_iter=     201 conv_iter=      79 cpu clock= 3.93E+00
+ tran: time= 9.8347E-09 tot_iter=     207 conv_iter=      82 cpu clock= 3.93E+00
+ tran: time= 1.4635E-08 tot_iter=     211 conv_iter=      84 cpu clock= 3.93E+00
+ tran: time= 1.9435E-08 tot_iter=     215 conv_iter=      86 cpu clock= 3.93E+00
+ tran: time= 2.4235E-08 tot_iter=     219 conv_iter=      88 cpu clock= 3.93E+00
+ tran: time= 2.9035E-08 tot_iter=     223 conv_iter=      90 cpu clock= 3.93E+00
+ tran: time= 3.3835E-08 tot_iter=     227 conv_iter=      92 cpu clock= 3.93E+00
+ tran: time= 3.8635E-08 tot_iter=     231 conv_iter=      94 cpu clock= 3.93E+00
+ tran: time= 4.3435E-08 tot_iter=     235 conv_iter=      96 cpu clock= 3.93E+00
+ tran: time= 4.8000E-08 tot_iter=     239 conv_iter=      98 cpu clock= 3.93E+00
+ sweep: tran tran77   end,  cpu clock=  3.93E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.80E+01
+ dcop: begin dcop,  cpu clock=  3.93E+00
+ dcop: end dcop,  cpu clock=  3.93E+00 memory=      1714 kb  tot_iter=    1482
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran78   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.93E+00
+ tran: time= 4.8092E-09 tot_iter=     200 conv_iter=      79 cpu clock= 3.94E+00
+ tran: time= 9.8278E-09 tot_iter=     206 conv_iter=      82 cpu clock= 3.94E+00
+ tran: time= 1.4628E-08 tot_iter=     210 conv_iter=      84 cpu clock= 3.94E+00
+ tran: time= 1.9428E-08 tot_iter=     214 conv_iter=      86 cpu clock= 3.94E+00
+ tran: time= 2.4228E-08 tot_iter=     218 conv_iter=      88 cpu clock= 3.94E+00
+ tran: time= 2.9028E-08 tot_iter=     222 conv_iter=      90 cpu clock= 3.94E+00
+ tran: time= 3.3828E-08 tot_iter=     226 conv_iter=      92 cpu clock= 3.94E+00
+ tran: time= 3.8628E-08 tot_iter=     230 conv_iter=      94 cpu clock= 3.94E+00
+ tran: time= 4.3428E-08 tot_iter=     234 conv_iter=      96 cpu clock= 3.94E+00
+ tran: time= 4.8000E-08 tot_iter=     238 conv_iter=      98 cpu clock= 3.94E+00
+ sweep: tran tran78   end,  cpu clock=  3.94E+00 memory=      1714 kb
+ data: data=stimdata        index           =    7.90E+01
+ dcop: begin dcop,  cpu clock=  3.94E+00
+ dcop: end dcop,  cpu clock=  3.94E+00 memory=      1714 kb  tot_iter=    1501
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran79   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.94E+00
+ tran: time= 4.8100E-09 tot_iter=     164 conv_iter=      60 cpu clock= 3.95E+00
+ tran: time= 1.1802E-08 tot_iter=     214 conv_iter=      84 cpu clock= 3.95E+00
+ tran: time= 1.6602E-08 tot_iter=     218 conv_iter=      86 cpu clock= 3.95E+00
+ tran: time= 2.1402E-08 tot_iter=     222 conv_iter=      88 cpu clock= 3.95E+00
+ tran: time= 2.6202E-08 tot_iter=     226 conv_iter=      90 cpu clock= 3.95E+00
+ tran: time= 3.1002E-08 tot_iter=     230 conv_iter=      92 cpu clock= 3.95E+00
+ tran: time= 3.5802E-08 tot_iter=     234 conv_iter=      94 cpu clock= 3.95E+00
+ tran: time= 4.0602E-08 tot_iter=     238 conv_iter=      96 cpu clock= 3.95E+00
+ tran: time= 4.5402E-08 tot_iter=     242 conv_iter=      98 cpu clock= 3.95E+00
+ tran: time= 4.8000E-08 tot_iter=     244 conv_iter=      99 cpu clock= 3.95E+00
+ sweep: tran tran79   end,  cpu clock=  3.95E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.00E+01
+ dcop: begin dcop,  cpu clock=  3.95E+00
+ dcop: end dcop,  cpu clock=  3.95E+00 memory=      1714 kb  tot_iter=    1520
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran80   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.95E+00
+ tran: time= 4.8100E-09 tot_iter=     165 conv_iter=      60 cpu clock= 3.95E+00
+ tran: time= 1.1596E-08 tot_iter=     211 conv_iter=      83 cpu clock= 3.95E+00
+ tran: time= 1.6396E-08 tot_iter=     215 conv_iter=      85 cpu clock= 3.95E+00
+ tran: time= 2.1196E-08 tot_iter=     219 conv_iter=      87 cpu clock= 3.95E+00
+ tran: time= 2.5996E-08 tot_iter=     223 conv_iter=      89 cpu clock= 3.95E+00
+ tran: time= 3.0796E-08 tot_iter=     227 conv_iter=      91 cpu clock= 3.95E+00
+ tran: time= 3.5596E-08 tot_iter=     231 conv_iter=      93 cpu clock= 3.95E+00
+ tran: time= 4.0396E-08 tot_iter=     235 conv_iter=      95 cpu clock= 3.95E+00
+ tran: time= 4.5196E-08 tot_iter=     239 conv_iter=      97 cpu clock= 3.95E+00
+ tran: time= 4.8000E-08 tot_iter=     243 conv_iter=      99 cpu clock= 3.95E+00
+ sweep: tran tran80   end,  cpu clock=  3.95E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.10E+01
+ dcop: begin dcop,  cpu clock=  3.96E+00
+ dcop: end dcop,  cpu clock=  3.96E+00 memory=      1714 kb  tot_iter=    1539
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran81   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.96E+00
+ tran: time= 4.8100E-09 tot_iter=     167 conv_iter=      60 cpu clock= 3.96E+00
+ tran: time= 1.1865E-08 tot_iter=     216 conv_iter=      84 cpu clock= 3.96E+00
+ tran: time= 1.6665E-08 tot_iter=     220 conv_iter=      86 cpu clock= 3.96E+00
+ tran: time= 2.1465E-08 tot_iter=     224 conv_iter=      88 cpu clock= 3.96E+00
+ tran: time= 2.6265E-08 tot_iter=     228 conv_iter=      90 cpu clock= 3.96E+00
+ tran: time= 3.1065E-08 tot_iter=     232 conv_iter=      92 cpu clock= 3.96E+00
+ tran: time= 3.5865E-08 tot_iter=     236 conv_iter=      94 cpu clock= 3.96E+00
+ tran: time= 4.0665E-08 tot_iter=     240 conv_iter=      96 cpu clock= 3.96E+00
+ tran: time= 4.5465E-08 tot_iter=     244 conv_iter=      98 cpu clock= 3.96E+00
+ tran: time= 4.8000E-08 tot_iter=     246 conv_iter=      99 cpu clock= 3.96E+00
+ sweep: tran tran81   end,  cpu clock=  3.96E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.20E+01
+ dcop: begin dcop,  cpu clock=  3.96E+00
+ dcop: end dcop,  cpu clock=  3.96E+00 memory=      1714 kb  tot_iter=    1558
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran82   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.96E+00
+ tran: time= 4.8100E-09 tot_iter=     171 conv_iter=      62 cpu clock= 3.97E+00
+ tran: time= 1.1851E-08 tot_iter=     223 conv_iter=      87 cpu clock= 3.97E+00
+ tran: time= 1.6651E-08 tot_iter=     227 conv_iter=      89 cpu clock= 3.97E+00
+ tran: time= 2.1451E-08 tot_iter=     231 conv_iter=      91 cpu clock= 3.97E+00
+ tran: time= 2.6251E-08 tot_iter=     235 conv_iter=      93 cpu clock= 3.97E+00
+ tran: time= 3.1051E-08 tot_iter=     239 conv_iter=      95 cpu clock= 3.97E+00
+ tran: time= 3.5851E-08 tot_iter=     243 conv_iter=      97 cpu clock= 3.97E+00
+ tran: time= 4.0651E-08 tot_iter=     247 conv_iter=      99 cpu clock= 3.97E+00
+ tran: time= 4.5451E-08 tot_iter=     251 conv_iter=     101 cpu clock= 3.97E+00
+ tran: time= 4.8000E-08 tot_iter=     253 conv_iter=     102 cpu clock= 3.97E+00
+ sweep: tran tran82   end,  cpu clock=  3.97E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.30E+01
+ dcop: begin dcop,  cpu clock=  3.97E+00
+ dcop: end dcop,  cpu clock=  3.97E+00 memory=      1714 kb  tot_iter=    1577
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran83   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.97E+00
+ tran: time= 4.8100E-09 tot_iter=     155 conv_iter=      56 cpu clock= 3.98E+00
+ tran: time= 1.1842E-08 tot_iter=     205 conv_iter=      80 cpu clock= 3.98E+00
+ tran: time= 1.6642E-08 tot_iter=     209 conv_iter=      82 cpu clock= 3.98E+00
+ tran: time= 2.1442E-08 tot_iter=     213 conv_iter=      84 cpu clock= 3.98E+00
+ tran: time= 2.6242E-08 tot_iter=     217 conv_iter=      86 cpu clock= 3.98E+00
+ tran: time= 3.1042E-08 tot_iter=     221 conv_iter=      88 cpu clock= 3.98E+00
+ tran: time= 3.5842E-08 tot_iter=     225 conv_iter=      90 cpu clock= 3.98E+00
+ tran: time= 4.0642E-08 tot_iter=     229 conv_iter=      92 cpu clock= 3.98E+00
+ tran: time= 4.5442E-08 tot_iter=     233 conv_iter=      94 cpu clock= 3.98E+00
+ tran: time= 4.8000E-08 tot_iter=     235 conv_iter=      95 cpu clock= 3.98E+00
+ sweep: tran tran83   end,  cpu clock=  3.98E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.40E+01
+ dcop: begin dcop,  cpu clock=  3.98E+00
+ dcop: end dcop,  cpu clock=  3.98E+00 memory=      1714 kb  tot_iter=    1596
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran84   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.98E+00
+ tran: time= 4.8100E-09 tot_iter=     156 conv_iter=      56 cpu clock= 3.99E+00
+ tran: time= 1.1907E-08 tot_iter=     208 conv_iter=      81 cpu clock= 3.99E+00
+ tran: time= 1.6707E-08 tot_iter=     212 conv_iter=      83 cpu clock= 3.99E+00
+ tran: time= 2.1507E-08 tot_iter=     216 conv_iter=      85 cpu clock= 3.99E+00
+ tran: time= 2.6307E-08 tot_iter=     220 conv_iter=      87 cpu clock= 3.99E+00
+ tran: time= 3.1107E-08 tot_iter=     224 conv_iter=      89 cpu clock= 3.99E+00
+ tran: time= 3.5907E-08 tot_iter=     228 conv_iter=      91 cpu clock= 3.99E+00
+ tran: time= 4.0707E-08 tot_iter=     232 conv_iter=      93 cpu clock= 3.99E+00
+ tran: time= 4.5507E-08 tot_iter=     236 conv_iter=      95 cpu clock= 3.99E+00
+ tran: time= 4.8000E-08 tot_iter=     238 conv_iter=      96 cpu clock= 3.99E+00
+ sweep: tran tran84   end,  cpu clock=  3.99E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.50E+01
+ dcop: begin dcop,  cpu clock=  3.99E+00
+ dcop: end dcop,  cpu clock=  3.99E+00 memory=      1714 kb  tot_iter=    1615
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran85   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  3.99E+00
+ tran: time= 4.8100E-09 tot_iter=     157 conv_iter=      56 cpu clock= 4.00E+00
+ tran: time= 1.1597E-08 tot_iter=     205 conv_iter=      79 cpu clock= 4.00E+00
+ tran: time= 1.6397E-08 tot_iter=     209 conv_iter=      81 cpu clock= 4.00E+00
+ tran: time= 2.1197E-08 tot_iter=     213 conv_iter=      83 cpu clock= 4.00E+00
+ tran: time= 2.5997E-08 tot_iter=     217 conv_iter=      85 cpu clock= 4.00E+00
+ tran: time= 3.0797E-08 tot_iter=     221 conv_iter=      87 cpu clock= 4.00E+00
+ tran: time= 3.5597E-08 tot_iter=     225 conv_iter=      89 cpu clock= 4.00E+00
+ tran: time= 4.0397E-08 tot_iter=     229 conv_iter=      91 cpu clock= 4.00E+00
+ tran: time= 4.5197E-08 tot_iter=     233 conv_iter=      93 cpu clock= 4.00E+00
+ tran: time= 4.8000E-08 tot_iter=     237 conv_iter=      95 cpu clock= 4.00E+00
+ sweep: tran tran85   end,  cpu clock=  4.00E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.60E+01
+ dcop: begin dcop,  cpu clock=  4.00E+00
+ dcop: end dcop,  cpu clock=  4.00E+00 memory=      1714 kb  tot_iter=    1634
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran86   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.00E+00
+ tran: time= 4.8100E-09 tot_iter=     174 conv_iter=      63 cpu clock= 4.00E+00
+ tran: time= 9.8902E-09 tot_iter=     228 conv_iter=      89 cpu clock= 4.01E+00
+ tran: time= 1.4690E-08 tot_iter=     232 conv_iter=      91 cpu clock= 4.01E+00
+ tran: time= 1.9490E-08 tot_iter=     236 conv_iter=      93 cpu clock= 4.01E+00
+ tran: time= 2.4290E-08 tot_iter=     240 conv_iter=      95 cpu clock= 4.01E+00
+ tran: time= 2.9090E-08 tot_iter=     244 conv_iter=      97 cpu clock= 4.01E+00
+ tran: time= 3.3890E-08 tot_iter=     248 conv_iter=      99 cpu clock= 4.01E+00
+ tran: time= 3.8690E-08 tot_iter=     252 conv_iter=     101 cpu clock= 4.01E+00
+ tran: time= 4.3490E-08 tot_iter=     256 conv_iter=     103 cpu clock= 4.01E+00
+ tran: time= 4.8000E-08 tot_iter=     260 conv_iter=     105 cpu clock= 4.01E+00
+ sweep: tran tran86   end,  cpu clock=  4.01E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.70E+01
+ dcop: begin dcop,  cpu clock=  4.01E+00
+ dcop: end dcop,  cpu clock=  4.01E+00 memory=      1714 kb  tot_iter=    1653
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran87   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.01E+00
+ tran: time= 4.8100E-09 tot_iter=     181 conv_iter=      65 cpu clock= 4.01E+00
+ tran: time= 1.1616E-08 tot_iter=     227 conv_iter=      88 cpu clock= 4.01E+00
+ tran: time= 1.6416E-08 tot_iter=     231 conv_iter=      90 cpu clock= 4.01E+00
+ tran: time= 2.1216E-08 tot_iter=     235 conv_iter=      92 cpu clock= 4.01E+00
+ tran: time= 2.6016E-08 tot_iter=     239 conv_iter=      94 cpu clock= 4.01E+00
+ tran: time= 3.0816E-08 tot_iter=     243 conv_iter=      96 cpu clock= 4.01E+00
+ tran: time= 3.5616E-08 tot_iter=     247 conv_iter=      98 cpu clock= 4.01E+00
+ tran: time= 4.0416E-08 tot_iter=     251 conv_iter=     100 cpu clock= 4.01E+00
+ tran: time= 4.5216E-08 tot_iter=     255 conv_iter=     102 cpu clock= 4.01E+00
+ tran: time= 4.8000E-08 tot_iter=     259 conv_iter=     104 cpu clock= 4.01E+00
+ sweep: tran tran87   end,  cpu clock=  4.01E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.80E+01
+ dcop: begin dcop,  cpu clock=  4.01E+00
+ dcop: end dcop,  cpu clock=  4.02E+00 memory=      1714 kb  tot_iter=    1672
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran88   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.02E+00
+ tran: time= 4.8100E-09 tot_iter=     181 conv_iter=      65 cpu clock= 4.02E+00
+ tran: time= 1.1624E-08 tot_iter=     227 conv_iter=      88 cpu clock= 4.02E+00
+ tran: time= 1.6424E-08 tot_iter=     231 conv_iter=      90 cpu clock= 4.02E+00
+ tran: time= 2.1224E-08 tot_iter=     235 conv_iter=      92 cpu clock= 4.02E+00
+ tran: time= 2.6024E-08 tot_iter=     239 conv_iter=      94 cpu clock= 4.02E+00
+ tran: time= 3.0824E-08 tot_iter=     243 conv_iter=      96 cpu clock= 4.02E+00
+ tran: time= 3.5624E-08 tot_iter=     247 conv_iter=      98 cpu clock= 4.02E+00
+ tran: time= 4.0424E-08 tot_iter=     251 conv_iter=     100 cpu clock= 4.02E+00
+ tran: time= 4.5224E-08 tot_iter=     255 conv_iter=     102 cpu clock= 4.02E+00
+ tran: time= 4.8000E-08 tot_iter=     259 conv_iter=     104 cpu clock= 4.02E+00
+ sweep: tran tran88   end,  cpu clock=  4.02E+00 memory=      1714 kb
+ data: data=stimdata        index           =    8.90E+01
+ dcop: begin dcop,  cpu clock=  4.02E+00
+ dcop: end dcop,  cpu clock=  4.02E+00 memory=      1714 kb  tot_iter=    1691
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran89   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.02E+00
+ tran: time= 4.8100E-09 tot_iter=     179 conv_iter=      65 cpu clock= 4.03E+00
+ tran: time= 1.1624E-08 tot_iter=     226 conv_iter=      88 cpu clock= 4.03E+00
+ tran: time= 1.6424E-08 tot_iter=     230 conv_iter=      90 cpu clock= 4.03E+00
+ tran: time= 2.1224E-08 tot_iter=     234 conv_iter=      92 cpu clock= 4.03E+00
+ tran: time= 2.6024E-08 tot_iter=     238 conv_iter=      94 cpu clock= 4.03E+00
+ tran: time= 3.0824E-08 tot_iter=     242 conv_iter=      96 cpu clock= 4.03E+00
+ tran: time= 3.5624E-08 tot_iter=     246 conv_iter=      98 cpu clock= 4.03E+00
+ tran: time= 4.0424E-08 tot_iter=     250 conv_iter=     100 cpu clock= 4.03E+00
+ tran: time= 4.5224E-08 tot_iter=     254 conv_iter=     102 cpu clock= 4.03E+00
+ tran: time= 4.8000E-08 tot_iter=     258 conv_iter=     104 cpu clock= 4.03E+00
+ sweep: tran tran89   end,  cpu clock=  4.03E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.00E+01
+ dcop: begin dcop,  cpu clock=  4.03E+00
+ dcop: end dcop,  cpu clock=  4.03E+00 memory=      1714 kb  tot_iter=    1710
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran90   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.03E+00
+ tran: time= 4.8100E-09 tot_iter=     181 conv_iter=      65 cpu clock= 4.04E+00
+ tran: time= 1.1624E-08 tot_iter=     228 conv_iter=      88 cpu clock= 4.04E+00
+ tran: time= 1.6424E-08 tot_iter=     232 conv_iter=      90 cpu clock= 4.04E+00
+ tran: time= 2.1224E-08 tot_iter=     236 conv_iter=      92 cpu clock= 4.04E+00
+ tran: time= 2.6024E-08 tot_iter=     240 conv_iter=      94 cpu clock= 4.04E+00
+ tran: time= 3.0824E-08 tot_iter=     244 conv_iter=      96 cpu clock= 4.04E+00
+ tran: time= 3.5624E-08 tot_iter=     248 conv_iter=      98 cpu clock= 4.04E+00
+ tran: time= 4.0424E-08 tot_iter=     252 conv_iter=     100 cpu clock= 4.04E+00
+ tran: time= 4.5224E-08 tot_iter=     256 conv_iter=     102 cpu clock= 4.04E+00
+ tran: time= 4.8000E-08 tot_iter=     260 conv_iter=     104 cpu clock= 4.04E+00
+ sweep: tran tran90   end,  cpu clock=  4.04E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.10E+01
+ dcop: begin dcop,  cpu clock=  4.04E+00
+ dcop: end dcop,  cpu clock=  4.04E+00 memory=      1714 kb  tot_iter=    1729
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran91   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.04E+00
+ tran: time= 4.8100E-09 tot_iter=     158 conv_iter=      57 cpu clock= 4.04E+00
+ tran: time= 1.1630E-08 tot_iter=     205 conv_iter=      80 cpu clock= 4.05E+00
+ tran: time= 1.6430E-08 tot_iter=     209 conv_iter=      82 cpu clock= 4.05E+00
+ tran: time= 2.1230E-08 tot_iter=     213 conv_iter=      84 cpu clock= 4.05E+00
+ tran: time= 2.6030E-08 tot_iter=     217 conv_iter=      86 cpu clock= 4.05E+00
+ tran: time= 3.0830E-08 tot_iter=     221 conv_iter=      88 cpu clock= 4.05E+00
+ tran: time= 3.5630E-08 tot_iter=     225 conv_iter=      90 cpu clock= 4.05E+00
+ tran: time= 4.0430E-08 tot_iter=     229 conv_iter=      92 cpu clock= 4.05E+00
+ tran: time= 4.5230E-08 tot_iter=     233 conv_iter=      94 cpu clock= 4.05E+00
+ tran: time= 4.8000E-08 tot_iter=     237 conv_iter=      96 cpu clock= 4.05E+00
+ sweep: tran tran91   end,  cpu clock=  4.05E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.20E+01
+ dcop: begin dcop,  cpu clock=  4.05E+00
+ dcop: end dcop,  cpu clock=  4.05E+00 memory=      1714 kb  tot_iter=    1748
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran92   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.05E+00
+ tran: time= 4.8447E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.05E+00
+ tran: time= 9.8467E-09 tot_iter=     216 conv_iter=      85 cpu clock= 4.05E+00
+ tran: time= 1.4647E-08 tot_iter=     220 conv_iter=      87 cpu clock= 4.05E+00
+ tran: time= 1.9447E-08 tot_iter=     224 conv_iter=      89 cpu clock= 4.05E+00
+ tran: time= 2.4247E-08 tot_iter=     228 conv_iter=      91 cpu clock= 4.05E+00
+ tran: time= 2.9047E-08 tot_iter=     232 conv_iter=      93 cpu clock= 4.05E+00
+ tran: time= 3.3847E-08 tot_iter=     236 conv_iter=      95 cpu clock= 4.05E+00
+ tran: time= 3.8647E-08 tot_iter=     240 conv_iter=      97 cpu clock= 4.05E+00
+ tran: time= 4.3447E-08 tot_iter=     244 conv_iter=      99 cpu clock= 4.05E+00
+ tran: time= 4.8000E-08 tot_iter=     248 conv_iter=     101 cpu clock= 4.05E+00
+ sweep: tran tran92   end,  cpu clock=  4.05E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.30E+01
+ dcop: begin dcop,  cpu clock=  4.05E+00
+ dcop: end dcop,  cpu clock=  4.05E+00 memory=      1714 kb  tot_iter=    1767
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran93   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.05E+00
+ tran: time= 4.8446E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.06E+00
+ tran: time= 1.0920E-08 tot_iter=     223 conv_iter=      88 cpu clock= 4.06E+00
+ tran: time= 1.5720E-08 tot_iter=     227 conv_iter=      90 cpu clock= 4.06E+00
+ tran: time= 2.0520E-08 tot_iter=     231 conv_iter=      92 cpu clock= 4.06E+00
+ tran: time= 2.5320E-08 tot_iter=     235 conv_iter=      94 cpu clock= 4.06E+00
+ tran: time= 3.0120E-08 tot_iter=     239 conv_iter=      96 cpu clock= 4.06E+00
+ tran: time= 3.4920E-08 tot_iter=     243 conv_iter=      98 cpu clock= 4.06E+00
+ tran: time= 3.9720E-08 tot_iter=     247 conv_iter=     100 cpu clock= 4.06E+00
+ tran: time= 4.4520E-08 tot_iter=     251 conv_iter=     102 cpu clock= 4.06E+00
+ tran: time= 4.8000E-08 tot_iter=     255 conv_iter=     104 cpu clock= 4.06E+00
+ sweep: tran tran93   end,  cpu clock=  4.06E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.40E+01
+ dcop: begin dcop,  cpu clock=  4.06E+00
+ dcop: end dcop,  cpu clock=  4.06E+00 memory=      1714 kb  tot_iter=    1786
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran94   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.06E+00
+ tran: time= 4.8446E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.06E+00
+ tran: time= 1.1985E-08 tot_iter=     223 conv_iter=      87 cpu clock= 4.07E+00
+ tran: time= 1.6785E-08 tot_iter=     227 conv_iter=      89 cpu clock= 4.07E+00
+ tran: time= 2.1585E-08 tot_iter=     231 conv_iter=      91 cpu clock= 4.07E+00
+ tran: time= 2.6385E-08 tot_iter=     235 conv_iter=      93 cpu clock= 4.07E+00
+ tran: time= 3.1185E-08 tot_iter=     239 conv_iter=      95 cpu clock= 4.07E+00
+ tran: time= 3.5985E-08 tot_iter=     243 conv_iter=      97 cpu clock= 4.07E+00
+ tran: time= 4.0785E-08 tot_iter=     247 conv_iter=      99 cpu clock= 4.07E+00
+ tran: time= 4.5585E-08 tot_iter=     251 conv_iter=     101 cpu clock= 4.07E+00
+ tran: time= 4.8000E-08 tot_iter=     253 conv_iter=     102 cpu clock= 4.07E+00
+ sweep: tran tran94   end,  cpu clock=  4.07E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.50E+01
+ dcop: begin dcop,  cpu clock=  4.07E+00
+ dcop: end dcop,  cpu clock=  4.07E+00 memory=      1714 kb  tot_iter=    1805
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran95   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.07E+00
+ tran: time= 4.8445E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.07E+00
+ tran: time= 1.1717E-08 tot_iter=     223 conv_iter=      87 cpu clock= 4.08E+00
+ tran: time= 1.6517E-08 tot_iter=     227 conv_iter=      89 cpu clock= 4.08E+00
+ tran: time= 2.1317E-08 tot_iter=     231 conv_iter=      91 cpu clock= 4.08E+00
+ tran: time= 2.6117E-08 tot_iter=     235 conv_iter=      93 cpu clock= 4.08E+00
+ tran: time= 3.0917E-08 tot_iter=     239 conv_iter=      95 cpu clock= 4.08E+00
+ tran: time= 3.5717E-08 tot_iter=     243 conv_iter=      97 cpu clock= 4.08E+00
+ tran: time= 4.0517E-08 tot_iter=     247 conv_iter=      99 cpu clock= 4.08E+00
+ tran: time= 4.5317E-08 tot_iter=     251 conv_iter=     101 cpu clock= 4.08E+00
+ tran: time= 4.8000E-08 tot_iter=     255 conv_iter=     103 cpu clock= 4.08E+00
+ sweep: tran tran95   end,  cpu clock=  4.08E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.60E+01
+ dcop: begin dcop,  cpu clock=  4.08E+00
+ dcop: end dcop,  cpu clock=  4.08E+00 memory=      1714 kb  tot_iter=    1824
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran96   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.08E+00
+ tran: time= 4.8445E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.08E+00
+ tran: time= 9.8638E-09 tot_iter=     223 conv_iter=      86 cpu clock= 4.08E+00
+ tran: time= 1.4664E-08 tot_iter=     227 conv_iter=      88 cpu clock= 4.08E+00
+ tran: time= 1.9464E-08 tot_iter=     231 conv_iter=      90 cpu clock= 4.08E+00
+ tran: time= 2.4264E-08 tot_iter=     235 conv_iter=      92 cpu clock= 4.08E+00
+ tran: time= 2.9064E-08 tot_iter=     239 conv_iter=      94 cpu clock= 4.08E+00
+ tran: time= 3.3864E-08 tot_iter=     243 conv_iter=      96 cpu clock= 4.08E+00
+ tran: time= 3.8664E-08 tot_iter=     247 conv_iter=      98 cpu clock= 4.08E+00
+ tran: time= 4.3464E-08 tot_iter=     251 conv_iter=     100 cpu clock= 4.08E+00
+ tran: time= 4.8000E-08 tot_iter=     255 conv_iter=     102 cpu clock= 4.08E+00
+ sweep: tran tran96   end,  cpu clock=  4.08E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.70E+01
+ dcop: begin dcop,  cpu clock=  4.09E+00
+ dcop: end dcop,  cpu clock=  4.09E+00 memory=      1714 kb  tot_iter=    1843
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran97   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.09E+00
+ tran: time= 4.8444E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.09E+00
+ tran: time= 9.7933E-09 tot_iter=     208 conv_iter=      81 cpu clock= 4.09E+00
+ tran: time= 1.4593E-08 tot_iter=     212 conv_iter=      83 cpu clock= 4.09E+00
+ tran: time= 1.9393E-08 tot_iter=     216 conv_iter=      85 cpu clock= 4.09E+00
+ tran: time= 2.4193E-08 tot_iter=     220 conv_iter=      87 cpu clock= 4.09E+00
+ tran: time= 2.8993E-08 tot_iter=     224 conv_iter=      89 cpu clock= 4.09E+00
+ tran: time= 3.3793E-08 tot_iter=     228 conv_iter=      91 cpu clock= 4.09E+00
+ tran: time= 3.8593E-08 tot_iter=     232 conv_iter=      93 cpu clock= 4.09E+00
+ tran: time= 4.3393E-08 tot_iter=     236 conv_iter=      95 cpu clock= 4.09E+00
+ tran: time= 4.8000E-08 tot_iter=     240 conv_iter=      97 cpu clock= 4.09E+00
+ sweep: tran tran97   end,  cpu clock=  4.09E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.80E+01
+ dcop: begin dcop,  cpu clock=  4.09E+00
+ dcop: end dcop,  cpu clock=  4.09E+00 memory=      1714 kb  tot_iter=    1862
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran98   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.09E+00
+ tran: time= 4.8444E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.10E+00
+ tran: time= 9.9444E-09 tot_iter=     213 conv_iter=      84 cpu clock= 4.10E+00
+ tran: time= 1.4744E-08 tot_iter=     217 conv_iter=      86 cpu clock= 4.10E+00
+ tran: time= 1.9544E-08 tot_iter=     221 conv_iter=      88 cpu clock= 4.10E+00
+ tran: time= 2.4344E-08 tot_iter=     225 conv_iter=      90 cpu clock= 4.10E+00
+ tran: time= 2.9144E-08 tot_iter=     229 conv_iter=      92 cpu clock= 4.10E+00
+ tran: time= 3.3944E-08 tot_iter=     233 conv_iter=      94 cpu clock= 4.10E+00
+ tran: time= 3.8744E-08 tot_iter=     237 conv_iter=      96 cpu clock= 4.10E+00
+ tran: time= 4.3544E-08 tot_iter=     241 conv_iter=      98 cpu clock= 4.10E+00
+ tran: time= 4.8000E-08 tot_iter=     245 conv_iter=     100 cpu clock= 4.10E+00
+ sweep: tran tran98   end,  cpu clock=  4.10E+00 memory=      1714 kb
+ data: data=stimdata        index           =    9.90E+01
+ dcop: begin dcop,  cpu clock=  4.10E+00
+ dcop: end dcop,  cpu clock=  4.10E+00 memory=      1714 kb  tot_iter=    1881
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran99   begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.10E+00
+ tran: time= 4.8444E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.10E+00
+ tran: time= 1.1663E-08 tot_iter=     209 conv_iter=      81 cpu clock= 4.11E+00
+ tran: time= 1.6463E-08 tot_iter=     213 conv_iter=      83 cpu clock= 4.11E+00
+ tran: time= 2.1263E-08 tot_iter=     217 conv_iter=      85 cpu clock= 4.11E+00
+ tran: time= 2.6063E-08 tot_iter=     221 conv_iter=      87 cpu clock= 4.11E+00
+ tran: time= 3.0863E-08 tot_iter=     225 conv_iter=      89 cpu clock= 4.11E+00
+ tran: time= 3.5663E-08 tot_iter=     229 conv_iter=      91 cpu clock= 4.11E+00
+ tran: time= 4.0463E-08 tot_iter=     233 conv_iter=      93 cpu clock= 4.11E+00
+ tran: time= 4.5263E-08 tot_iter=     237 conv_iter=      95 cpu clock= 4.11E+00
+ tran: time= 4.8000E-08 tot_iter=     241 conv_iter=      97 cpu clock= 4.11E+00
+ sweep: tran tran99   end,  cpu clock=  4.11E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.00E+02
+ dcop: begin dcop,  cpu clock=  4.11E+00
+ dcop: end dcop,  cpu clock=  4.11E+00 memory=      1714 kb  tot_iter=    1900
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran100  begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.11E+00
+ tran: time= 4.8444E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.11E+00
+ tran: time= 1.1783E-08 tot_iter=     209 conv_iter=      81 cpu clock= 4.12E+00
+ tran: time= 1.6583E-08 tot_iter=     213 conv_iter=      83 cpu clock= 4.12E+00
+ tran: time= 2.1383E-08 tot_iter=     217 conv_iter=      85 cpu clock= 4.12E+00
+ tran: time= 2.6183E-08 tot_iter=     221 conv_iter=      87 cpu clock= 4.12E+00
+ tran: time= 3.0983E-08 tot_iter=     225 conv_iter=      89 cpu clock= 4.12E+00
+ tran: time= 3.5783E-08 tot_iter=     229 conv_iter=      91 cpu clock= 4.12E+00
+ tran: time= 4.0583E-08 tot_iter=     233 conv_iter=      93 cpu clock= 4.12E+00
+ tran: time= 4.5383E-08 tot_iter=     237 conv_iter=      95 cpu clock= 4.12E+00
+ tran: time= 4.8000E-08 tot_iter=     239 conv_iter=      96 cpu clock= 4.12E+00
+ sweep: tran tran100  end,  cpu clock=  4.12E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.01E+02
+ dcop: begin dcop,  cpu clock=  4.12E+00
+ dcop: end dcop,  cpu clock=  4.12E+00 memory=      1714 kb  tot_iter=    1919
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran101  begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.12E+00
+ tran: time= 4.8443E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.12E+00
+ tran: time= 9.6009E-09 tot_iter=     205 conv_iter=      79 cpu clock= 4.12E+00
+ tran: time= 1.4401E-08 tot_iter=     209 conv_iter=      81 cpu clock= 4.12E+00
+ tran: time= 1.9201E-08 tot_iter=     213 conv_iter=      83 cpu clock= 4.12E+00
+ tran: time= 2.4001E-08 tot_iter=     217 conv_iter=      85 cpu clock= 4.12E+00
+ tran: time= 2.8801E-08 tot_iter=     221 conv_iter=      87 cpu clock= 4.12E+00
+ tran: time= 3.3601E-08 tot_iter=     225 conv_iter=      89 cpu clock= 4.12E+00
+ tran: time= 3.8401E-08 tot_iter=     229 conv_iter=      91 cpu clock= 4.12E+00
+ tran: time= 4.3201E-08 tot_iter=     233 conv_iter=      93 cpu clock= 4.12E+00
+ tran: time= 4.8000E-08 tot_iter=     237 conv_iter=      95 cpu clock= 4.12E+00
+ sweep: tran tran101  end,  cpu clock=  4.12E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.02E+02
+ dcop: begin dcop,  cpu clock=  4.12E+00
+ dcop: end dcop,  cpu clock=  4.13E+00 memory=      1714 kb  tot_iter=    1938
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran102  begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.13E+00
+ tran: time= 4.8443E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.13E+00
+ tran: time= 9.9634E-09 tot_iter=     209 conv_iter=      81 cpu clock= 4.13E+00
+ tran: time= 1.4763E-08 tot_iter=     213 conv_iter=      83 cpu clock= 4.13E+00
+ tran: time= 1.9563E-08 tot_iter=     217 conv_iter=      85 cpu clock= 4.13E+00
+ tran: time= 2.4363E-08 tot_iter=     221 conv_iter=      87 cpu clock= 4.13E+00
+ tran: time= 2.9163E-08 tot_iter=     225 conv_iter=      89 cpu clock= 4.13E+00
+ tran: time= 3.3963E-08 tot_iter=     229 conv_iter=      91 cpu clock= 4.13E+00
+ tran: time= 3.8763E-08 tot_iter=     233 conv_iter=      93 cpu clock= 4.13E+00
+ tran: time= 4.3563E-08 tot_iter=     237 conv_iter=      95 cpu clock= 4.13E+00
+ tran: time= 4.8000E-08 tot_iter=     241 conv_iter=      97 cpu clock= 4.13E+00
+ sweep: tran tran102  end,  cpu clock=  4.13E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.03E+02
+ dcop: begin dcop,  cpu clock=  4.13E+00
+ dcop: end dcop,  cpu clock=  4.13E+00 memory=      1714 kb  tot_iter=    1957
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran103  begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.13E+00
+ tran: time= 4.8443E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.13E+00
+ tran: time= 9.7895E-09 tot_iter=     229 conv_iter=      89 cpu clock= 4.14E+00
+ tran: time= 1.4590E-08 tot_iter=     233 conv_iter=      91 cpu clock= 4.14E+00
+ tran: time= 1.9390E-08 tot_iter=     237 conv_iter=      93 cpu clock= 4.14E+00
+ tran: time= 2.4190E-08 tot_iter=     241 conv_iter=      95 cpu clock= 4.14E+00
+ tran: time= 2.8990E-08 tot_iter=     245 conv_iter=      97 cpu clock= 4.14E+00
+ tran: time= 3.3790E-08 tot_iter=     249 conv_iter=      99 cpu clock= 4.14E+00
+ tran: time= 3.8590E-08 tot_iter=     253 conv_iter=     101 cpu clock= 4.14E+00
+ tran: time= 4.3390E-08 tot_iter=     257 conv_iter=     103 cpu clock= 4.14E+00
+ tran: time= 4.8000E-08 tot_iter=     261 conv_iter=     105 cpu clock= 4.14E+00
+ sweep: tran tran103  end,  cpu clock=  4.14E+00 memory=      1714 kb
+ data: data=stimdata        index           =    1.04E+02
+ dcop: begin dcop,  cpu clock=  4.14E+00
+ dcop: end dcop,  cpu clock=  4.14E+00 memory=      1714 kb  tot_iter=    1976
+ output: /home/mrezaie/Downloads/ncx_inv/lib_all/and2/tOut_A_0000f/tOut_A_0000f.
+ sweep: tran tran104  begin, stop_t=  4.80E-08 #sweeps= 481 cpu clock=  4.14E+00
+ tran: time= 4.8443E-09 tot_iter=      54 conv_iter=      24 cpu clock= 4.14E+00
+ tran: time= 9.7496E-09 tot_iter=     229 conv_iter=      89 cpu clock= 4.15E+00
+ tran: time= 1.4550E-08 tot_iter=     233 conv_iter=      91 cpu clock= 4.15E+00
+ tran: time= 1.9350E-08 tot_iter=     237 conv_iter=      93 cpu clock= 4.15E+00
+ tran: time= 2.4150E-08 tot_iter=     241 conv_iter=      95 cpu clock= 4.15E+00
+ tran: time= 2.8950E-08 tot_iter=     245 conv_iter=      97 cpu clock= 4.15E+00
+ tran: time= 3.3750E-08 tot_iter=     249 conv_iter=      99 cpu clock= 4.15E+00
+ tran: time= 3.8550E-08 tot_iter=     253 conv_iter=     101 cpu clock= 4.15E+00
+ tran: time= 4.3350E-08 tot_iter=     257 conv_iter=     103 cpu clock= 4.15E+00
+ tran: time= 4.8000E-08 tot_iter=     261 conv_iter=     105 cpu clock= 4.15E+00
+ sweep: tran tran104  end,  cpu clock=  4.15E+00 memory=      1714 kb
+ sweep: data            data            1 end
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

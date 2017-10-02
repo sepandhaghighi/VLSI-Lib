@@ -1,0 +1,13 @@
+set output_library  out.lib
+set model_file /home/mrezaie/Desktop/hspice180.mdl
+set netlist_file library.spi
+set Simulator_exec /opt/Synopsys/HSPICE/hspice/amd64/hspice 
+set input_template_dir config 
+set library_template_file lib_all 
+set nldm true 
+set nlpm true 
+set timing true 
+set power true 
+set ccs_timing false 
+set ccs_power false 
+set farm_type NoFarm

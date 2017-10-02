@@ -1,0 +1,26 @@
+* Liberty NCX vC-2009.06-SP1
+flow_stage netlist
+time_unit 1e-12
+capacitance_unit 1e-15
+current_unit 0.001
+leakage_power_unit 1e-12
+resistance_unit 1000
+slew_derate 1
+
+cell and2
+pin A 0 1.2
+number_output_pin 1
+combinational_cell
+gate_leakage
+reference_align
+
+when !Ap&!B
+pg_pins VSS Vdd
+pg_rails VSS vdd
+power_pins VSS Vdd
+intrinsic_power_pins VSS Vdd
+
+clk_width 0
+pin_edge rise
+
+ccs_power_tolerance 0.05
