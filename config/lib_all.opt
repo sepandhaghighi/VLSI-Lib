@@ -50,5 +50,5 @@ operating_conditions W_25_1.2_1.2 {
 include lib.indexes ;
 
 do {
-and2
+nand2
 }

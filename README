@@ -1,0 +1,6 @@
+
+This is an automated Library making script
+
+put all the Hspice netlists in library.spi
+
+run the ncx_setup.pl Ruby script
